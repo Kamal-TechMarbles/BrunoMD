@@ -1,10 +1,10 @@
 {%- assign background = section.settings.background_image | img_url: 'master' | split:'?' | first -%}
-<div class="join-our-newsletter" style="background-image: url({{ background }});     background-repeat: no-repeat; background-size: cover;">
+<div class="join-our-newsletter" style="background-image: url({{ background }}); background-repeat: no-repeat; background-size: cover">
   <div class="page-width">
     <div class="grid">
       <div class="grid__item medium-up--one-half">
         <div class="newsletter-para">
-          <p class="text-center newLogo-para"><img src="{{ section.settings.newlogo | img_url: 'master' }}"></p>
+          <p class="text-center newLogo-para"><img srcset="{{ section.settings.newlogo | img_url: '480x' }} 480w, {{ section.settings.newlogo | img_url: '800x' }} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{ section.settings.newlogo | img_url: 'master' }}"></p>
         </div>
       </div>
       <div class="grid__item medium-up--one-half">
@@ -37,7 +37,7 @@
         "label": "Section Heading/Title",
         "default": "Join the New Health Renaissance"
       },
-	{
+    {
         "type": "image_picker",
         "id": "newlogo",
         "label": "New Logo Icon"

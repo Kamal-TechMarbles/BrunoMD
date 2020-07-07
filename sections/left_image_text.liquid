@@ -1,19 +1,19 @@
 <div class="art_inovation left-art-inovation">
-  	<div class="art-img">
-      	<img  src="{{ section.settings.section-img | img_url: '800x' }}">
-  	</div>
-  	<div class="today_bg">
-      	<div class="page-width">
-          	<div class="medium-up--two-quarters">
-              	<div class="art-description">
-                  	<h1 style="color:{{section.settings.main-heading_color }}; font-family:{{section.settings.main-heading_font}}; font-size:{{section.settings.font_size}}px">{{ section.settings.heading_richtext | remove: '<p>'  | remove: '</p>'  }}</h1>
-                  	<p class="about-description-text">
-                      	{{ section.settings.description_text | escape }}
-                  	</p>
-              	</div>
-          	</div>
-      	</div>
-  	</div>
+    <div class="art-img">
+        <img srcset="{{ section.settings.section-img | img_url: '480x' }} 480w, {{ section.settings.section-img | img_url: '800x' }} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{ section.settings.section-img | img_url: '800x' }}">
+    </div>
+    <div class="today_bg">
+        <div class="page-width">
+            <div class="medium-up--two-quarters">
+                <div class="art-description">
+                    <h1 style="color:{{section.settings.main-heading_color }}; font-family:{{section.settings.main-heading_font}}; font-size:{{section.settings.font_size}}px">{{ section.settings.heading_richtext | remove: '<p>'  | remove: '</p>'  }}</h1>
+                    <p class="about-description-text">
+                        {{ section.settings.description_text | escape }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% schema %}
   {
@@ -24,13 +24,13 @@
              "id": "heading_richtext",
              "label": "Text"
           },
-		{
+        {
            "type": "textarea",
            "id": "description_text",
            "default": "Welcome to my shop!",
            "label": "Welcome message"
         },
-		{
+        {
             "type": "image_picker",
             "id": "section-img",
             "label": "Image"

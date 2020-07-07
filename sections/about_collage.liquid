@@ -1,35 +1,35 @@
 <div class="about-collage">
-  	<div class="page-width" style="margin-left: 0px; padding-left: 0px;">
-      	{% if section.settings.collage %}
-      	<img data-src="{{ section.settings.collage | img_url: 'master' | split:'?' | first }}" class="lazyload collage-padding" alt="About Collage">
-      	{% endif %}
-  	</div>
+    <div class="page-width" style="margin-left: 0px; padding-left: 0px;">
+        {% if section.settings.collage %}
+        <img srcset="{{ section.settings.collage | img_url: '480x' }} 480w, {{ section.settings.collage | img_url: '800x' }} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{ section.settings.collage | img_url: 'master' | split:'?' | first }}" class="lazyload collage-padding" alt="About Collage">
+        {% endif %}
+    </div>
 </div>
 
 {% schema %}
   {
     "name": "About Collage",
     "settings": [
-		{
+        {
             "type": "image_picker",
             "id": "collage",
             "label": "Upload Collage"
-		},
-		{
+        },
+        {
             "type": "image_picker",
             "id": "newlogo",
             "label": "Upload New Logo"
-		},
-		{
+        },
+        {
             "type": "text",
             "id": "btnTxt",
             "label": "Call to Action Text"
-		},
-		{
+        },
+        {
             "type": "url",
             "id": "btnLnk",
             "label": "Call to Action Link"
-		}
-	]
+        }
+    ]
   }
 {% endschema %}

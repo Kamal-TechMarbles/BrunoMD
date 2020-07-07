@@ -1,7 +1,7 @@
 <div class="about-us custom-about-us small--text-center">
     <div class="page-width">
         <div class="feature-row">
-            <div class="medium-up--one-half"><div class="about-img"><img data-src="{{ section.settings.img1 | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div></div>
+            <div class="medium-up--one-half"><div class="about-img"><img srcset="{{ section.settings.img1 | img_url: '480x' }} 480w, {{ section.settings.img1 | img_url: '800x' }} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{ section.settings.img1 | img_url: '800x' }}" data-src="{{ section.settings.img1 | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div></div>
             <div class="medium-up--one-half">
                 <div class="about-us-description">
                     <h4>{{ section.settings.header1 | escape }}</h4>
@@ -9,7 +9,7 @@
                     <p class="about-description-text">{{ section.settings.cont1 | escape }}</p>
                 </div>
             </div>
-            <div class="about-img small"><img data-src="{{ section.settings.img1 | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
+            <div class="about-img small"><img srcset="{{ section.settings.img1 | img_url: '480x' }} 480w, {{ section.settings.img1 | img_url: '800x' }} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{ section.settings.img1 | img_url: '800x' }}" data-src="{{ section.settings.img1 | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
         </div>
     </div>
     <div class="page-width">
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="medium-up--one-half">
-                <div class="about-img"><img data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
+                <div class="about-img"><img srcset="{{ section.settings.about-img | img_url: '480x' }} 480w, {{ section.settings.about-img | img_url: '800x' }} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{ section.settings.about-img | img_url: '800x' }}" data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-img small"><img data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
+            <div class="about-img small"><img srcset="{{ section.settings.about-img | img_url: '480x' }} 480w, {{ section.settings.about-img | img_url: '800x' }} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{ section.settings.about-img | img_url: '800x' }}" data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
         </div>
     </div>
 </div>

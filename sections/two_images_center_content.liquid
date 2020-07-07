@@ -1,43 +1,43 @@
 <div class="two_images_content">
-  	<div class="two_images">
-  		<img src="{{ section.settings.image1 | img_url: '700x' }}">
-  		<img src="{{ section.settings.image2 | img_url: '700x' }}">
-  	</div>
-  	<div class="image_content">
-  		<h2>{{ section.settings.title | escape }}</h2>
+    <div class="two_images">
+        <img srcset="{{ section.settings.image1 | img_url: '480x' }} 480w, {{ section.settings.image1 | img_url: '700x' }} 700w" sizes="(max-width: 600px) 480px, 700px" src="{{ section.settings.image1 | img_url: '700x' }}">
+        <img srcset="{{ section.settings.image2 | img_url: '480x' }} 480w, {{ section.settings.image2 | img_url: '700x' }} 700w" sizes="(max-width: 600px) 480px, 700px" src="{{ section.settings.image2 | img_url: '700x' }}">
+    </div>
+    <div class="image_content">
+        <h2>{{ section.settings.title | escape }}</h2>
       <p class="two_images_text">{{ section.settings.description | strip_html }}</p>
-  	</div>
+    </div>
 </div>
 
 {% schema %}
-	{
-		"name": "Two Images Content",
-		"settings": [
-			{
-				"type": "text",
-				"id": "title",
-				"label": "Title"
-			},
-			{
-				"type":      "header",
-				"content":   "Section",
-				"info":      "Two Images Content Centered"
-			},
-			{
-				"type": "image_picker",
-				"id": "image1",
-				"label": "Image 1"
-			},
-			{
-				"type": "image_picker",
-				"id": "image2",
-				"label": "Image 2"
-			},
-			{
-				"type": "textarea",
-				"id": "description",
-				"label": "Description"
-			}
-		]
-	}
+    {
+        "name": "Two Images Content",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type":      "header",
+                "content":   "Section",
+                "info":      "Two Images Content Centered"
+            },
+            {
+                "type": "image_picker",
+                "id": "image1",
+                "label": "Image 1"
+            },
+            {
+                "type": "image_picker",
+                "id": "image2",
+                "label": "Image 2"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description"
+            }
+        ]
+    }
 {% endschema %}
