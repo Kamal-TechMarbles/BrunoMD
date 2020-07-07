@@ -1,0 +1,86 @@
+<div id="shopify-section-ingredients-accordions">
+<div class="natural-ingredients">
+  <div class="page-width">
+		<div class="grid">
+			<div class="grid__item medium-up--one-half">
+				<h1>{{ section.settings.title }}</h1>
+          </div>
+    </div>
+  </div>
+	<div class="page-width">
+		<div class="grid">
+			<div class="grid__item medium-up--one-half">
+				<div class="accordions-wrap">
+					{%- assign count = 1 -%}
+					{% for block in section.blocks %}
+						<div class="accordion {% if count == 1 %}activeAcc{% endif %}">
+							<h2>{{ block.settings.acc_title }} <i class="{% if count == 1 %}active{% endif %}"></i></h2>
+							{% if block.settings.acc_sub != empty or block.settings.acc_sub != 'blank' %}
+							<span>{{ block.settings.acc_sub }}</span>
+							{% endif %}
+							<div class="accordion_text" style="{% if count != 1 %}display:none{% endif %}">{{ block.settings.acc_text }}</div>
+						</div>
+						{% assign count = count | plus: 1 %}
+					{% endfor %}
+				</div>
+			</div>
+			<div class="grid__item medium-up--one-half riboflam_accordions-img">
+				{%- assign image = section.settings.image | img_url: 'master' | split:'?' | first -%}
+				<div class="ingredients-img">
+                  <figure class="section-img">
+					<img src="{{ image }}" alt="Natural Ingredients">
+				</figure>
+              </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+{% schema %}
+	{
+		"name":  "Natural Ingredients",
+		"class": "natural-ingredients",
+		"settings": [
+			{
+				"type":    "header",
+				"content": "Natural Ingredients Section"
+			},
+			{
+				"type":   "text",
+				"id":     "title",
+				"label":  "Section Heading/Title",
+				"default": "<b>Natural</b> Ingredients"
+			},
+			{
+				"type":  "image_picker",
+				"id":    "image",
+				"label": "Section Image"
+			}
+		],
+		"name":   "Ingredients List",
+		"blocks": [
+			{
+				"type": "accordion",
+            	"name": "Ingredients",
+            	"settings": [
+            		{
+            			"type":   "text",
+						"id":     "acc_title",
+						"label":  "Ingredient Name"
+            		},
+            		{
+            			"type":   "text",
+						"id":     "acc_sub",
+						"label":  "Ingredient Sub Name"
+            		},
+            		{
+            			"type":   "richtext",
+						"id":     "acc_text",
+						"label":  "Description"
+            		}
+            	]
+			}
+		]
+	}
+{% endschema %}

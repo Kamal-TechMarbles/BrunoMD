@@ -1,0 +1,78 @@
+<div class="full_body_benefits-section">
+  <div class="page-width">
+    <div class="grid__item medium-up--one-half">
+      <div class="full-body-benefits">
+        <h1>{{ section.settings.heading | remove: '<p>' | remove: '</p>' }}</h1>
+        <h6>{{ section.settings.sub_heading | remove: '<p>' | remove: '</p>' }}</h6>
+        <ul class="benefits-points">
+           {% for block in section.blocks %}
+	          <li>{{ block.settings.Benefits | escape }}</li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="grid__item medium-up--one-half">
+      <div class="benefits-img">
+      	<img class="lazyload benefits-img-child" alt="Full Body Benefits" data-src="{{ section.settings.images | product_img_url: '800x' | split:'?' | first }}">
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Full Body Benefits",
+    "settings": [
+		{
+           "type": "header",
+           "content": "Section Images"
+        }
+		,
+		 {
+          "type": "image_picker",
+          "id": "images",
+          "label": "section Image"
+        },
+		{
+           "type": "header",
+           "content": "Section Heading"
+        },
+		 {
+           "type": "richtext",
+           "id": "heading",
+           "label": "heading"
+        },
+		{
+           "type": "header",
+           "content": "Section Sub Heading"
+        },
+		 {
+           "type": "richtext",
+           "id": "sub_heading",
+           "label": "heading"
+        }
+	],
+      "blocks": [
+        {
+          "type": "text",
+          "name": "text",
+          "settings": [
+            {
+              "type": "header",
+              "content": "Benefits"
+            },
+            {
+              "type": "text",
+              "id": "Benefits",
+              "label": "Benefits"
+            }
+          ]
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

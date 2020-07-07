@@ -1,0 +1,36 @@
+<div class="parallalc-section">
+  	<div class="para-right showMobile text-center" style="display:none">
+      	<h2>{{ section.settings.imgHead }}</h2>
+      	{{ section.settings.imgTxt }}
+  	</div>
+  	<div class="para-left">
+  		<img src="{{ section.settings.img | img_url: 'master' }}">
+  	</div>
+  	<div class="para-right hideMobile">
+      	<h2>{{ section.settings.imgHead }}</h2>
+      	{{ section.settings.imgTxt }}
+  	</div>
+</div>
+
+{% schema %}
+    {
+        "name": "Parallel Content Section",
+        "settings": [
+			{
+                "type": "image_picker",
+                "id": "img",
+                "label": "Upload Image"
+            },
+			{
+                "type": "text",
+                "id": "imgHead",
+                "label": "Section Title"
+            },
+			{
+                "type": "textarea",
+                "id": "imgTxt",
+                "label": "Description"
+            }
+        ]
+    }
+{% endschema %}

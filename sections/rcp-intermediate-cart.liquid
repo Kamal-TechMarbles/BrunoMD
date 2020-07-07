@@ -1,0 +1,335 @@
+<style type="text/css">
+    .gift-select {
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px auto;
+      	display: flex;
+    }
+    /*.free-gift-title:before {
+        border: 2px solid #518fd3;
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        line-height: 42px;
+        font-size: 40px;
+        color: #518fd3;
+        margin: auto;
+        content: '+';
+        height: 40px;
+        width: 40px;
+        left: -50px;
+        bottom: 0;
+        top: 0;
+    }*/
+    .free-gift-title {
+        display: inline-block;
+        position: relative;
+        font-size: 1.5em;
+      	text-align: left;
+        max-width: 320px;
+        padding-left: 0;
+        width: 100%;
+        left: 10px;
+    }
+    .free-gift-option {
+        font-weight: bold;
+    }
+    .gift-select form {
+        position: relative;
+        max-width: 310px;
+        width: 60%;
+    }
+    select.minimal-arrow {
+        background-image:
+            linear-gradient(45deg, transparent 50%, gray 50%),
+            linear-gradient(135deg, gray 50%, transparent 50%),
+            linear-gradient(to right, #ccc, #ccc) !important;
+        background-position:
+            calc(100% - 20px) calc(1em + 2px),
+            calc(100% - 15px) calc(1em + 2px),
+            calc(100% - 2.5em) 0.5em !important;
+        background-size:
+            5px 5px,
+            5px 5px,
+            1px 1.5em !important;
+        background-repeat: no-repeat !important;
+    }
+    .gift-select select {
+        padding: 10px 32px 8px 7px;
+        border: 2px solid #00a3dc;
+        background: transparent;
+        border-radius: 5px;
+        line-height: 20px;
+        margin-top: 2px;
+        font-size: 13px;
+        width: 100%;
+    }
+    .gift-select select:focus {
+        border: 2px solid #00a3dc;
+    }
+    .free {
+        font-weight: 600;
+        font-size: 18px;
+        padding: 3px 0;
+        color: #518fd3;
+    }
+    .gift-product-info {
+        text-align: center;
+        display: none;
+    }
+    .gift-product-info>*{
+        vertical-align: middle;
+        display: inline-block;
+        margin: -2px;
+    }
+    .gift-product-info img {
+        width:150px;
+    }
+    .gift-product-info span {
+        text-decoration: line-through;
+        padding-right: 10px;
+        color: red;
+        display:block;
+    }
+    @media screen and ( max-width: 1280px ) {
+        .free-gift-title {
+            max-width: 260px;
+        }
+        .free {
+            font-size: 15px
+        }
+        .gift-product-info {
+            width: 40%
+        }
+        .gift-product-info img {
+            width: 100px
+        }
+    }
+    @media screen and ( max-width: 1024px ) {
+        .free-gift-title {
+            max-width: 240px;
+            line-height: 1.2
+        }
+        .free-gift-title::before {
+            line-height: 30px;
+            font-size: 30px;
+            height: 30px;
+            width: 30px;
+            left: -40px;
+        }
+        .gift-select {
+            padding: 10px 15px !important
+        }
+        .gift-select select {
+            padding: 8px 32px 6px 7px;
+            line-height: 18px;
+            font-size: 12px;
+        }
+        .gift-product-info * {
+            padding-right: 4px;
+            text-align: right;
+            width: 60%;
+        }
+        .gift-product-info span {
+            font-size: 13px;
+        }
+    }
+    @media screen and ( max-width: 750px ) {
+        .free {
+            display: block;
+        }
+        .free-gift-title {
+      	     max-width: 350px;
+            overflow:hidden;
+            left:0;
+        }
+        .free-gift-title span {
+            white-space:nowrap;
+            font-size:13px;
+        }
+        .gift-select form {
+            max-width: 350px;
+            text-align: left;
+        }
+        .gift-product-info {
+            padding-left: 20px;
+        }
+        .gift-product-info div:first-child{
+            width:100%;
+            margin:auto;
+            display:block;
+        }
+        .gift-product-info div:last-child {
+            display:flex;
+            width:100%;
+            justify-content:center;
+        }
+        .gift-product-info div:last-child span {
+            width:auto;
+        }
+    }
+</style>
+
+<!-- Query String to Product Handle -->
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&' -%}
+{%- assign pageQuerystring = pageUrl | split:'?' | last -%}
+{%- assign keyAndValue = pageQuerystring | split:'=' -%}
+{%- assign phandle =  keyAndValue[1] -%}
+
+<!-- Product Handle Variable -->
+{%- assign product = all_products[phandle] -%}
+
+<!-- Subscription Price Value -->
+{% for variant in product.variants %}
+	{%- assign subsprice = variant.metafields.subscriptions.discount_variant_price | replace: ".", "" -%}
+{% endfor %}
+
+<!-- Subscription Price Percentage -->
+{% assign subscription_product = product.metafields.subscriptions %}
+{% assign discount_percentage = subscription_product.discount_percentage | round: 0 %}
+
+<!-- You Save TXT -->
+{% assign yousave = product.price | minus: subsprice %}
+<div class="brunoMD-content">
+	<p class="pro-price">Price: <span class="price-value">{{ subsprice | money }}</span><span class="yousave-span">You Save {{ discount_percentage }}% ({{ yousave | money }}) + Free Shipping!</span></p>
+  
+  <!-- Check Gives Away product -->
+  {% assign is_give_away_product = false %}
+  {% assign gift= '' %}
+  {% for tag in product.tags %}
+  {% if tag=='gives-away-product' %}
+  {% assign is_give_away_product = true %}
+  {% endif %}
+  {% if is_give_away_product== true %}
+    {% assign is_give_away_product = false %}
+      {% for product2 in collections.all.products %}
+        {% assign tags = product2.tags | join:"," %}
+        {% if tags contains gift and tags contains 'gift-product' %}
+        	{% assign is_give_away_product = true %}
+        {%endif%}
+    {%endfor%}
+  {%endif%}
+  {% if tag contains 'gift-' %}
+  {% assign gift = tag %}
+  {% endif %}
+  {% endfor %}
+
+  {% if is_give_away_product == true %}
+    <div class="gift-select" style="border:2px solid #518fd3;background:#eaf5fe;padding:0 10px;border-radius:15px;max-width:600px;">
+      <form id="frm-gift-product">
+        <input type="hidden" name="form_type" value="product">
+        <input type="hidden" name="utf8" value="✓">
+        <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="price" value="0" id="gift-price">
+        <input type="hidden" name="variant_to_price" value="0" id="gift-variant-price">
+        <label for="gift-select" class="free-gift-title">
+          <span class="free">FREE GIFT</span><span class="free"> WITH YOUR PURCHASE</span>
+          <select id="gift-select" name="id" class="minimal-arrow">
+            {% for product2 in collections.all.products %}
+            {% assign tags = product2.tags | join:"," %}
+            {% if tags contains gift and tags contains 'gift-product' %}
+            <option value="{{ product2.variants.first.id }}" data-price="{{product2.variants.first.price | money}}">{{product2.title}}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+        </label>
+      </form>
+      {% for product2 in collections.all.products %}
+      {% assign tags = product2.tags | join:"," %}
+      {% if tags contains gift and tags contains 'gift-product' %}
+      <div class="gift-product-info" id="gift-product-info-{{product2.variants.first.id}}">
+        <div><img src="{{product2.selected_or_first_available_variant.featured_media | default: product2.featured_media | img_url:'150x150'}}"></div>
+        <div>
+          <span>{{ product2.price | money }}</span>
+          <!--<span style="text-decoration:none;">FREE</span>-->
+        </div>
+
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  
+  {% form 'product', product, novalidate: 'novalidate', data-product-form: '', data-productid: product.id %}
+      <div class="quantity-subs">
+          <label>
+              <input type="radio" name="subscription_type" value="one_time">
+              <div class="pack">One-time Purchase<br><span>{{ product.price | money }}</span></div>
+          </label>
+          <label>
+              <input type="radio" name="subscription_type" value="subscribe" checked>
+              <div class="pack">Subscribe & Save<br><span>{{ subsprice | money }}</span></div>
+          </label>
+      </div>
+      {% include 'subscription-product' %}
+      <div class="buynow-btns">
+          <input type="hidden" name="onetime_price" id="onetime_price" value="{{ product.price | money }}">
+          <input type="hidden" name="subs_price" id="subs_price" value="{{ subsprice | money }}">
+          <input type="hidden" name="yousave" id="yousave" value="{{ yousave | money }}">
+          <input type="hidden" name="savepercent" id="savepercent" value="{{ discount_percentage }}">
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+          <button type="submit" class="buy-now" name="add">Subscribe Now</button>
+      </div>
+      <div class="subs-statement" style="color: {{ section.settings.text-color }}">{{ section.settings.txt }}</div>
+  {% endform %}
+</div>
+
+<script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0332/6297/t/76/assets/jquery.min.js"></script>
+<script>
+  if(jQuery('#gift-select').length){
+      jQuery('#gift-select').change(function(){
+        selectGift();
+      });
+      selectGift();
+      
+      function selectGift(){
+        const val = jQuery('#gift-select').val();
+        // console.log(JSON.stringify(jQuery('option[]')));
+        const price = jQuery('option[value='+val+']').data('price');
+        jQuery('#gift-price').val(price);
+        jQuery('#gift-variant-price').val(price);
+        jQuery('.gift-product-info').hide();
+        jQuery('#gift-product-info-'+val).show();
+      }
+    }
+  jQuery('.buy-now').click(function(e){
+    e.preventDefault();
+    if(jQuery('#frm-gift-product').length){
+      jQuery.ajax({
+        type: 'POST', 
+        url: '/cart/add.js',
+        dataType: 'json', 
+        data: $('#frm-gift-product').serialize(),
+        success: function(){
+          jQuery('.shopify-product-form').submit();
+        }
+      });
+    } else {
+      jQuery('.shopify-product-form').submit();
+    }
+  });
+</script>
+
+{% schema %}
+	{
+    	"name": "Intermediate Cart",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Intermediate Cart"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Description"
+			},
+			{
+				"type": "color",
+				"id": "text-color",
+				"label": "Text Color"
+			}
+		]
+  	}
+{% endschema %}

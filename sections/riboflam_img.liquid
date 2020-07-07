@@ -1,0 +1,21 @@
+<div class="ribo-img">
+  <img  src="{{ section.settings.images | product_img_url: '800x' }}">
+</div>
+{% schema %}
+  {
+    "name": "Images Section",
+    "settings": [
+		{
+           "type": "header",
+           "content": "Section Images"
+        }
+		,
+		 {
+          "type": "image_picker",
+          "id": "images",
+          "label": "section Image"
+        }
+	]
+  }
+{% endschema %}
+

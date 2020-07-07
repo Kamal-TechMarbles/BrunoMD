@@ -1,0 +1,70 @@
+<div class="productpage-banner our-story-banner">
+    <div class="page-width-custom">
+        <div class="grid">
+            <div class="bn-grd grid__item small--one-whole medium-up--two-thirds" style="background-image: url({{ section.settings.banner | img_url: 'master' }})">
+                <div class="story-banner-text-wrapper">
+                    <p>{{ section.settings.banner_text }}</p>
+                </div>
+            </div>
+            <div class="bn-grd grd2 grid__item small--one-whole medium-up--one-third"><img src="{{ section.settings.product_banner | img_url: 'master' }}"></div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Product Banner",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Product Banner Section"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner",
+                "label": "Upload Banner Image"
+            },
+            {
+                "type": "richtext",
+                "id": "banner_text",
+                "label": "Banner Content"
+            },
+            {
+                "type": "image_picker",
+                "id": "product_banner",
+                "label": "Upload Product Image"
+            },
+			{
+           "type": "header",
+           "content": "Section Heading"
+        },
+        {
+           "type": "richtext",
+           "id": "heading",
+           "label": "heading"
+        },
+		{
+           "type": "header",
+           "content": "Product Benefits"
+        },
+		 {
+          "type": "image_picker",
+          "id": "images",
+          "label": "Product Image"
+        },
+		{
+           "type": "header",
+           "content": "Product Benefits style"
+        },
+		{
+           "type": "header",
+           "content": "Content"
+        },
+		{
+           "type": "richtext",
+           "id": "content",
+           "label": "content"
+        }
+        ]
+    }
+{% endschema %}

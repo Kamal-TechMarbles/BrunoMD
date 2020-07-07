@@ -1,0 +1,48 @@
+<section class="pbenefits common-section" id="benefits">
+  	<div class="page-width">
+      	<div class="imgbox desktop-hide">
+          	<div>{{ section.settings.txt2 }}</div>
+      		<img class="lazyload" data-src="{{ section.settings.img | img_url: 'master' | split:'?' | first }}" alt="Benefits">
+      	</div>
+      	<div class="content">
+      		<h2>{{ section.settings.head }}</h2>
+      		{{ section.settings.txt }}
+      	</div>
+      	<div class="imgbox mobile-hide">
+          	<div>{{ section.settings.txt2 }}</div>
+      		<img class="lazyload" data-src="{{ section.settings.img | img_url: 'master' | split:'?' | first }}" alt="Benefits">
+      	</div>
+    </div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Product Benefits",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Product Benefits"
+			},
+			{
+				"type": "text",
+				"id": "head",
+				"label": "Section Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Description"
+			},
+			{
+				"type": "image_picker",
+				"id": "img",
+				"label": "Upload Image"
+			},
+			{
+				"type": "richtext",
+				"id": "txt2",
+				"label": "Description"
+			}
+		]
+  	}
+{% endschema %}

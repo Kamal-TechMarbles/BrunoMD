@@ -1,0 +1,126 @@
+<div class="site-slider-banner" style="background-color:{{section.settings.background-color }}">
+  <div class="scroll-img"><img src="{{ 'scroll.png' | asset_img_url: 'master' | split:'?' | first }}" alt="Scroll" width="20" height="191"></div>
+    <div class="grid">
+        <div class="grid__item small--one-full medium-up--one-half">
+            <div class="banner-discription">
+                <h3>{{ section.settings.sub-heading | escape }}</h3>
+                <h1>{{ section.settings.main-heading | escape }}</h1>
+                <p style="color:{{section.settings.description-heading_color }}; font-size:{{section.settings.description_font_size}}px">{{ section.settings.description | escape }}</p>
+                <div class="section-btn">
+                    <a href="{{ section.settings.button_link | escape }}">{{ section.settings.readmore_text | escape }}
+                        <span><img src="{{ 'arrow.png' | asset_img_url: 'master' | split:'?' | first }}" alt="Arrow" width="42" height="15"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="grid__item  small--one-full medium-up--one-half bannerHolder">
+			<div id="bannerVideo" class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_2ilorn7g0a videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+        </div>
+        <div class="grid__item  small--hide medium-up--one-full">
+            <div class="product-img"><img src="{{ section.settings.images_on_slider | img_url: '400x307' | split:'?' | first }}" alt="Product Slide" width="399" height="307"></div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Slider with text",
+        "settings": [
+            {
+                "type": "color",
+                "id": "background-color",
+                "label": "background color"
+            },
+            {
+                "type": "header",
+                "content": "Sub Heading",
+                "info": "Text"
+            },
+            {
+                "type": "text",
+                "id": "sub-heading",
+                "label": "Sub Heading"
+            },
+            
+            {
+                "type":      "header",
+                "content":   "Main Heading",
+                "info":      "Text"
+            },
+            {
+                "type": "text",
+                "id": "main-heading",
+                "label": "Main Heading"
+            },
+            {
+                "type":      "header",
+                "content":   "Description",
+                "info":      "Text"
+            },
+            {
+                "type": "text",
+                "id": "description",
+                "label": "Description"
+            },
+            {
+                "type":      "header",
+                "content":   "Button",
+                "info":      "Button Text information"
+            },
+        {
+                "type": "text",
+                "id": "readmore_text",
+                "label": "Button label"
+            },
+            {
+                "type": "url",
+                "id": "button_link",
+                "label": "Button link"
+            },
+            {
+                "type":      "header",
+                "content":   "Product Image",
+                "info":      "Text"
+            },
+        {
+                "type": "image_picker",
+                "id": "images_on_slider",
+                "label": "Banner Product Images"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "images",
+                "name": "Slide(s)",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Choose Slide Item",
+                        "info": "You can upload images or embed youtube url for slides"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "slider-img",
+                        "label": "Slider Images"
+                    },
+          {
+                        "type": "text",
+                        "id": "slider_txt",
+                        "label": "Slider Tagline"
+                    },
+            {
+                        "type": "text",
+                        "id": "slide_video",
+                        "label": "Embed Youtube URL"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "category": "Homepage",
+                "name": "Slider with text"
+            }
+        ]
+    }
+{% endschema %}

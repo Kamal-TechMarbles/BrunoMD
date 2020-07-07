@@ -1,0 +1,107 @@
+<div class="our-story-img">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item small--one-full medium-up--one-half">
+        <div class="story_img_div">
+        	<div class="story-img"><img  src="{{ section.settings.section_img | img_url: '800x' | split:'?' | first }}"></div>
+          	<h1>{{ section.settings.heading_richtext | remove: '<p>'  | remove: '</p>'  }}</h1>
+            <p>{{ section.settings.description | remove: '<p>'  | remove: '</p>'  }}</p>
+        </div>
+      </div>
+      <div class="grid__item small--one-full medium-up--one-half">
+        <div class="story_img_div">
+        	<div class="story-img"><img  src="{{ section.settings.section_img1 | img_url: '800x' | split:'?' | first }}"></div>
+          	<h1>{{ section.settings.heading_richtext1 | remove: '<p>'  | remove: '</p>'  }}</h1>
+            <p>{{ section.settings.description1 | remove: '<p>'  | remove: '</p>'  }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	<div class="page-width belowSec">
+    	<div class="grid">
+      		<div class="grid__item small--one-full medium-up--one-half">
+        		<h1>{{ section.settings.bhead }}</h1>
+        		<p>{{ section.settings.btext }}</p>
+        	</div>
+      		<div class="grid__item small--one-full medium-up--one-half">
+        		<div class="story-img"><img  src="{{ section.settings.bimg | img_url: 'master' | split:'?' | first }}"></div>
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+	 	{
+          "type":      "header",
+          "content":   "Left Section",
+          "info":      "Images"
+        },
+		{
+            "type": "image_picker",
+            "id": "section_img",
+            "label": "Image"
+        },
+       	{
+          "type":      "header",
+          "content":   "Heading",
+          "info":      "Heading"
+        },
+		{
+           "type": "richtext",
+           "id": "heading_richtext",
+           "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "default": "Welcome to my shop!",
+          "label": "Welcome message"
+        },
+		{
+          "type":      "header",
+          "content":   "Right Section",
+          "info":      "Images"
+        },
+		{
+            "type": "image_picker",
+            "id": "section_img1",
+            "label": "Image"
+        },
+       	{
+          "type":      "header",
+          "content":   "Heading",
+          "info":      "Heading"
+        },
+		{
+           "type": "richtext",
+           "id": "heading_richtext1",
+           "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description1",
+          "default": "Welcome to my shop!",
+          "label": "Welcome message"
+        },
+		{
+			"type": "text",
+          	"id": "bhead",
+          	"label": "Section Heading"
+        },
+		{
+			"type": "textarea",
+          	"id": "btext",
+          	"label": "Section Content"
+        },
+		{
+            "type": "image_picker",
+            "id": "bimg",
+            "label": "Section Image"
+        }
+	]
+  }
+{% endschema %}
+

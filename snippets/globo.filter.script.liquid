@@ -1,0 +1,50 @@
+{{ 'v5.globo.filter.css' | asset_url | stylesheet_tag }}<script defer="defer">
+{%- assign assets_url = 'product-1.png' | asset_img_url: '50x' | split: 'product-1_50x.png' -%}
+{%- assign files_url  = 'product-1.png' | file_img_url: '50x' | split: 'product-1_50x.png' -%}
+  window.moneyFormat = "{{ shop.money_format | replace:'"',"'" }}";
+  window.shopCurrency = "{{ shop.currency }}";
+  window.assetsUrl = '{{ assets_url[0] }}';
+  window.filesUrl = '{{ files_url[0] }}';
+  var page_id = {% if template contains 'collection' %}{% if collection.handle == 'all' %}1{% else %}{{collection.id | default: 1}}{% endif %}{% elsif template contains 'search' %}2{% else %}0{% endif %};
+  var GloboFilterConfig = {
+    api: {
+      filterUrl: "https://filter-v5.globosoftware.net/filter",
+      searchUrl: "https://filter-v5.globosoftware.net/search",
+    },
+    shop: {
+      name: "{{ shop.name | escape }}",
+      url: "{{ shop.url }}",
+      domain: "{{ shop.permanent_domain }}",
+      product_image: {width: 360, height: 400},
+      no_image_url: "https://cdn.shopify.com/s/images/themes/product-1.png",
+      themeStoreId: 796,
+      swatches: {{ shop.metafields.globo.swatches | json }},
+      images: ["1584004371product-benefits.jpg","1584004661product-benefits.jpg","1584006102nutrition.jpg","1584006628howtouse.jpg","1584011142label-backside.jpg","1584011238label-frontside.jpg","1584362806features-img.png","1584362838features-img2.png","1584362866features-img3.png","1584363601features-img3.png","1584419171features-img3.png","1584419871features-img3.png","1584421790features-img3.png","1584421850features-img3.png","1584425093features-img4.png","1584425180features-img5.png","1584425209features-img6.png","1584593506footer-icon1.png","1584964577icon_healthyjoints.png","1584964607icon_healthyhair.png","1584964632icon_healthybones.png","1584964819icon_ultabio.png","1584964844icon_healthyweight.png","1584964871icon_ketobenefits.png","1584964972icon_healthyjoints.png","1584964997icon_healthyhair.png","1584965023icon_healthybones.png","1584965216icon_ultabio.png","1584965250icon_ultabio.png","1584965259icon_ultabio.png","1584965275icon_ultabio.png","1584965298icon_healthyweight.png","1584965307icon_healthyweight.png","1584965317icon_healthyweight.png","1584965343icon_healthyweight.png","1584966042icon_ketobenefits.png","1584966052icon_ketobenefits.png","1584966062icon_ketobenefits.png","1584966073icon_ketobenefits.png","1584966073icon_ketobenefits_1.png","1584966336icon_healthyjoints.png","1584966344icon_healthyjoints.png","1584966367icon_healthyjoints.png","1584966383icon_healthyhair.png","1584966392icon_healthyhair.png","1584966418icon_healthyhair.png","1584966427icon_healthybones.png","1584966437icon_healthybones.png","1584966473icon_healthybones.png","1584966856icon_ultabio.png","1584966886icon_healthyweight.png","1584966924icon_ketobenefits.png","1585035672Science-BN.png","1585037713Science-BN.png","1585049162product-img.png","1585049351product-img.png","1585209113nutrition.jpg","1585209281howtouse.jpg","1585209437label-backside.jpg","1585209707label-frontside.jpg","1585209830icon_healthybones.png","1585209886features-img5.png","1585209940features-img4.png","1585209989features-img6.png","1585210192product-img2.png","1585221643product-img2.png","1585221654product-img2.png","1585221665product-img2.png","1585221676product-img2.png","1585221688product-img2.png","1585221699product-img2.png","1585221720product-img2.png","1585221732product-img2.png","1585221760product-img2.png","1585221855product-img2.png","1585221890product-img2.png","1585222016nutrition.jpg","1585222026nutrition.jpg","1585222053nutrition.jpg","1585222064nutrition.jpg","1585222081nutrition.jpg","1585222102nutrition.jpg","1585222161nutrition.jpg","1585222195nutrition.jpg","1585222589nutrition.jpg","1585222601nutrition.jpg","1585222621nutrition.jpg","1585222906howtouse.jpg","1585222916howtouse.jpg","1585222936howtouse.jpg","1585222947howtouse.jpg","1585222960howtouse.jpg","1585222980howtouse.jpg","1585223008howtouse.jpg","1585223019howtouse.jpg","1585223031howtouse.jpg","1585223044howtouse.jpg","1585223118howtouse.jpg","1585223375label-backside.jpg","1585223385label-backside.jpg","1585223396label-backside.jpg","1585223465label-backside.jpg","1585223476label-backside.jpg","1585223505label-backside.jpg","1585223516label-backside.jpg","1585223535label-backside.jpg","1585223545label-backside.jpg","1585223575label-backside.jpg","1585223594label-backside.jpg","1585223623label-frontside.jpg","1585223634label-frontside.jpg","1585223655label-frontside.jpg","1585223666label-frontside.jpg","1585223696label-frontside.jpg","1585223708label-frontside.jpg","1585223719label-frontside.jpg","1585223740label-frontside.jpg","1585223753label-frontside.jpg","1585223773label-frontside.jpg","1585223814label-frontside.jpg","1585224021features-img4.png","1585224030features-img4.png","1585224048features-img4.png","1585224057features-img4.png","1585224077features-img4.png","1585224086features-img4.png","1585224096features-img4.png","1585224105features-img4.png","1585224132features-img4.png","1585224142features-img5.png","1585224177features-img5.png","1585224195features-img5.png","1585224215features-img4.png","1585224224features-img5.png","1585224254features-img4.png","1585224272features-img6.png","1585224292features-img5.png","1585224310features-img5.png","1585224321features-img5.png","1585224358features-img5.png","1585224388features-img5.png","1585224399features-img6.png","1585224429features-img6.png","1585224441features-img6.png","1585224453features-img5.png","1585224464features-img6.png","1585224516features-img6.png","1585224527features-img6.png","1585224558features-img6.png","1585224570features-img5.png","1585224593features-img6.png","1585224634features-img6.png","1585224645features-img6.png","arrow.png","banner.png","bg-science.png","facebook-img.png","fruit-img1.png","fruit-img2.png","fruit-img3.png","fruit-img4.png","fruit-img5.png","gooseberry.png","graps.png","graps1-bg.png","icon1.png","icon2.png","icon3.png","icon4.png","icon5.png","insta-icon.png","insta-img.png","landing-bg.jpg","linkedin-img.png","mango.png","natural-bg.png","news-letter.png","payment.png","product-banner-bg.jpg","product-banner.jpg","product-benefits-bg.png","product-bg.png","product-bg1.png","product-icon1.png","product-icon2.png","product-icon3.png","product-icon4.png","product-icon5.png","product-icon6.png","science-banner.png","science-bg-banner.jpg","sciencebg.jpg","scroll.png","video-bg.jpg","who-we-are.png"]    },
+    filter: {
+      id: {{ shop.metafields.globo.filters | json }}[page_id] || {{ shop.metafields.globo.filters | json }}['default'] || 0,
+      layout: 1,
+      showCount: 1,
+      isLoadMore: 0    },
+    collection: {
+      id: {{ collection.id | default: 0 }},
+      handle: '{{ collection.handle }}',
+      sort: {% if template contains 'collection' %}"{{ collection.default_sort_by | default: 'best-selling' }}"{% else %}null{% endif %},
+      tags: {% if current_tags %}[{% for tag in current_tags %}{{ tag | handle | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% else %}null{% endif %},
+      vendor: "{{ collection.current_vendor }}",
+      type: "{{ collection.current_type }}",
+      term: "{{ search.terms | escape }}",
+      limit: 10
+    },
+    customer: {% if customer %}{id: {{customer.id}}, tags: {{customer.tags | json}}}{% else %}false{% endif %},
+    selector: {
+      sortBy: '#SortBy',
+      pagination: '.pagination',
+      products: '.grid--view-items, .list-view-items'
+    }
+  };
+</script>
+<script defer="defer" id="gspfSearchResult" type="template/html">{% include 'globo.filter.search' %}</script><script defer="defer" id="gspfFilterTree"   type="template/html">{% include 'globo.filter.tree' %}</script>
+<script defer="defer" id="gspfFilterSort"   type="template/html">{% include 'globo.filter.sort' %}</script>
+<script defer="defer" id="gspfProduct"      type="template/html">{% include 'globo.filter.product' %}</script>
+<script defer="defer" id="gspfPagination"   type="template/html">{% include 'globo.filter.pagination' %}</script>
+{{ 'v5.globo.filter.lib.js' | asset_url | script_tag }}<script defer="defer" type="text/javascript">var globofilter = new GloboFilter(GloboFilterConfig);</script>

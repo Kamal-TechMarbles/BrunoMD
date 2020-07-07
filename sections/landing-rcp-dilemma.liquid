@@ -1,0 +1,48 @@
+<section class="dilemmna common-section">
+  	<div class="leftSide">
+      <img class="lazyload" data-src="{{ section.settings.facts | img_url: "master" | split:'?' | first }}" alt="Dilemma">
+  	</div>
+  	<div class="rightSide">
+      	<h2>{{ section.settings.head1 }}</h2>
+      	<h3>{{ section.settings.head2 }}</h3>
+      	<div class="check-p">{{ section.settings.head3 }}</div>
+      	<div class="purple">{{ section.settings.head4 }}</div>
+  	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "The Collagen Dilemma",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "The Collagen Dilemma"
+			},
+			{
+				"type": "image_picker",
+				"id": "facts",
+				"label": "Upload Left Image"
+			},
+			{
+				"type": "text",
+				"id": "head1",
+				"label": "Section Heading"
+			},
+			{
+				"type": "text",
+				"id": "head2",
+				"label": "Subhead"
+			},
+			{
+				"type": "textarea",
+				"id": "head3",
+				"label": "Check Bullets"
+			},
+			{
+				"type": "richtext",
+				"id": "head4",
+				"label": "Purple Text"
+			}
+		]
+  	}
+{% endschema %}

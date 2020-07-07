@@ -1,0 +1,100 @@
+{%- assign product = all_products[section.settings.collection] -%}
+{%- assign sendpro = section.settings.collection -%}
+
+<section class="rcp-upfooter common-section" style="background-image: url({{ section.settings.background | img_url: 'master' | split:'?' | first }})">
+  	<div class="trust-badge text-center">
+      	<img class="lazyload" data-src="{{ section.settings.badge | img_url: 'master' | split:'?' | first }}">
+      	<h2>{{ section.settings.head1 }}</h2>
+      	<h4>{{ section.settings.head2 }}</h4>
+      	{{ section.settings.txt }}
+      	<div class="buynow"><a href="/pages/intermediate-cart/?product={{ sendpro }}" class="buynow-button">Buy Now</a></div>
+  	</div>
+  	<div class="rcp-topheader">
+      	<div class="page-width">
+          	<div class="column">
+              	<img class="lazyload" data-src="{{ section.settings.top_img1 | img_url: 'master' | split:'?' | first }}" alt="topbar Icon1" width="56" height="54">
+              	<span>{{ section.settings.top_txt1 }}</span>
+          	</div>
+          	<div class="column bordered">
+              	<img class="lazyload" data-src="{{ section.settings.top_img2 | img_url: 'master' | split:'?' | first }}" alt="topbar Icon2" width="50" height="44">
+              	<span>{{ section.settings.top_txt2 }}</span>
+          	</div>
+          	<div class="column">
+              	<img class="lazyload" data-src="{{ section.settings.top_img3 | img_url: 'master' | split:'?' | first }}" alt="topbar Icon3" width="46" height="48">
+              	<span>{{ section.settings.top_txt3 }}</span>
+          	</div>
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Upper Footer",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Upper Footer"
+			},
+			{
+				"type": "image_picker",
+				"id": "background",
+				"label": "Section Background"
+			},
+			{
+				"type": "image_picker",
+				"id": "badge",
+				"label": "Badge Icon"
+			},
+			{
+				"type": "text",
+				"id": "head1",
+				"label": "Heading 1"
+			},
+			{
+				"type": "text",
+				"id": "head2",
+				"label": "Heading 2"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Benefits"
+			},
+			{
+				"type": "product",
+				"id": "collection",
+				"label": "Select Product for Buy Now"
+			},
+			{
+				"type": "text",
+				"id": "top_txt1",
+				"label": "Column 1 Text"
+			},
+			{
+				"type": "image_picker",
+				"id": "top_img1",
+				"label": "Column 1 Icon"
+			},
+			{
+				"type": "text",
+				"id": "top_txt2",
+				"label": "Column 2 Text"
+			},
+			{
+				"type": "image_picker",
+				"id": "top_img2",
+				"label": "Column 2 Icon"
+			},
+			{
+				"type": "text",
+				"id": "top_txt3",
+				"label": "Column 3 Text"
+			},
+			{
+				"type": "image_picker",
+				"id": "top_img3",
+				"label": "Column 3 Icon"
+			}
+		]
+  	}
+{% endschema %}

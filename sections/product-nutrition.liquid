@@ -1,0 +1,61 @@
+<div class="product-nutrition">
+	<div class="page-width">
+		<div class="grid">
+			<div class="grid__item medium-up--one-quarter">
+				{%- assign image = section.settings.image1 | img_url: 'master' | split:'?' | first -%}
+				<div class="nutrition-img nutrition-deatils gooseberry-img">
+                  <figure class="image-container">
+					<img src="{{ image }}" alt="Product Nutrition">
+				</figure>
+              </div>
+			</div>
+			<div class="grid__item medium-up--two-quarters">
+              	<div class="nutrition-deatils">
+                  <h2>{{ section.settings.title }}</h2>
+				<div class="section-text">{{ section.settings.content | strip }}</div>
+              </div>
+			</div>
+			<div class="grid__item medium-up--one-quarter">
+				{%- assign image = section.settings.image2 | img_url: 'master' | split:'?' | first -%}
+			<div class="nutrition-img">	
+              <figure class="image-container">
+					<img src="{{ image }}" alt="Product Nutrition">
+				</figure>
+              </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+	{
+		"name":  "Product Nutrition",
+		"class": "product-nutrition",
+		"settings": [
+			{
+				"type":    "header",
+				"content": "Product Nutrition Section"
+			},
+			{
+    			"type":   "text",
+				"id":     "title",
+				"label":  "Section Heading/Title"
+    		},
+			{
+				"type":  "image_picker",
+				"id":    "image1",
+				"label": "Left Side Image"
+			},
+			{
+    			"type":   "richtext",
+				"id":     "content",
+				"label":  "Middle Content"
+    		},
+    		{
+				"type":  "image_picker",
+				"id":    "image2",
+				"label": "Right Side Image"
+			}
+		]
+	}
+{% endschema %}

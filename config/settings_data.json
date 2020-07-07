@@ -1,0 +1,1818 @@
+{
+  "current": {
+    "color_text": "#36244b",
+    "color_body_text": "#69727b",
+    "color_sale_text": "#557b97",
+    "color_button": "#557b97",
+    "color_button_text": "#fff",
+    "color_small_button_text_border": "#3d4246",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#949494",
+    "color_text_field": "#fff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#ffffff",
+    "type_header_font": "poppins_n4",
+    "type_header_base_size": 26,
+    "type_base_font": "poppins_n4",
+    "type_base_size": 16,
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/BrunoMDofficial\/",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/brunomdofficial\/",
+    "social_linkedin_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/BrunoMD-favicon.png",
+    "enable_ajax": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#d20b0b",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "center",
+          "logo": "shopify:\/\/shop_images\/BRUNOMD-Logo_36d4f0be-9412-44e3-a300-9e04b2afd61e.png",
+          "logo_max_width": 155,
+          "main_linklist": "menu-2020",
+          "message": true,
+          "home_page_only": true,
+          "message_text": "Welcome to the Bruno Family!",
+          "message_link": "",
+          "color_bg": "#54337a",
+          "color_text": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "text": {
+            "type": "text",
+            "settings": {
+              "footer_logo": "shopify:\/\/shop_images\/BrunoMD-logo.png",
+              "text": "<p>Welcome to better health, the way only Italians can create it. Welcome to BRUNO MD. Prescription grade supplements to fuel your future.<\/p>"
+            }
+          },
+          "link_list": {
+            "type": "link_list",
+            "settings": {
+              "title": "Company",
+              "menu": "footer-customer-service-menu"
+            }
+          },
+          "1583411150109": {
+            "type": "link_list",
+            "settings": {
+              "title": "Customer",
+              "menu": "learn"
+            }
+          },
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Join the New Health Renaissance"
+            }
+          }
+        },
+        "block_order": [
+          "text",
+          "link_list",
+          "1583411150109",
+          "newsletter"
+        ],
+        "settings": {
+          "foo_icon_1": "shopify:\/\/shop_images\/footer-icon1.png",
+          "foo_text_1": "15% loyalty discount for subscribe & save customers",
+          "foo_icon_2": "shopify:\/\/shop_images\/footer-icon2.png",
+          "foo_text_2": "Free shipping for all orders above $75",
+          "foo_icon_3": "shopify:\/\/shop_images\/footer-icon3.png",
+          "foo_text_3": "30-Day money back guarantee - Purchase with complete confidence",
+          "show_payment_icons": false,
+          "color_footer_bg": "rgba(0,0,0,0)",
+          "color_footer_text": "#3d4246",
+          "show_locale_selector": true,
+          "show_currency_selector": true,
+          "copyright": "Copyright © 2020 brunomd.com. All Rights Reserved"
+        }
+      },
+      "1583135763171": {
+        "type": "homepage-banner",
+        "settings": {
+          "background-color": "#efece6",
+          "sub-heading": "Join the New Health",
+          "main-heading": "Renaissance",
+          "description": "Welcome to better health, the way only Italians can create it.  Welcome to BRUNO MD. Pharmaceutical grade supplements to fuel your future",
+          "readmore_text": "Shop All Products",
+          "button_link": "shopify:\/\/collections\/best-selling",
+          "images_on_slider": "shopify:\/\/shop_images\/BrunoMD-Royal-Collagen-Peptides-Collage-01-1041x800.png"
+        }
+      },
+      "1583142998664": {
+        "type": "home-about",
+        "settings": {
+          "about-img": "shopify:\/\/shop_images\/BrunoMD-Science-2020.jpg",
+          "section-name": "ABOUT US",
+          "main-heading": "",
+          "sub-heading_text": "Science First. <span>Prescription Grade Clinically Proven Ingredients.<\/span>",
+          "sub_heading_color": "#54337a",
+          "sub_font_size": 61,
+          "about-description": "In times of uncertainty, science matters. Bruno MD products are made for times like these. Bruno MD puts science first with over 25 years of pharmaceutical research and proven clinical studies backing every product we make. At its heart, science yearns to answer questions that better the human condition. How can we improve the outcomes for our customers? Our mother company, Bruno Farmateutici S.p.A, answers those questions for millions of our cardiac, diabetic, and eye patients each year with beneficial pharmacology: molecules that interact with cells and tissues that help save lives.<br><br>\nBruno MD approaches supplements with the same philosophy. We look at health and wellness and ask, “How can nature Herself help improve the human condition?” We answer that question with prescription-grade supplements and a scientific breakthrough called Phytosome® technology. Phytosome® delivers clinically proven nutrients where your body needs them in their most potent form. It’s called Ultra-Bioavailability. Consider this Nature’s prescription for health and wellness. Without Phytosome technology delivering nutrients at the molecular level, you are receiving minimal benefit from ordinary supplements. <b>Bruno MD. Science first<\/b>.",
+          "description-color": "#636464",
+          "description-font-size": 16,
+          "heightlight-description": "",
+          "readmore_text": "Learn More",
+          "readmore_link": "shopify:\/\/pages\/our-story-1"
+        }
+      },
+      "1583232529381": {
+        "type": "homepage-multivitamins-slider",
+        "disabled": true,
+        "blocks": {
+          "1583234312786": {
+            "type": "images",
+            "settings": {
+              "slider-img": "shopify:\/\/shop_images\/viatamin-product.png",
+              "slider-heading": "Vegan Certified",
+              "description": "Lorem ipsum dolor sit amet, consectetur scing  elit. Maecenas pharetra enim eget nulla  cursus porttitor."
+            }
+          },
+          "1583234600049": {
+            "type": "images",
+            "settings": {
+              "slider-img": "shopify:\/\/shop_images\/viatamin-product3.png",
+              "slider-heading": "No Colorants",
+              "description": "Lorem ipsum dolor sit amet, consectetur scing elit. Maecenas pharetra enim eget nulla  cursus porttitor."
+            }
+          },
+          "1583234494110": {
+            "type": "images",
+            "settings": {
+              "slider-img": "shopify:\/\/shop_images\/viatamin-product2.png",
+              "slider-heading": "Gluten and Allergen Free",
+              "description": "Lorem ipsum dolor sit amet, consectetur scing elit. Maecenas pharetra enim eget nulla  cursus porttitor."
+            }
+          },
+          "1583399356863": {
+            "type": "images",
+            "settings": {
+              "slider-img": "shopify:\/\/shop_images\/viatamin-product.png",
+              "slider-heading": "Vegan Certified",
+              "description": "Lorem ipsum dolor sit amet, consectetur scing elit. Maecenas pharetra enim eget nulla  cursus porttitor."
+            }
+          }
+        },
+        "block_order": [
+          "1583234312786",
+          "1583234600049",
+          "1583234494110",
+          "1583399356863"
+        ],
+        "settings": {
+          "background-color": "",
+          "main-heading": "<p>OUR PASSION FOR <strong><b>SCIENCE<\/b><\/strong> BRINGS YOU <strong><b>NATURE'S BEST MEDICINE<\/b><\/strong> <\/p>",
+          "main-heading_color": "#2c1844",
+          "main_font_size": 33,
+          "video_ml": "https:\/\/www.youtube.com\/embed\/pwF5Nklibrw",
+          "video_txt": "<b>BETTERING HUMANITY<\/b> TO PROVIDE ESSENTIALS FOR <b>FUTURE GENERATIONS<\/b>"
+        }
+      },
+      "1583300249957": {
+        "type": "art_of_Innovation",
+        "settings": {
+          "text_bg_color": "#ffffff",
+          "heading_richtext": "<p>The Art of <strong>Innovation<\/strong><\/p>",
+          "description_text": "Paint a new picture of what it means to thrive with \nBruno MD supplements — powered by Pharmaceutical grade, \nall-natural ingredients, and over 50 years of innovation \nin prescription medicine.",
+          "section-img": "shopify:\/\/shop_images\/Art-of-Innovation.jpg",
+          "button_link": "shopify:\/\/pages\/science-1",
+          "btn_text": "Read More",
+          "btn_bg": "#54337a",
+          "btn-color": "#ffffff",
+          "btn_font_size": 18,
+          "btn_con_img": "shopify:\/\/shop_images\/arrow_862bf456-5b59-43c9-9227-07ee2b382262.png"
+        }
+      },
+      "1583313349102": {
+        "type": "testimonials",
+        "blocks": {
+          "1583314103887": {
+            "type": "text",
+            "settings": {
+              "description": "This collagen is making me so well. I’m taking it every day, so I can say the quality is great! Also, in this fragile moment, it is really helping me to be healthy.",
+              "customer_name": "Bianca A."
+            }
+          },
+          "1583325858792": {
+            "type": "text",
+            "settings": {
+              "description": "I just love the product and the results are real.",
+              "customer_name": "Jessica S."
+            }
+          },
+          "1583394384383": {
+            "type": "text",
+            "settings": {
+              "description": "I love the ingredients, the packaging and the taste. My nails are growing faster, the hair is smoother.",
+              "customer_name": "Kateryna"
+            }
+          }
+        },
+        "block_order": [
+          "1583314103887",
+          "1583325858792",
+          "1583394384383"
+        ],
+        "settings": {
+          "section_heading": "Testimonials",
+          "heading_color": "#54337a",
+          "font_size": 51
+        }
+      },
+      "1583319063623": {
+        "type": "who_we_are",
+        "settings": {
+          "bg_color": "#ecf0f9",
+          "section_heading": "<p>Who <strong>We<\/strong> Are<\/p>",
+          "heading_color": "#000000",
+          "font_size": 51,
+          "description1": "Description",
+          "description": "<p>As Italians, we take enormous pride in perfecting things. The New Health Renaissance begins by using science to perfect the best in Nature. Meet Bruno MD, the inventive family behind this unique approach to creating supplements with clinically proven ingredients delivered with prescription-grade potency.<\/p>\n<p>At Bruno MD, we are scientists, doctors, researchers, and biological engineers. Moreover, we are world citizens: parents, grandparents, sons, and daughters who care deeply about our communities and the health and wellness of our loved ones.<\/p>\n<p>Over 6 million patients trust Bruno for their daily immunity, pain management, osteoporosis, diabetes, and cardiac care. Over 5000 optometrists and ophthalmologists prescribe our revolutionary line of vision care products. The New Health Renaissance extends to 25000 doctors with over 13000 medical specialists, in over 1000 hospitals.<br><br>Bruno MD is here to improve health and wellness today and for future generations.<\/p>",
+          "section_images": "shopify:\/\/shop_images\/BrunoMD-Family-landscape.jpg",
+          "readmore_text": "Read More",
+          "readmore_link": "shopify:\/\/pages\/our-story-1"
+        }
+      },
+      "1583323009265": {
+        "type": "why_buy_from_us",
+        "disabled": true,
+        "blocks": {
+          "1583323071732": {
+            "type": "images",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/Natural-Buy.png"
+            }
+          },
+          "1583323283436": {
+            "type": "images",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/buyus-img2.png"
+            }
+          },
+          "1583323293597": {
+            "type": "images",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/buyus-img3.png"
+            }
+          },
+          "1583323305187": {
+            "type": "images",
+            "settings": {
+              "images": "shopify:\/\/shop_images\/buyus-img4.png"
+            }
+          }
+        },
+        "block_order": [
+          "1583323071732",
+          "1583323283436",
+          "1583323293597",
+          "1583323305187"
+        ],
+        "settings": {
+          "section_heading": "<p><strong>Why<\/strong> Buy <strong>From<\/strong> Us?<\/p>",
+          "heading_color": "#321850",
+          "font_size": 51
+        }
+      },
+      "1583388667619": {
+        "type": "home-prescription-pro",
+        "blocks": {
+          "1583388709206": {
+            "type": "product",
+            "settings": {
+              "product_list": "royal-collagen-peptides",
+              "icon_1": "Create New Collagen",
+              "icon_2": "Skin, Hair, Nail, Joint & Bone Health",
+              "icon_3": "Boost Immunity"
+            }
+          },
+          "1583399311326": {
+            "type": "product",
+            "settings": {
+              "product_list": "riboflam-90-v-caps-30-servings",
+              "icon_1": "Stimulate Immune Health",
+              "icon_2": "Healthy Inflammation Response",
+              "icon_3": "Relieve Exercise Pain"
+            }
+          },
+          "1586838944993": {
+            "type": "product",
+            "settings": {
+              "product_list": "bluerex-vision-60-caps-30-servings",
+              "icon_1": "360º Eye Health",
+              "icon_2": "Filter Harmful Blue Light",
+              "icon_3": "Reduce Eye Fatigue"
+            }
+          },
+          "1586838965744": {
+            "type": "product",
+            "settings": {
+              "product_list": "chondrorex-90-v-caps-30-servings",
+              "icon_1": "Joint Mobility & Comfort",
+              "icon_2": "Musculoskeletal Health",
+              "icon_3": "Ease Muscle Pain"
+            }
+          },
+          "1586838999110": {
+            "type": "product",
+            "settings": {
+              "product_list": "cholestq10-60-v-caps-30-servings",
+              "icon_1": "Healthy Cholesterol",
+              "icon_2": "Heart Health",
+              "icon_3": "Higher CoQ10 levels"
+            }
+          },
+          "1583390797867": {
+            "type": "product",
+            "settings": {
+              "product_list": "ketorex-pina-colada-bhb-avocado-oil-powder-400g",
+              "icon_1": "Boost Ketone Levels",
+              "icon_2": "Promote Weight Loss",
+              "icon_3": "Boost Energy & Metabolism"
+            }
+          }
+        },
+        "block_order": [
+          "1583388709206",
+          "1583399311326",
+          "1586838944993",
+          "1586838965744",
+          "1586838999110",
+          "1583390797867"
+        ],
+        "settings": {
+          "background_color": "#ecf0f9",
+          "heading": "<p>Your <strong>Prescription<\/strong> to Thrive<\/p>",
+          "heading_color": "#543f68",
+          "font_size": 50
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/83656852_185562879524664_443906039935401984_n_567d92aa-adb7-4d61-9041-1a267e82bc0e.jpg",
+          "bg_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+          "bg_btn": "Read More",
+          "bg_url": "#",
+          "layout": "grid",
+          "blog_show_author": true,
+          "blog_show_date": true
+        }
+      },
+      "contactus-form-images": {
+        "type": "contactus-form-images",
+        "settings": {
+          "contact_us": "shopify:\/\/shop_images\/Family-Generational-01b.png"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 3,
+          "rows": 3,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "product-banner": {
+        "type": "product-banner",
+        "settings": {
+          "banner": "shopify:\/\/shop_images\/product-banner.jpg",
+          "banner_text": "<p>We lead a lifestyle That<\/p>\n<p><strong>celebrates<\/strong> Humanity,<\/p>",
+          "product_banner": "shopify:\/\/shop_images\/product2.png"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "media_size": "small",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
+        }
+      },
+      "landing_product_banner": {
+        "type": "landing_product_banner",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/landing-bg.jpg",
+          "sub_heading": "Join the New Health",
+          "heading": "Renaissance",
+          "main_font_size": 72,
+          "description": "Welcome to better health, the way only Italians can create it. Welcome to Bruno MD. Prescription grade supplements to fuel your future",
+          "collection": "ketorex-mojito-bhb-avocado-oil-powder-400g"
+        }
+      },
+      "home-prescription-pro": {
+        "type": "home-prescription-pro",
+        "blocks": {
+          "1583927236488": {
+            "type": "product",
+            "settings": {
+              "product_list": "royal-collagen-peptides",
+              "icon_1": "shopify:\/\/shop_images\/features-img4.png",
+              "icon_2": "shopify:\/\/shop_images\/features-img5.png",
+              "icon_3": "shopify:\/\/shop_images\/features-img6.png"
+            }
+          },
+          "1583927315062": {
+            "type": "product",
+            "settings": {
+              "product_list": "ketorex-mojito-bhb-avocado-oil-powder-400g",
+              "icon_1": "shopify:\/\/shop_images\/features-img6_9260b0c0-bc24-484f-975a-1e2c96ec5fcc.png",
+              "icon_2": "shopify:\/\/shop_images\/features-img5.png",
+              "icon_3": "shopify:\/\/shop_images\/features-img4.png"
+            }
+          },
+          "1585211218920": {
+            "type": "product",
+            "settings": {
+              "product_list": "ketorex-margarita-bhb-avocado-oil-powder-432g-1",
+              "icon_1": "shopify:\/\/shop_images\/features-img7.png",
+              "icon_2": "shopify:\/\/shop_images\/features-img8.png",
+              "icon_3": "shopify:\/\/shop_images\/features-img9.png"
+            }
+          },
+          "1583927278593": {
+            "type": "product",
+            "settings": {
+              "product_list": "riboflam-90-v-caps-30-servings",
+              "icon_1": "shopify:\/\/shop_images\/features-img7.png",
+              "icon_2": "shopify:\/\/shop_images\/features-img8.png",
+              "icon_3": "shopify:\/\/shop_images\/features-img9.png"
+            }
+          }
+        },
+        "block_order": [
+          "1583927236488",
+          "1583927315062",
+          "1585211218920",
+          "1583927278593"
+        ],
+        "settings": {
+          "background_color": "#ffffff",
+          "heading": "<p>Your <strong>Prescription<\/strong> to Thrive<\/p>",
+          "heading_color": "#2a1343",
+          "font_size": 49
+        }
+      },
+      "product_benefits": {
+        "type": "product_benefits",
+        "blocks": {
+          "1584014322734": {
+            "type": "text",
+            "settings": {
+              "benefits_heading": "Ultra Bioavailable",
+              "description": "That means this product is formulated with Phytosome® Proprietary Technology."
+            }
+          },
+          "1584015484347": {
+            "type": "text",
+            "settings": {
+              "benefits_heading": "Healthy Immune Response",
+              "description": "100% vegan dietary Nucleoflam™ nucleotides and nucleosides Yeast Extract Complex"
+            }
+          },
+          "1584015502341": {
+            "type": "text",
+            "settings": {
+              "benefits_heading": "Inflammation",
+              "description": "Helps control inflammation which naturally boosts your immune system."
+            }
+          },
+          "1584015519084": {
+            "type": "text",
+            "settings": {
+              "benefits_heading": "Vegan",
+              "description": "All ingredients are gluten-free and suitable for vegans and both kosher & halal."
+            }
+          },
+          "1584015542749": {
+            "type": "text",
+            "settings": {
+              "benefits_heading": "Clinically Proven",
+              "description": "Phytosome® Complex is a powerful fusion of clinically proven ingredients validated by more than 120 double-blind"
+            }
+          }
+        },
+        "block_order": [
+          "1584014322734",
+          "1584015484347",
+          "1584015502341",
+          "1584015519084",
+          "1584015542749"
+        ],
+        "settings": {
+          "heading": "<p>Product <strong>Benefits<\/strong><\/p>",
+          "images": "shopify:\/\/shop_images\/product-img2.png",
+          "content": "<p>Lorem ipsum dolor sit amet, <strong>Consectetur adipiscing<\/strong> elit. Ut sollicitudin lorem sed tellus volutpat, eu <strong>Tristique Tellus<\/strong> rutrum. In ullamcorper nulla at purus eleifend sollicitudin. Nunc porttitor <strong>condimentum<\/strong> dolor, eget vestibulum eros efficitur at.<\/p>"
+        }
+      },
+      "landing_product_video": {
+        "type": "landing_product_video",
+        "settings": {
+          "slide_video": "https:\/\/www.youtube.com\/embed\/9xwazD5SyVg?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
+        }
+      },
+      "join-list": {
+        "type": "join-list",
+        "settings": {
+          "title": "Join the New Health Renaissance",
+          "newlogo": "shopify:\/\/shop_images\/Health-Renaissance.png",
+          "paragraph": "<p>Ready to join the New Health Renaissance? Your health is a precious gift and Bruno MD is here to help you live your best life with prescription grade products that will make a difference. We&rsquo;d love to keep in touch with special offers and discounts from time to time. We respect your privacy and any information you provide is never shared with, or sold to, third parties.<\/p>",
+          "background_image": "shopify:\/\/shop_images\/Bruno_Landscape.jpg"
+        }
+      },
+      "how_to_use": {
+        "type": "how_to_use",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/keto-bg.jpg",
+          "img": "shopify:\/\/shop_images\/img.png",
+          "heading": "<p><strong>How<\/strong> To Use<\/p>",
+          "description": "<p>Add 1 scoop into at least 16 oz. of cold water and mix well by shaking or stirring vigorously. <strong>Ketorex&reg;<\/strong> can be consumed on an empty stomach.<\/p>\n<p><\/p>\n<p><\/p>\n<p>Caution: As with any dietary supplement, consult your healthcare professional before using this product if you are pregnant, nursing, taking any medications, or under medical supervision. <strong>KEEP OUT OF REACH OF CHILDREN<\/strong>. Do not use if safety seal is broken or missing. Protect from heat, light and moisture. Store in a cool, dry place at<strong> 15-30&deg;C (59-86&deg;F).<\/strong><\/p>\n<p><\/p>\n<p><\/p>"
+        }
+      },
+      "ingredients-accordions": {
+        "type": "ingredients-accordions",
+        "blocks": {
+          "1584083963268": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Avocado Oils Extract",
+              "acc_sub": "Ketrox® Proprietary Phytosome® Complex",
+              "acc_text": "<p>Biohackers call Ketorex&reg; the &ldquo;King of All Ketone Boosters.&rdquo; Ketorex Proprietary Phytosome Complex is a powerful blend of clinically-proven ingredients optimized for maximum absorption.&nbsp;<\/p>"
+            }
+          },
+          "1584084521791": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "White Kidney Bean Extract",
+              "acc_sub": "Ketorex® Proprietary Phytosome® Complex",
+              "acc_text": "<p>Biohackers call Ketorex&reg; the <strong>&ldquo;King of All Ketone Boosters.&rdquo;<\/strong> Ketorex Proprietary Phytosome Complex is a powerful blend of clinically-proven ingredients optimized for maximum absorption<\/p>"
+            }
+          },
+          "1584095209873": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Green Tea Extract",
+              "acc_sub": "Ketorex® Proprietary Phytosome® Complex",
+              "acc_text": "<p>A specific standardized extract of Italian white kidney beans clinically proven to suppress appetite and harvested at the perfect time to yield a pure extract of nature&rsquo;s most powerful benefits.<\/p>"
+            }
+          },
+          "1584095355541": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Olea Europeae Fruit Extract",
+              "acc_sub": "Ketorex® Proprietary Phytosome®",
+              "acc_text": "<p>A specific standardized extract of Italian white kidney beans clinically proven to suppress appetite and harvested at the perfect time to yield a pure extract of nature&rsquo;s most powerful benefits.<\/p>"
+            }
+          },
+          "1584095380715": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "BHB Salts",
+              "acc_sub": "Beta-Hydroxybutyrate-Ketorex® Proprietary Ketogenic Blend",
+              "acc_text": "<p>A specific standardized extract of Italian white kidney beans clinically proven to suppress appetite and harvested at the perfect time to yield a pure extract of nature&rsquo;s most powerful benefits.<\/p>"
+            }
+          },
+          "1584095422021": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "L-Tyrosine",
+              "acc_sub": "",
+              "acc_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "1584083963268",
+          "1584084521791",
+          "1584095209873",
+          "1584095355541",
+          "1584095380715",
+          "1584095422021"
+        ],
+        "settings": {
+          "title": "<b>Natural<\/b> Ingredients",
+          "image": "shopify:\/\/shop_images\/img.png"
+        }
+      },
+      "where_We_are_from": {
+        "type": "where_We_are_from",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/where-bg.png",
+          "section_heading": "<p><strong>Where <\/strong>We're From&nbsp;<\/p>",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus tellus nec ligula laoreet auctor. \nIn blandit nunc dolor, vitae cursus mauris hendrerit id. Aenean porta ligula nec velit porta, non laoreet tortor consequat. Morbi ut sem id nulla tincidunt porta eget eu mauris. Integer accumsan ipsum\n interdum, condimentum nisi sit amet, laoreet quam. Mauris dignissim et elit vel maximus. In eu \nsapien dolor. Maecenas bibendum eros quis justo venenatis, vel imperdiet velit lacinia.",
+          "description_color": "#221334",
+          "description_size": 16
+        }
+      },
+      "product-nutrition": {
+        "type": "product-nutrition",
+        "settings": {
+          "title": "Product <b>Nutrition<\/b>",
+          "image1": "shopify:\/\/shop_images\/img.png",
+          "content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+          "image2": "shopify:\/\/shop_images\/facts.png"
+        }
+      },
+      "terms-template": {
+        "type": "terms-template",
+        "settings": {
+          "bg": "shopify:\/\/shop_images\/bg-imgreal.png",
+          "bg_text": "Bruno Pharma Innovations LLC"
+        }
+      },
+      "return-template": {
+        "type": "return-template",
+        "settings": {
+          "bg": "",
+          "bg_text": "Bruno Pharma Innovations LLC"
+        }
+      },
+      "privacy-template": {
+        "type": "privacy-template",
+        "settings": {
+          "bg": "shopify:\/\/shop_images\/privacy_background_2112717a-e2d6-4467-8a47-66405f7bcc69.png",
+          "bg_text": "Bruno Pharma Innovations LLC"
+        }
+      },
+      "shipping-template": {
+        "type": "shipping-template",
+        "settings": {
+          "bg": "shopify:\/\/shop_images\/privacy_background_2112717a-e2d6-4467-8a47-66405f7bcc69.png",
+          "bg_text": "Bruno Pharma Innovations LLC"
+        }
+      },
+      "about_us": {
+        "type": "about_us",
+        "settings": {
+          "header1": "ABOUT US",
+          "header2": "We lead a lifestyle <br>that celebrates <br><strong>humanity<\/strong>.",
+          "cont1": "We are scientists, doctors and researchers. We are also a passionate family with a lifelong mission to improve human health for all.",
+          "img1": "shopify:\/\/shop_images\/BrunoMD-Family.jpg",
+          "about-img": "shopify:\/\/shop_images\/image.png",
+          "section-name": "",
+          "main-heading": "<p>A <strong>Healing<\/strong> Passion<\/p>",
+          "column_richtext": "<p>Default <em>richtext<\/em> <a href=\"https:\/\/example.com\/\">content<\/a><\/p>",
+          "about-description": "Over 50 years ago, Dr. Antonio Bruno combined his passion for \nchemistry with the art of innovation to make lives better the world over. BRUNO MD stands at the intersection of art and science. Our pride is giving people the tools to take ownership of their own health stories. These stories, we believe, are among the most incredible that nature and science can write together. We think you’ll agree.",
+          "heightlight-description": "I was fortunate to have a dream very early in life; to help improve human health. Even more fortunate, this dream became a career. And, now, an \neven larger mission: to reach as many people as possible with better \nsolutions for their well being.  Dr. Bruno"
+        }
+      },
+      "text_with_right_img": {
+        "type": "text_with_right_img",
+        "settings": {
+          "text_bg_color": "#ffffff",
+          "description_text": "Dr. Bruno Antonio was born in 1938 in a small town in southern Italy in the province of Avellino, an ancient and generous land characterized by rich, fertile soil and its people’s devotion to Avellino’s mountains, vast plains, and crystal-clear rivers. The province is also a flourishing agricultural hub, and Dr. Bruno grew up appreciating this deep relationship between man \nand Terra Madre. It instilled in him a passion for making high-quality\nproducts from the best ingredients that Italian soil has to offer.",
+          "section-img": "shopify:\/\/shop_images\/img.jpg"
+        }
+      },
+      "left_image_text": {
+        "type": "left_image_text",
+        "settings": {
+          "heading_richtext": "<p><strong>Today <\/strong><\/p>",
+          "description_text": "From Futuristic Eye Care And Life-saving Cardiac Treatments To Bruno MD Prescription-grade Supplements, We’re Excited! We Have An Incredible Lineup Of Products Available Right Now That Will Amaze You, And A Few Hundred More Soon, That Are Even More Amazing.",
+          "section-img": "shopify:\/\/shop_images\/BrunoMD-Science-Pic.jpg"
+        }
+      },
+      "page_banner": {
+        "type": "page_banner",
+        "settings": {
+          "banner": "shopify:\/\/shop_images\/Bruno_italy_watercolor-F.jpg",
+          "banner_text": "<p>The ideas created<\/p>\n<p>here help people all<\/p>\n<p>over the world.<\/p>",
+          "product_banner": "shopify:\/\/shop_images\/product1.png",
+          "heading": "",
+          "images": "",
+          "content": ""
+        }
+      },
+      "image_with_content": {
+        "type": "image_with_content",
+        "settings": {
+          "section_img": "shopify:\/\/shop_images\/University-of-Naples-Italy-03.jpg",
+          "heading_richtext": "<p>Early Career<\/p>",
+          "description": "Dr. Bruno graduated with honors in Chemistry from the University of Naples and pursued his passion for improving people’s lives working as a medical representative at the award-winning Milanese pharmaceutical company called Lepetit S.p.A. which specialized in corticosteroids. His dedication and drive for excellence led to his promotion as a Lepetit S.p.A. Sales Manager in the early 1990’s.",
+          "section_img1": "shopify:\/\/shop_images\/Bruno-20-years-2016.jpg",
+          "heading_richtext1": "<p>Birth of Bruno MD<\/p>",
+          "description1": "Two separate multinational companies acquired Lepetit while Dr. Bruno was still an employee. During these transitions, Dr. Bruno was inspired to make an offer to take over a branch of the business that encompassed twelve prescription drugs. His proposal was accepted, and Bruno Farmaceutici was born in July 1996. Soon after, Dr. Bruno’s son, Vincenzo, and daughter Mariolina joined the effort, and the company became a family business in every sense of the word.",
+          "bhead": "Nature’s Pharmacy",
+          "btext": "Dr. Bruno grew up in a flourishing agricultural hub and learned to appreciate Mother Nature’s flair for producing natural crops with near-medicinal benefits. His vision: combine the best ingredients that Italian soil has to offer with Pharma-formulations that deliver clinically proven results.",
+          "bimg": "shopify:\/\/shop_images\/BrunoMD-Dr.Brun.jpg"
+        }
+      },
+      "riboflam_landing_banner": {
+        "type": "riboflam_landing_banner",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/new-bg_98a03b2e-b615-46a4-94d0-5f96d407f508.jpg",
+          "sub_heading": "IGNITE YOUR<b> IMMUNE<\/b> SYSTEM and PROMOTE A HEALTHY INFLAMMATION RESPONSE With <b>Riboflam<\/b>",
+          "heading": "",
+          "main_font_size": 21,
+          "description": "Riboflam is the only prescription-grade supplement which contains clinically proven ingredients that enhance the immune system response, promote a healthy adaptive and innate immune response, and support the whole body’s healthy inflammation response. Riboflam delivers the maximum dosage of immune boosting nutrients into your bloodstream using Patented Phytosome® technology.",
+          "collection": "riboflam-90-v-caps-30-servings"
+        }
+      },
+      "riboflam-product_benefits": {
+        "type": "riboflam-product_benefits",
+        "blocks": {
+          "1585933695024": {
+            "type": "text",
+            "settings": {
+              "icon_images": "shopify:\/\/shop_images\/BrunoMD-Hourglass-Icon-01a.png"
+            }
+          },
+          "1585933730214": {
+            "type": "text",
+            "settings": {
+              "icon_images": "shopify:\/\/shop_images\/BrunoMD-Hourglass-Icon-01a.png"
+            }
+          },
+          "1585933760577": {
+            "type": "text",
+            "settings": {
+              "icon_images": "shopify:\/\/shop_images\/BrunoMD-Hourglass-Icon-01a.png"
+            }
+          },
+          "1585933775271": {
+            "type": "text",
+            "settings": {
+              "icon_images": "shopify:\/\/shop_images\/BrunoMD-Hourglass-Icon-01a.png"
+            }
+          },
+          "1585933784112": {
+            "type": "text",
+            "settings": {
+              "icon_images": "shopify:\/\/shop_images\/BrunoMD-Hourglass-Icon-01a.png"
+            }
+          }
+        },
+        "block_order": [
+          "1585933695024",
+          "1585933730214",
+          "1585933760577",
+          "1585933775271",
+          "1585933784112"
+        ],
+        "settings": {
+          "heading": "<p>Product <strong>Benefits<\/strong><\/p>",
+          "images": "shopify:\/\/shop_images\/ribo-product-img.png",
+          "content": "<p>The Only Vegan Dietary Supplement With Nucleotides Complex, Astaxanthin & Curcumin Phytosome that Contains Clinically Proven Ingredients to Promote a Healthy Inflammation Response, & Stimulate Overall Immune Health* Riboflam is advanced Biopharmaceutical Phytotherapy that delivers up to 3000% more clinically-proven nutrients to your body vs. ordinary supplements.<\/p>",
+          "benefits_heading": "Utra Bioavailable",
+          "description": "Ultra-Bioavailable means this product is formulated with Patented Phytosome® Technology. A 100% food-grade ingredient transport system that delivers the highest concentration of vital nutrients where your body needs them in their most potent form. Phytosomes are used to naturally promote the solubilities of poorly bioavailable active natural ingredients and their abilities to cross biological barriers, leading to significant improvements in bioavailability and thus biological activity.",
+          "benefits_heading1": "Healthy Inflammation Response Throughout the Body",
+          "description1": "Formulated with the most potent, all vegan, clinically-proven inflammation fighters known to modern science to help promote a healthy inflammation response throughout the body. Designed to help guard against chronic inflammation for a lifetime.",
+          "benefits_heading2": "Vegan",
+          "description2": "All ingredients are gluten-free and suitable for vegans and are kosher & halal certified.",
+          "benefits_heading3": "Healthy Immune Response",
+          "description3": "100% vegan dietary Nucleoflam® proprietary nucleotides and nucleosides Yeast Extract Complex helps maintain and boost immune system functionality. Astaxanthin and Riboflam Proprietary Phytosome Complex stimulate overall immune health.",
+          "benefits_heading4": "Healthy Inflammation Response",
+          "description4": "Helps control inflammation which naturally boosts your immune system. Phytosome® technology is Ultra Bioavailable delivering up to 3000% more vital nutrients into your bloodstream to help your immune system stay strong to help fight invaders (pathogens)"
+        }
+      },
+      "riboflam_landing_video": {
+        "type": "riboflam_landing_video",
+        "settings": {
+          "slide_video": "https:\/\/www.youtube.com\/embed\/yTMQqd9pbB4"
+        }
+      },
+      "riboflam-how_to_use": {
+        "type": "riboflam-how_to_use",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/BrunoMD-Yoga-0809-Long1.jpg",
+          "img": "shopify:\/\/shop_images\/Riboflam-Bruno-MD-Front-02b-2500x2500.png",
+          "heading": "<p><strong>How<\/strong> To Use<\/p>",
+          "description": "<p>Take three (3) capsules daily: 1 in the morning, 1 in the afternoon, and 1 in the evening, preferably before meals, or as directed by your healthcare professional.<\/p>\n<p>Caution: As with any dietary supplement, consult your healthcare professional before using this product if you are pregnant, nursing, taking any medications, or under medical supervision. KEEP OUT OF REACH OF CHILDREN. Do not use it if the safety seal is broken or missing. Protect from heat, light and moisture. Store in a cool, dry place at 15-30&deg;C (59-86&deg;F).<\/p>"
+        }
+      },
+      "riboflam-where_We_are_from": {
+        "type": "riboflam-where_We_are_from",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/Breakfast_with_Friends_1213_480d1eee-9131-4c35-a58b-77c1a642f432.jpg",
+          "section_heading": "<p><strong>Where <\/strong>We're From<\/p>",
+          "description": "Bruno MD is owned by Bruno Pharma Innovations, the US subsidiary of Bruno Farmaceutici\nS.p.A.; a visionary clinical research Pharmaceutical multinational company based in Rome, Italy.\nBuilding on over 50 years of artful innovation and scientific solutions to human problems, Bruno\nMD is leading a modern renaissance in wellness! Today, we don’t just workout to feel good, we\nlive entirely better holistic lives which include working out and recovery with balanced and\nnatural ways of getting the most out of every choice we make. Science has proven that\ningredients in Riboflam help boost your overall immune system, while supporting your whole\nbody’s inflammatory response and promoting relief from exercise related pain.",
+          "description_color": "#ffffff",
+          "description_size": 42
+        }
+      },
+      "riboflam-ingredients-accordions": {
+        "type": "riboflam-ingredients-accordions",
+        "blocks": {
+          "1584704833355": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Nucleoflam® Proprietary Nucleotide & Nucleosides Yeast Extract Complex",
+              "acc_sub": "",
+              "acc_text": "<p>Our formulation begins at the cellular base level with a unique Nucleoflam Proprietary Nucleotide &amp; Nucleotides Yeast Extract Complex. These nucleotides are vital to maintaining essential cell functions and supporting a healthy immune system, digestive system, and brain function. Nucleotides also enhance the anti-inflammatory activity of Vitamin C, Vitamin D3, and Zinc. They are gluten-free and suitable for vegans and both kosher &amp; halal. BRUNO MD combines Nucleoflam with Astaxanthin, the most potent anti-inflammatory known in nature. Together they create a powerful shield against chronic inflammation.<\/p>"
+            }
+          },
+          "1585786555807": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Natural Astaxanthin Extract (Haematococcus Pluvialis) (Algae)",
+              "acc_sub": "",
+              "acc_text": "<p>Astaxanthin is the most potent anti-inflammatory known in nature. Natural astaxanthin,has a strong ability to both balance and strengthen the immune system,enhance antibody production, hence improving the defense against inflammation, and outside invaders (pathogens) Astaxanthin can also help reduce high blood pressure, improve heart health, prevent type II diabetes, and decrease the risk of brain damage from a stroke. Over 95% of commercial Astaxanthin is synthetic. Worse, it&rsquo;s harvested using petrochemicals. Bruno MD Astaxanthin is naturally derived from Haematococcus Pluvialis algae, found in temperate environments around the world to produce the highest concentrations of Astaxanthin with the highest bioavailability.<\/p>\n<p>● Our Astaxanthin is cultivated using proprietary indoor, state-of-the-art photobioreactors, using filtered air and triple-filtered water for minimal contamination risk<\/p>\n<p>● It is harvested at a precise time to remove chlorophyll contamination which maximizes astaxanthin stability<\/p>\n<p>● It is harvested precisely to consistently produce whole algae containing 4.5-5% astaxanthin content<\/p>"
+            }
+          },
+          "1584704803027": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Curcumin Phytosome (Turmeric Extract - Curcuma Longa)",
+              "acc_sub": "#1 Doctors Recommended and endorsed by Cleveland Clinic",
+              "acc_text": "<p>Curcumin Phytosome is the most studied compound curcumin compound in the world. It is the formulation of choice for leading practitioners and their patients. It was independently endorsed by the prestigious Cleveland Clinic in the US as the curcumin formulation of choice in the turmeric market. Part of the ginger family, curcumin is sourced from turmeric and has been used for thousands of years in Southeast Asia, China, and India for cooking and medicinal uses. Our Curcumin Phytosome is clinically proven in 35 randomized, double-blind, placebo-controlled, published clinical trials to promote a healthy inflammatory response, boost immune response, and provide relief from exercise-related pain. It works through multiple pathways on multiple targets to provide complete relief throughout the entire body. The extract has been standardized and contains the full bouquet of curcuminoids, not just curcumin (Curcuminoids are polyphenolic pigments and include 77% curcumin, 17% demethoxycurcumin,and 3% bisdemethoxycurcumin). It has been called a &ldquo;Life Guardian&rdquo; because it helps control chronic inflammation and boost immune response at any age.<\/p>"
+            }
+          },
+          "1584704855688": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Boswellia Serrata Phytosome (Indian Frankincense Extract)",
+              "acc_sub": "",
+              "acc_text": "<p>Indian Frankincense is a botanical extract harvested from the gum resin of the Boswellia Serrata tree. Boswellia Serrata Phytosome helps govern inflammatory response in the joints, bones, respiratory airways, the bowel, and even in the brain. In addition, clinical studies have shown that a cocktail of AKBA (<strong>Acetyl-11-Keto-𝛃-Boswellic Acid<\/strong>) and Curcumin significantly inhibit certain viral infections (viral entry) compared to the untreated control. BRUNO MD uses<\/p>"
+            }
+          },
+          "1584704866814": {
+            "type": "accordion",
+            "settings": {
+              "acc_title": "Echinacea Angustifolia Phytosome (Narrow-leaved Coneflower Extract-Echinacea Angustifolia Root)",
+              "acc_sub": "",
+              "acc_text": "<p>The use of Echinacea is traced back to Native Americans who used it as a natural anti-inflammatory. Major disorder targets of these treatments were related to: sore mouth, toothache,colds,tonsillitis,septic diseases,cough and general inflammatory conditions. Bruno MD cultivates our coneflower from a variety located in Italy. Our plants guarantee high polysaccharide and low cross contamination between Echinacea species. Echinacea Angustifolia Phytosome is optimized for maximum absorption. Results in clinical trials conducted using our triple-standardized Echinacea Phytosome, have shown a statistically significant tendency to be more efficacious than flu vaccination alone, suggesting that E. Phytosome has the potential to act synergistically with influenza vaccination.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1584704833355",
+          "1585786555807",
+          "1584704803027",
+          "1584704855688",
+          "1584704866814"
+        ],
+        "settings": {
+          "title": "<b>Natural<\/b> Ingredients",
+          "image": "shopify:\/\/shop_images\/product-Ingredients.png"
+        }
+      },
+      "riboflam-product-nutrition": {
+        "type": "riboflam-product-nutrition",
+        "settings": {
+          "bg_img": "shopify:\/\/shop_images\/lady.jpg",
+          "title": "Product <b>Nutrition<\/b>",
+          "image1": "shopify:\/\/shop_images\/women.jpg",
+          "content": "<p>When it comes to ingredients, Bruno MD looks first to what we can grow in Italy. Our unique soil and climate create crops with extraordinary healing properties known to locals for centuries! If it can’t be grown on Italian soil, Bruno MD searches the world for ingredients that live up to the same standards then transforms them into products that deliver 100% food-grade composition and the highest bioavailability and benefits you can achieve without a prescription. Bruno MD’s Phytosome technology is a revolutionary ingredient transport system that delivers 100% food-grade composition of vital nutrients where your body needs them in their most potent form. Without it, you’re wasting your money.<\/p>",
+          "image2": "shopify:\/\/shop_images\/riboflam-label.png"
+        }
+      },
+      "science_banner": {
+        "type": "science_banner",
+        "settings": {
+          "banner": "shopify:\/\/shop_images\/BrunoMD-Female-Doctor-scientist-b.jpg",
+          "banner_heading": "<b>Pharma Formulated<\/b><br>with the world's best <br><b>clinically proven ingredients.<\/b>",
+          "banner_text": "",
+          "product_banner": "shopify:\/\/shop_images\/product1.png",
+          "heading": "",
+          "images": "",
+          "content": ""
+        }
+      },
+      "vital-nature": {
+        "type": "vital-nature",
+        "settings": {
+          "about-img": "shopify:\/\/shop_images\/Untitled-9.png",
+          "main-heading": "<p>Our Vital Nature<\/p>",
+          "about-description": "<h4>In Italy.<\/h4>\n<p>When it comes to ingredients, Bruno MD looks first to what we can grow in Italy. Our unique soil and climate produce crops with extraordinary healing properties known to locals for centuries!<\/p>\n<h4>Abroad.<\/h4>\n<p>If it can’t be grown on Italian soil, Bruno MD searches the world for ingredients that live up to the same standards then transforms them into products that deliver 100% food grade composition and the highest bioavailability and benefits you can achieve without a prescription.<\/p>",
+          "iframe1": "<iframe src=\"https:\/\/fast.wistia.net\/embed\/iframe\/4be63o3gsj\" title=\"Ingredients rev06 Video\" allow=\"autoplay; fullscreen\" allowtransparency=\"true\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" allowfullscreen=\"\" msallowfullscreen=\"\" style=\"margin-left:-25%\" width=\"150%\" height=\"614\" frameborder=\"0\"><\/iframe>\n<script src=\"https:\/\/fast.wistia.net\/assets\/external\/E-v1.js\" async=\"\"><\/script>",
+          "main-heading2": "<p>Our Vital Nature<\/p>",
+          "about-description2": "<h4>In Italy.<\/h4>\n<p>When it comes to ingredients, Bruno MD looks first to what we can grow in Italy. Our unique soil and climate produce crops with extraordinary healing properties known to locals for centuries!<\/p>\n<h4>Abroad.<\/h4>\n<p>If it can’t be grown on Italian soil, Bruno MD searches the world for ingredients that live up to the same standards then transforms them into products that deliver 100% food grade composition and the highest bioavailability and benefits you can achieve without a prescription.<\/p>",
+          "iframe2": "<iframe src=\"https:\/\/fast.wistia.net\/embed\/iframe\/4be63o3gsj\" title=\"Ingredients rev06 Video\" allow=\"autoplay; fullscreen\" allowtransparency=\"true\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" allowfullscreen=\"\" msallowfullscreen=\"\" style=\"margin-left:-25%\" width=\"150%\" height=\"614\" frameborder=\"0\"><\/iframe>"
+        }
+      },
+      "inspired_science": {
+        "type": "inspired_science",
+        "settings": {
+          "heading_richtext": "<p><strong>Innovation and Imagination<\/strong><\/p>",
+          "description_text": "BRUNO MD has 50 years of experience in clinical science, and we bring that same\nlevel of expertise to the supplements we make. When our prescription-grade labs\nprocess the finest ingredients in Nature, we create the most potent, bioavailable health\nproducts on the market today. Today's New Health Renaissance is inspired by\npassionate people and ideas and powered by BRUNO MD's Italian craftsmanship and\ndecades of medical studies.",
+          "section-img": "shopify:\/\/shop_images\/Science-banner2.png",
+          "button_link": "",
+          "btn_text": ""
+        }
+      },
+      "altra_bio": {
+        "type": "altra_bio",
+        "settings": {
+          "heading_richtext": "<p><strong>Ultra Bioavailability<\/strong><\/p>",
+          "description_text": "Phytosome Technology is a scientific wonder. Imagine a beneficial nutrient like\ncurcumin. Without Phytosome, curcumin enters the body unprotected. When curcumin\narrives at the final checkpoint, called your gut, the guard takes one look and slams the\ngate shut. 90% or more of all nutrients ingested from ordinary supplements are lost in\nthis way.<br><br>\nWith Phytosome Technology, curcumin is packed inside a special delivery\ntruck, shielded from the gate guard who sees it as a friend. The curcumin is swiftly\ndelivered through the gut and into the bloodstream delivering up to 3000% more\nbioavailability to target specific benefits throughout the body. This is how BRUNO MD\nsets the new standard in prescription-grade ingredients.",
+          "section-img": "shopify:\/\/shop_images\/BrunoMD-Science-03b.jpg"
+        }
+      },
+      "two_images_center_content": {
+        "type": "two_images_center_content",
+        "settings": {
+          "title": "Italian Soil",
+          "image1": "shopify:\/\/shop_images\/Bruno_Landscape-B.jpg",
+          "image2": "shopify:\/\/shop_images\/BrunoMD-Foto-Villa.jpg",
+          "description": "<p>Dr. Bruno Antonio was born in 1938 in a small town in southern Italy in the province of Avellino, an ancient and generous land characterized by rich, fertile soil and its people’s devotion to Avellino’s mountains, vast plains, and crystal-clear rivers.<\/p>"
+        }
+      },
+      "1585725022508": {
+        "type": "homepage-full-image",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/Dinner-With-Friends-2020.jpg",
+          "imgTxt": "OUR PASSION FOR <b>SCIENCE<\/b> BRINGS YOU <b>NATURE'S BEST MEDICINE<\/b>"
+        }
+      },
+      "full_body_benefits": {
+        "type": "full_body_benefits",
+        "blocks": {
+          "1585935625271": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Helps maintain the immune system functionality*"
+            }
+          },
+          "1585935756276": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Enhances immune response*"
+            }
+          },
+          "1585935774288": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Modulates immune response*"
+            }
+          },
+          "1585935792601": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Stimulate overall immune health*"
+            }
+          },
+          "1585935814571": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Helps proliferation of B and T cells (supports a healthy adaptive immune response)*"
+            }
+          },
+          "1585935830064": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Helps increase NK (Natural Killer) cells activity (supports a healthy innate immune response)*"
+            }
+          },
+          "1585935873664": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Supports a healthy inflammatory response*"
+            }
+          },
+          "1585935908825": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Supports cardio health*"
+            }
+          },
+          "1585935928413": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Supports mental health*"
+            }
+          },
+          "1585935943730": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Supports cognition, mental clarity, and focus*"
+            }
+          },
+          "1585935959409": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Supports healthy digestion*"
+            }
+          },
+          "1585935977207": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Promotes relief from exercise related pain*"
+            }
+          },
+          "1585935996298": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Helps maintain the performance of social and emotional functions*"
+            }
+          },
+          "1585936011635": {
+            "type": "text",
+            "settings": {
+              "Benefits": "Maintains liver health*"
+            }
+          }
+        },
+        "block_order": [
+          "1585935625271",
+          "1585935756276",
+          "1585935774288",
+          "1585935792601",
+          "1585935814571",
+          "1585935830064",
+          "1585935873664",
+          "1585935908825",
+          "1585935928413",
+          "1585935943730",
+          "1585935959409",
+          "1585935977207",
+          "1585935996298",
+          "1585936011635"
+        ],
+        "settings": {
+          "images": "shopify:\/\/shop_images\/Acitve-Lifestyle-03b.jpg",
+          "heading": "<p>Full <strong>Body Benefits<\/strong><\/p>",
+          "sub_heading": "<p>Riboflam provides these positive benefits:<\/p>"
+        }
+      },
+      "riboflam_img": {
+        "type": "riboflam_img",
+        "settings": {
+          "images": "shopify:\/\/shop_images\/Breakfast_with_Friends_1213.jpg"
+        }
+      },
+      "1585910017192": {
+        "type": "custom-content",
+        "blocks": {
+          "1585910163563": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"funnel-text text-center\">\n<h2>From Our Family To Yours<\/h2>\n<p>BRUNO MD creates health products with an Italian Heritage using clinically-proven ingredients for bettering humanity.<\/p>\n<p class=\"section-btn\"><a href=\"https:\/\/brunomd.com\/collections\/best-selling\/\">Shop Now<\/a><\/p>\n<\/div>",
+              "width": "100%"
+            }
+          }
+        },
+        "block_order": [
+          "1585910163563"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "left_img_right_text": {
+        "type": "left_img_right_text",
+        "settings": {
+          "img": "shopify:\/\/shop_images\/BrunoMD-Family-landscape-2.jpg",
+          "imgHead": "Original Headline",
+          "imgTxt": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>"
+        }
+      },
+      "about_collage": {
+        "type": "about_collage",
+        "settings": {
+          "collage": "shopify:\/\/shop_images\/RCP-Coffee-0062-c.png",
+          "newlogo": "shopify:\/\/shop_images\/Health-Renaissance.png",
+          "btnTxt": "Join Now",
+          "btnLnk": "shopify:\/\/collections\/best-selling"
+        }
+      },
+      "1586423467646": {
+        "type": "custom-content",
+        "blocks": {
+          "1586423530486": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"corona-virus text-center\">\n<h2>Bruno MD Covid-19 Response<\/h2>\n<p>In this time of deep anxiety and uncertainty, Bruno MD and our mother company Bruno Farmaceutici S.p.A. stand with all global citizens against our common enemy, Covid-19.<br><br>As scientists, we are confident that the cure is out there, and collectively, humanity will find it. But today we want to acknowledge the brave medical doctors, technicians, emergency responders, and volunteers who battle this pandemic on the front lines with their blood, sweat, and, for some, their very lives. For them, we are eternally thankful. <br><span class=\"more-text\"><br>As a research company, Bruno MD leans on science to improve health and wellness but the first line of defense in biological battles like the one we face now is the human spirit. That bravery that puts others before self. That impulse to step into the divide to build a bridge built on hope, human grit, courage, and sacrifice so that we can all walk into a healthy future together.<br><br>During this time, Bruno's network of medical representatives remains in constant communication with over 25000 doctors and medical specialists to assess where we can provide the most value. Currently, we are donating FFPU masks, gloves, and gels to ICUs in over 1000 hospitals worldwide. We also offer free care and counseling to millions of our diabetic and cardiac patients who may be more vulnerable to the effects of the coronavirus.<br><br>We encourage you to take care of yourself and your family during this time. It's essential to take an active approach to minimize the spread of the disease. Please refer to the websites of the <b>Centers for Disease Control (CDC)<\/b> and the <b>World Health Organization (WHO)<\/b> for steps you can take to protect you and your loved ones.<br><br>Let's rise to this challenge together, with the creativity, compassion, and resilience that is now, and always has been, the heart of Italy and Bruno MD.<span><\/span><\/span><\/p>\n<div class=\"section-btn\"><a href=\"javascript:void(0)\"><span>Read More<\/span> <img data-src=\"\/\/cdn.shopify.com\/s\/files\/1\/0021\/0573\/7291\/t\/86\/assets\/arrow.png\" alt=\"Arrow\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0021\/0573\/7291\/files\/arrow.png\" class=\"lazyload\" width=\"42\" height=\"15\" style=\"position:relative;top:5px;\"><\/a><\/div>\n<\/div>",
+              "width": "100%"
+            }
+          }
+        },
+        "block_order": [
+          "1586423530486"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "landing-rcp-header": {
+        "type": "landing-rcp-header",
+        "settings": {
+          "top_txt1": "15% loyalty discount for subscribe & save customers",
+          "top_img1": "shopify:\/\/shop_images\/footer-icon1_a7527865-c587-4e70-908e-c238000e21e9.png",
+          "top_txt2": "Free shipping for all orders above $75",
+          "top_img2": "shopify:\/\/shop_images\/footer-icon2_f7b88616-7249-4a05-8ac7-006e2ef65339.png",
+          "top_txt3": "30-Day money back guarantee - Purchase with complete confidence",
+          "top_img3": "shopify:\/\/shop_images\/footer-icon3_8b773ccc-ecd6-48da-ba73-92d08dfc40f8.png",
+          "logo": "shopify:\/\/shop_images\/logo-bruno-md--purple_3f2042e3-8a07-45f2-87b7-81ab297ac475.png",
+          "menus": "rcp-menus",
+          "collection": "royal-collagen-peptides"
+        }
+      },
+      "landing-rcp-footer": {
+        "type": "landing-rcp-footer",
+        "settings": {
+          "column1": "<h2>Royal Collagen Peptides<sup>®<\/sup>\n<\/h2>\n<p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.<\/p>",
+          "column2": "shopify:\/\/shop_images\/Health-Renaissance.png",
+          "column3-1": "BrunoMD\n<br>17870 Newhope Stte 104 #480\n<br>Fountain Valley, CA 92708",
+          "column3-2": "1-800-976-6118",
+          "column3-3": "support@brunomd.com",
+          "copyright": "Copyright © 2020 brunomd.com. All Rights Reserved",
+          "footer-menu": "rcp-footer"
+        }
+      },
+      "landing-rcp-video": {
+        "type": "landing-rcp-video",
+        "blocks": {
+          "1592463348414": {
+            "type": "videos",
+            "settings": {
+              "embed_code": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/7i1iu66hdc.jsonp\" async=\"\"><\/script><script src=\"https:\/\/fast.wistia.com\/assets\/external\/E-v1.js\" async=\"\"><\/script><div class=\"wistia_responsive_padding\" style=\"padding:100.0% 0 0 0;position:relative;\" id=\"7i1iu66hdc\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_7i1iu66hdc videoFoam=true\" style=\"height:100%;position:relative;width:100%\"><div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/7i1iu66hdc\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div><\/div><\/div><\/div>"
+            }
+          },
+          "1592463406454": {
+            "type": "videos",
+            "settings": {
+              "embed_code": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/dmisat3ux4.jsonp\" async=\"\"><\/script><script src=\"https:\/\/fast.wistia.com\/assets\/external\/E-v1.js\" async=\"\"><\/script><div class=\"wistia_responsive_padding\" style=\"padding:100.0% 0 0 0;position:relative;\" id=\"dmisat3ux4\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_dmisat3ux4 videoFoam=true\" style=\"height:100%;position:relative;width:100%\"><div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/dmisat3ux4\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div><\/div><\/div><\/div>"
+            }
+          }
+        },
+        "block_order": [
+          "1592463348414",
+          "1592463406454"
+        ],
+        "settings": {
+          "title": "Video Testimonial",
+          "product": "royal-collagen-peptides"
+        }
+      },
+      "landing-rcp-supplement": {
+        "type": "landing-rcp-supplement",
+        "settings": {
+          "img1": "shopify:\/\/shop_images\/Supplement-Facts-min.jpg",
+          "img_mob": "shopify:\/\/shop_images\/supplementary-facts-mobile.jpg",
+          "bg-color1": "#f9bf3c",
+          "img2": "shopify:\/\/shop_images\/Collagen_313046bf-2e03-465f-b9dc-c5f2d17a8d63-min.png",
+          "bg-color2": "#300370",
+          "txt1": "<h2>Still using ordinary collagen?<\/h2>\n<h3>You're wasting your money and you <br>may regret it one day.<\/h3>\n<h4>Kickstart Your Inner Beauty <u>Right Now<\/u>\n<\/h4>",
+          "txt2": "Only Bruno MD Royal Collagen Peptides are clinically proven to:\n<br>• Improve skin, hair & nails\n<br>• Stimulate the production of new collagen, at any age\n<br>• Boost Immunity w\/ 400%+ DV of Natural Vitamin C \n<br>• Accelerate stimulation of the body’s own collagen production (synthesis)\n<br>• Grow stronger bones + more flexible joints\n<br>\n<br><b>Science and research make Bruno MD’s Royal Collagen Peptides the most effective collagen formulation in the world.<\/b>",
+          "collection": "royal-collagen-peptides"
+        }
+      },
+      "landing-rcp-who-we-are": {
+        "type": "landing-rcp-who-we-are",
+        "settings": {
+          "bg-color": "#fdffff",
+          "head1": "Formulated for results",
+          "img": "shopify:\/\/shop_images\/who-we-are-min.png",
+          "head2": "Who we are",
+          "txt": "BrunoMD treats every customer like family so we want you to try the product risk-free for 30 days. If you're not satisfied for any reason drop us an honest note and tell us how we can do better and return your product even if it's empty. We'll refund your purchase less s&h and you can keep the spa eye mask you received as our gift to you.\n<br><br> \nTry Now. <br>Worry Free. <br><br>Really",
+          "img2": "shopify:\/\/shop_images\/Join-The-Health.png",
+          "img3": "shopify:\/\/shop_images\/New-logo.jpg"
+        }
+      },
+      "landing-rcp-supercharge": {
+        "type": "landing-rcp-supercharge",
+        "settings": {
+          "bg-color": "#f9bf3c",
+          "img": "shopify:\/\/shop_images\/supercharge-image.jpg",
+          "head": "Supercharge Immunity",
+          "subhead": "Bruno MD Red Orange Complex boosts immunity with +400% of daily recommended vitamin C.",
+          "txt": "<p>Our varieties of blood orange grow only in Sicily on the side of Mt. Etna, an active volcano. Minerals from deep in the Earth, renewed daily by the volcano, percolate into our orchards lending the citrus its deep, red flesh. The red pigments are actually beneficial anthocyanins; common to flowers and fruit, but rare in citrus. The high levels of vitamin C arise from our unique micro climate caused when ocean breezes and warm sun are trapped against steep volcanic slopes.<\/p>",
+          "bg-color2": "#efecf4",
+          "paragraph": "<p><strong>The science<\/strong><\/p>\n<p><\/p>\n<p>Each blood orange is an immune boosting powerhouse containing 40% more vitamin C than other citrus. Anthocyanin intake is associated with various health benefits as demonstrated in a number of studies ranging from human epidemiology and clinical trial intervention to screening and mechanistic studies in animals and cell culture models.&nbsp; Plus, over 60 beneficial flavonoids also contain powerful antioxidants to tame free radicals and may also offer anti-inflammatory benefits.<\/p>"
+        }
+      },
+      "landing-rcp-alternate": {
+        "type": "landing-rcp-alternate",
+        "settings": {
+          "head1": "Resilient Nails",
+          "sub1": "Royal Collagen Peptides promote  growth and health of fingernails with less chipping.",
+          "text1": "<p>Brittle nail syndrome; rough nails that peel, break and crack, affects 20% of the population and more women than men. What&rsquo;s the fix? Hair and collagen are made from the same protein building blocks. We already learned that collagen can&rsquo;t improve existing hair and the same rules apply to existing nail growth (no matter what other collagen companies say).<\/p>\n<p><\/p>\n<p>What Royal Collagen Peptides will do is significantly improve new nail growth.<\/p>\n<p><\/p>\n<p>We do this in two ways: First, Royal Collagen improves micro-circulation to the nail bed. Next, this flood of nutrients stimulates (up-regulates) the genes responsible for the assembly line of proteins that create strong, healthy nails. That&rsquo;s foundational beauty!<\/p>",
+          "para1": "<p><strong>The science<\/strong><\/p>\n<p><\/p>\n<p>A recent 24 week clinical trial demonstrated a pronounced improvement in brittle nails, a significant increase in nail growth rate, and a decrease in the frequency of cracked or chipped nails after daily oral supplementation with Royal Collagen Complex. Participants were aged from 18 to 50 and displayed at least one of the following signs of brittle nails: lamellar splitting of the free edge (lamellar peeling), edge irregularities (fissuring of the distal nail plate), and nail roughness (longitudinal ridging\/grooves).<\/p>",
+          "img1": "shopify:\/\/shop_images\/Royal-Collagen-Peptides-Healthy-Nails-01-scaled-min.png",
+          "head2": "Stronger Bones",
+          "sub2": "Royal Collagen Peptides keeps your bones strong.",
+          "text2": "<p>Our Specific Collagen Peptides Complex significantly strengthens bones by increasing bone mineral density. In fact, Royal Collagen Peptides are proven to reduce bone fractures by 75% when taken daily. That&rsquo;s a staggering improvement.<\/p>\n<p><\/p>\n<p>This is excellent news when it comes to Osteoporosis. Osteoporosis, which means \"porous bones,\" is a condition that causes bones to gradually thin and weaken when your body loses more bone than it produces, leaving bones susceptible to fractures.<\/p>\n<p><\/p>\n<p>Bruno Pharma is the Italian Market Leader in advanced formulations for the treatment of Osteoporosis and other metabolic bone diseases.<\/p>",
+          "para2": "<p><strong>The science<\/strong><\/p>\n<p><\/p>\n<p>About 70% of our bones are made of inorganic minerals, 10% of water, and 20% of Collagen. Collagen forms the framework to which calcium attaches. You can think of collagen as the steel core in a column made of concrete. If collagen is missing, degradation of the bone becomes inevitable.<\/p>\n<p><\/p>\n<p>The latest Peer Reviewed, Randomized, Double-Blind, Placebo-Controlled Clinical trial conducted on 131 postmenopausal women demonstrated that the oral intake of SCP in our Royal Collagen Peptides Complex significantly increased bone mineral density (BMD) in both the lumbar spine and the femoral neck vs the placebo group. Another double blind study carried out with approximately 100 women over a period of 3 years, concluded that bone fractures can be reduced by 75% when Royal Collagen Peptides are taken daily.<\/p>",
+          "img2": "shopify:\/\/shop_images\/Stronger-Bones.jpg",
+          "head3": "Flexible Joints",
+          "sub3": "Royal Collagen Peptides helps support joint and cartilage function.",
+          "text3": "<p>Cartilage is an important component of our joints. It acts like a shock absorber wherever two bones meet. When cartilage wears out, bones can rub painfully together. Royal Collagen Peptides reduce symptoms of joint pain associated with strenuous athletic activity and improve joint health.<\/p>",
+          "para3": "<p><strong>The science<\/strong><\/p>\n<p><\/p>\n<p>Cartilage is not connected to the bloodstream so the only way it receives nutrients is via a &ldquo;joint lubricant&rdquo; called synovial fluid. Royal Collagen Peptides are clinically proven to stimulate the activity of the only cells found in cartilage connective tissue called chondrocytes which are responsible for both collagen and hyaluronic acid production in cartilage tissue.<\/p>\n<p><\/p>\n<p>In the latest peer reviewed, randomized, double-blind, placebo-controlled, clinical study conducted in the US, 147 athletes were recruited (75 female, 72 male). After 24 weeks, the study demonstrated that oral intake of SCP contained&nbsp; in our Royal Collagen Peptides Complex significantly reduced the symptoms of joint pain associated with strenuous athletic activity and improved&nbsp; joint health with reduced need for physiotherapy or ice packs. Another US study demonstrated that subjects with relatively mild knee Osteoarthritis (degenerative joint disorders) showed changes in tibial cartilage proteoglycan concentration within a 6 month observation period.<\/p>",
+          "img3": "shopify:\/\/shop_images\/Flexible-Joints.jpg"
+        }
+      },
+      "landing-rcp-banner": {
+        "type": "landing-rcp-banner",
+        "settings": {
+          "bg-color": "#fdffff",
+          "head1": "The #1 Pharma Formulated",
+          "head2": "Clinically Proven Collagen Peptides <span>with 5-in-1 benefits:<\/span>",
+          "video": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/8e3mumza6i.jsonp\" async=\"\"><\/script><script src=\"https:\/\/fast.wistia.com\/assets\/external\/E-v1.js\" async=\"\"><\/script><div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_8e3mumza6i videoFoam=true\" style=\"height:100%;position:relative;width:100%\"><div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/8e3mumza6i\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div><\/div><\/div><\/div>",
+          "video_mob": "<script src=\"https:\/\/fast.wistia.com\/embed\/medias\/sbdhopnbb1.jsonp\" async=\"\"><\/script><script src=\"https:\/\/fast.wistia.com\/assets\/external\/E-v1.js\" async=\"\"><\/script><div class=\"wistia_responsive_padding\" style=\"padding:100.0% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><div class=\"wistia_embed wistia_async_sbdhopnbb1 videoFoam=true\" style=\"height:100%;position:relative;width:100%\"><div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https:\/\/fast.wistia.com\/embed\/medias\/sbdhopnbb1\/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\"><\/div><\/div><\/div><\/div>",
+          "head5": "<span>+400% daily value<\/span> of Natural Vitamin C so your immune system will love you.",
+          "head6": "<div data-scroll=\"#eye-wrinkle-volume\">\n<span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0021\/0573\/7291\/t\/67\/assets\/benefit-1.png\" alt=\"Benefit 1\" width=\"68\" height=\"26\"><\/span><p>Reduce <b>Eye Wrinkles Volume<\/b><\/p>\n<\/div>\n<div data-scroll=\"#youthful-hair\">\n<span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0021\/0573\/7291\/t\/67\/assets\/benefit-2.png\" alt=\"Benefit 2\" width=\"76\" height=\"57\"><\/span><p>Promote <b>Youthful Hair<\/b><\/p>\n<\/div>\n<div data-scroll=\"#nail-growth\">\n<span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0021\/0573\/7291\/t\/67\/assets\/benefit-3.png\" alt=\"Benefit 3\" width=\"65\" height=\"55\"><\/span><p>Increase <b>Nail Growth<\/b><\/p>\n<\/div>\n<div data-scroll=\"#bone-strength\">\n<span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0021\/0573\/7291\/t\/67\/assets\/benefit-4.png\" alt=\"Benefit 4\" width=\"89\" height=\"43\"><\/span><p>Increase <b>Bone Strength<\/b><\/p>\n<\/div>\n<div data-scroll=\"#joint-flexibility\">\n<span><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0021\/0573\/7291\/t\/67\/assets\/benefit-5.png\" alt=\"Benefit 1\" width=\"86\" height=\"43\"><\/span><p>Improve <b>Joint Flexibility<\/b><\/p>\n<\/div>",
+          "ben_mob": "<p data-scroll=\"#eye-wrinkle-volume\">Eye Wrinkles<\/p>\n<p data-scroll=\"#youthful-hair\">Youthful Hair<\/p>\n<p data-scroll=\"#nail-growth\">Nail Growth<\/p>\n<p data-scroll=\"#bone-strength\">Bone Strength<\/p>\n<p data-scroll=\"#joint-flexibility\">Joint Flexibility<\/p>",
+          "img": "shopify:\/\/shop_images\/RCP-Bottle-new_595fb021-cb06-4856-90cd-10bc722db240.png",
+          "head4": "Invest in your health with Bruno MD<sup>®<\/sup>.",
+          "collection": "royal-collagen-peptides"
+        }
+      },
+      "landing-rcp-upfooter": {
+        "type": "landing-rcp-upfooter",
+        "settings": {
+          "background": "shopify:\/\/shop_images\/Trust-Badge-2020.jpg",
+          "badge": "shopify:\/\/shop_images\/trust-badge.png",
+          "head1": "Refund Policy",
+          "head2": "Customer satisfaction is our #1 Priority",
+          "txt": "<p>If you are unhappy with a product, simply return it within 30 days<\/p>\n<p>of receiving it and we&rsquo;ll give you a full refund.<\/p>\n<p>It&rsquo;s that simple.<\/p>",
+          "collection": "royal-collagen-peptides",
+          "top_txt1": "15% loyalty discount for subscribe & save customers",
+          "top_img1": "shopify:\/\/shop_images\/footer-icon1_a7527865-c587-4e70-908e-c238000e21e9.png",
+          "top_txt2": "Free shipping for all orders above $75",
+          "top_img2": "shopify:\/\/shop_images\/footer-icon2_f7b88616-7249-4a05-8ac7-006e2ef65339.png",
+          "top_txt3": "30-Day money back guarantee - Purchase with complete confidence",
+          "top_img3": "shopify:\/\/shop_images\/footer-icon3_8b773ccc-ecd6-48da-ba73-92d08dfc40f8.png"
+        }
+      },
+      "landing-rcp-faq": {
+        "type": "landing-rcp-faq",
+        "blocks": {
+          "1589301022311": {
+            "type": "faq",
+            "settings": {
+              "acc_title": "What does aging Mean?",
+              "acc_text": "<p>When we are young, our metabolism runs at full speed and our body cells are constantly renewing themselves. The nutrient uptake works flawlessly, and the body&rsquo;s own production of important substances also helps to ensure the body gets everything it needs. We are bursting with strengths and youthfulness. But as we grow older, many processes in the body change. Our entire metabolism slows down and the untack and processing of nutrients decline. Certain tissues within the body are no longer reproduced at the required levels. Cartilage tissue wears out, bones become more porous, blood vessels calcify and stiffen. The blood flow decreases, and as a result neither the tissue nor the brain is optimally provided for. The skin loses its ability to store moisture. These aging processes cannot be halted or reversed. They can, however, be influenced by physical activity and a targeted diet with nutritional supplementation.<\/p>"
+            }
+          },
+          "1589301055997": {
+            "type": "faq",
+            "settings": {
+              "acc_title": "Why is Collagen Important?",
+              "acc_text": "<p>It is well known that the human body consists largely of water. Proteins are the other major component. When referring to the heart, lungs, kidneys, liver, brain, skin, bones, and even most hormones and enzymes that are indispensable for metabolism, it is always the proteins that provide their structure and function. Collagen is the most abundant component in the human body, and therefore the most important component of human connective tissue. This extraordinary protein is also the central building block of the bones, joints, tendons, and many other tissues and structures. Collagen provides a structure for the body and its many organs, and keeps them &ldquo;together&rdquo; in the truest sense of the word. It is present nearly everywhere in the body, forming and connecting moving parts, like the bones, and in turn, the muscles, tendons, and ligaments with the bones.<\/p>"
+            }
+          },
+          "1589301103190": {
+            "type": "faq",
+            "settings": {
+              "acc_title": "How many types of collagen exists?",
+              "acc_text": "<p>Currently we know of 28 different types of collagen. The human body mainly consists of collagen types I, II and III. Type I accounts for about 90% of the body&rsquo;s total collagen content, mainly in the connective tissue of the skin, bones, and tendons. Type II accounts for joint cartilage, and type III accounts for skin and muscles.<\/p>"
+            }
+          },
+          "1589301109227": {
+            "type": "faq",
+            "settings": {
+              "acc_title": "What are collagen peptides?",
+              "acc_text": "<p>When we are young, our body is busy day and night performing renovation work. It keeps itself young by breaking down old tissue, while at the same time building new tissue to replace old. As we age, this process slows down, but it never ceases. When our body breaks down collagen, these long chains are disassembled, by enzymes, into small &ldquo;snippets'' for removal. This sends a signal to the body: &ldquo;Attention! Bits of degraded collagen are floating around here; we have to start rebuilding.&rdquo; A young and healthy body reacts promptly to build the required quantity. As we age, our metabolism becomes weary and these signals are no longer enough for the body, which is becoming sluggish. When we consume collagen peptides as a dietary supplement, we ingest just these collagen snippets, but in larger amounts. Our bodies are rapidly digesting and absorbing collagen, mainly in the form of the smallest units, single amino acids, but also partially in intact form as collagen peptides (collagen snippets). These collagen snippets reach the bloodstream and distribute throughout the body. Now the cells in our body, which are responsible for connective tissue\/collagen metabolism, notice that there is an imbalance. It is like an alarm, &ldquo;Attention! There are lots of collagen particles swimming about here, now we really have to get work and make even more collagen!&rdquo; As the collagen supplements provide the amino acids, building blocks for collagen synthesis at the same time, they support the body twofold. In this way, collagen peptides stimulate our body&rsquo;s own collagen production. The whole connective tissue metabolism comes to life. Taking the skin as an example, it can be shown that other important components of skin structure, such as elastin and proteoglycans, are also produced in great quantities. The dermis, the second layer of skin, is, so to speak, completely overhauled. At the same time the degradation of the skin is slowed. In total, more collagen is being built up than broken down, and it is exactly this effect that many users, mostly women, describe as a more attractive, firmer, radiant complexion. The balance also shifts in other tissue types such as cartilage or bone: increased formation, slower degradation. This also explains why dietary supplements cannot produce visible or tangible results instantly disappear. Our body needs time to adapt to these processes. It is important to note one thing, collagen peptides do not only affect the symptoms, but also address the causes of the problems directly.<\/p>"
+            }
+          },
+          "1589301116298": {
+            "type": "faq",
+            "settings": {
+              "acc_title": "What are Specific Collagen Peptides?",
+              "acc_text": "<p>We have invested a lot of time researching these differences, and came up with a method of cutting the snippets out of the long chain of amino acids &ldquo;to size&rsquo; in precisely the right way. Specific collagen peptides are optimized for different purposes, and for specific conditions.<\/p>"
+            }
+          },
+          "1589437214750": {
+            "type": "faq",
+            "settings": {
+              "acc_title": "What is the difference between collagen and collagen peptides?",
+              "acc_text": "<p>Collagen molecules themselves are very large, which is why the body has difficulty in using and absorbing them. Collagen peptides are obtained from collagen. Collagen peptides are collagen molecules cut smaller allowing our body to make good use of them. Therefore, one speaks of their excellent &ldquo;bioavailability&rdquo;.<\/p>"
+            }
+          },
+          "1589437231784": {
+            "type": "faq",
+            "settings": {
+              "acc_title": "What does bio-availability mean?",
+              "acc_text": "<p>Collagen peptides can be so well absorbed by the body because they are water-soluble, and, unlike other proteins, have a very simple peptide structure, that is very easy for the body to work with. They are &ldquo;broken down&rdquo;, with an enzymatic process called &ldquo;exogenous enzymatic hydrolysis&rdquo;, and can therefore be absorbed more quickly and extensively than under natural collagen.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1589301022311",
+          "1589301055997",
+          "1589301103190",
+          "1589301109227",
+          "1589301116298",
+          "1589437214750",
+          "1589437231784"
+        ],
+        "settings": {
+          "background": "shopify:\/\/shop_images\/BrunoMD-Science-Medical-01-Scaled.jpg",
+          "head": "Frequently Asked Questions"
+        }
+      },
+      "landing-rcp-what-is": {
+        "type": "landing-rcp-what-is",
+        "settings": {
+          "facts": "shopify:\/\/shop_images\/Crown-RCP-Purple.png",
+          "head": "FACTS",
+          "fact1": "shopify:\/\/shop_images\/Doctor-Icon-RCP-Regal-Purple.png",
+          "head1": "30,000 + Doctors",
+          "head1-1": "choose to prescribe Bruno MD<sup>®<\/sup> products 35 million times a year.",
+          "fact2": "shopify:\/\/shop_images\/People-Icon-RCP-Regal-Purple.png",
+          "head2": "6 million + people",
+          "head2-1": "rely on Bruno MD products to improve their Health & Wellness.",
+          "fact3": "shopify:\/\/shop_images\/Science-Icon-1-RCP-Regal-Purple.png",
+          "head3": "50 + years of Clinical Research",
+          "head3-1": "backs every Bruno MD product.",
+          "txt": "<p>Collagen is an amazing protein. It&rsquo;s one of the major building blocks in your body.&nbsp; In fact, up to 90% of your bones, skin and connective tissues are made of collagen! Plentiful collagen is \u0003associated with glowing, wrinkle-free skin, youthful, shiny hair and strong nails and bones. However, after 25, your body produces less &amp; less collagen each day.<\/p>",
+          "img": "shopify:\/\/shop_images\/Collagen-Peptide-Powder-2020.png"
+        }
+      },
+      "landing-rcp-dilemma": {
+        "type": "landing-rcp-dilemma",
+        "settings": {
+          "facts": "shopify:\/\/shop_images\/Woman-Face-01-c-small-fixed-nails.png",
+          "head1": "The Collagen Dilemma",
+          "head2": "<b>Collagen is seriously important-<\/b><br>so how do we replace this vital building block?",
+          "head3": "<b>There are only two ways:<\/b>\n<span>Rely on our own bodies to make the <br>collagen we need or<\/span>\n<span>Take a daily collagen supplement.<\/span>",
+          "head4": "<p><strong>Here&rsquo;s the dilemma<\/strong>. Standard collagen supplements are simply not advanced enough to stimulate the special cells in our bodies that make collagen!<\/p>"
+        }
+      },
+      "landing-rcp-the-science": {
+        "type": "landing-rcp-the-science",
+        "settings": {
+          "head1": "Science solves the collagen dilemma <br>with Royal Collagen Peptides<sup>®<\/sup>.",
+          "head2": "Not all collagen peptides are equal.",
+          "txt1": "<p><strong>Bruno MD Royal Collagen Peptides&reg; are clinically proven to help produce new collagen at any age by stimulating your body&rsquo;s own collagen production! Science calls this endogenous but we just call it beauty from the inside out.<\/strong><br><br>Unlike standard collagen peptides, Bruno MD and its research partners have discovered the technology to precisely cut collagen peptides that specifically target cartilage growth, firmer skin, and stronger bones!<\/p>",
+          "head3": "The science? <br>Glad you asked.",
+          "head4": "Bruno MD’s technology is called <br><b>Specific and controlled enzymatic hydrolysis.<\/b>",
+          "txt2": "<p>After extraction, collagen consists of very long amino acid chains. These chains are then cut down (hydrolyzed) with the help of enzymes. Enzymes are like natural scissors that trim long chains of amino acids into smaller fragments that your body can easily use.<\/p>\n<p><\/p>\n<p>Once cut, these peptides then need to be optimized. Our patented process fine tunes the chain length, molecular weight and precise sequence of amino acids needed to stimulate exact cells in our bodies that are responsible for connective tissue metabolism.<\/p>",
+          "img": "shopify:\/\/shop_images\/native-min.png"
+        }
+      },
+      "landing-rcp-red-orange": {
+        "type": "landing-rcp-red-orange",
+        "settings": {
+          "head": "Next, we <b>supercharge<\/b> <br>our formula with <br><b>Red Orange Complex,<\/b>",
+          "txt": "<p>a potent organic form of vitamin C extracted from a unique variety of blood oranges grown only along the slopes of Mount Etna Volcano in Italy! Our Red Orange Complex maximizes collagen formation and boosts your immunity by providing your body with over 400% of the daily recommended value of Vitamin C. In addition, Red Orange Complex contains precious phenolic compounds which help prevent collagen degradation induced by environmental factors.<\/p>",
+          "img": "shopify:\/\/shop_images\/Orange-Grove-01-Small.jpg"
+        }
+      },
+      "landing-rcp-pro-benefits": {
+        "type": "landing-rcp-pro-benefits",
+        "settings": {
+          "head": "Royal Collagen Peptides help Stimulate new Collagen production at any age!",
+          "txt": "<p>Add one scoop in cold liquid everyday and stimulate your body&rsquo;s own collagen production. Give your body the fuel \u0003to look and feel younger.<\/p>",
+          "img": "shopify:\/\/shop_images\/RCP-Bottle-new_595fb021-cb06-4856-90cd-10bc722db240.png",
+          "txt2": "<p>Anti-Aging<\/p>\n<p>Youthful Skin<\/p>\n<p>Stronger Bones<\/p>\n<p>Flexible Joints<\/p>\n<p>Resilient Nails<\/p>\n<p>Beautiful Hair<\/p>\n<p>Immunity<\/p>"
+        }
+      },
+      "landing-rcp-youthful": {
+        "type": "landing-rcp-youthful",
+        "settings": {
+          "head": "Youthful Skin",
+          "head2": "Clinically Proven to help improve skin elasticity, and reduce the appearance of wrinkles",
+          "txt": "<p>Royal Collagen Peptides&reg; help beautify your skin in two ways!<\/p>\n<p><\/p>\n<p><strong>First<\/strong>, our specific peptides biologically stimulate Fibroblast cells.&nbsp; Fibroblasts are special because they build the connective fibers that provide your skin with structure, elasticity and firmness. The beauty benefits are astonishing: improved skin texture, youthful glow and fewer fine lines.<\/p>\n<p><\/p>\n<p><strong>Second<\/strong>, Royal Collagen Peptides activate the production of hyaluronic acid which is essential for firm, younger looking skin.<\/p>",
+          "txt2": "<p><strong>The science<\/strong><\/p>\n<p>Three Peer Reviewed, Randomized, Double-Blind, Placebo-Controlled Clinical trials conducted on 250 healthy females ranging in age from 45 to 65 years, have shown that oral intake of Royal Collagen Specific Peptides Complex, significantly reduced eye wrinkle volume by 20.1% on average and up to a maximum of 49.9% vs the placebo group after only 8 weeks of treatment<\/p>",
+          "img": "shopify:\/\/shop_images\/Woman-02b-small.png",
+          "img2": "shopify:\/\/shop_images\/youthful.jpg"
+        }
+      },
+      "landing-rcp-ingredients": {
+        "type": "landing-rcp-ingredients",
+        "settings": {
+          "head": "Ingredients",
+          "txt": "<p>When it comes to ingredients, Bruno Pharma looks to what can be sourced in Italy first. Our unique soil and climate create crops with extraordinary healing properties known to locals for centuries! If it can&rsquo;t be grown on Italian soil, Bruno Pharma searches the world for clinically proven ingredients that live up to the same standards and the highest bioavailability with benefits you can achieve without a prescription.<\/p>",
+          "img": "shopify:\/\/shop_images\/Crown-Icon-White.png"
+        }
+      },
+      "landing-rcp-all-ing": {
+        "type": "landing-rcp-all-ing",
+        "settings": {
+          "head1": "Royal Collagen Peptides",
+          "shead1": "<p><strong>Highly Purified Collagen Peptides Complex<\/strong><\/p>\n<p>Italy, Germany, Great Britain &amp; other EU countries<\/p>",
+          "txt1": "<p>Our Royal Collagen Peptides are a breakthrough because they target cells that stimulate the creation of new collagen at any age! The benefits are astonishing: improved skin texture, glow, and elasticity, more youthful hair with renewed luster and bounce and stronger nails. The advantages are not merely cosmetic. Royal Collagen Peptides increase collagen levels throughout the body to restore cartilage; so you'll move better, and increase bone density; to keep your bones strong.<\/p>",
+          "img1": "shopify:\/\/shop_images\/RCP-Powder-01-Small.png",
+          "head2": "Natural Vitamin C",
+          "shead2": "<p><strong>From Ascorbic Acid<\/strong><\/p>\n<p>Scotland, United Kingdom<\/p>",
+          "txt2": "<p>Clinical studies prove that skin health is significantly improved when Royal Collagen Peptides are combined with natural vitamin C. Vitamin C is crucial for the formation (biosynthesis) of collagen. <\/p>",
+          "img2": "shopify:\/\/shop_images\/ing-2-min.png",
+          "head3": "Sicilian Blood Orange",
+          "shead3": "<p><strong>Red Orange Complex<\/strong><\/p>\n<p>Citrus Sinensis - Varieties Moro, Sanguinello, Tarocco Fruit Extract <br>Sicily, Italy<\/p>",
+          "txt3": "<p>Our Vitamin C is locally sourced from three varieties of ancient blood oranges.&nbsp; Harvested for centuries on old family farms near Mt. Etna&rsquo;s volcanic slopes, this fertile, mineral-rich soil creates a citrus so dense in flavonoids and vitamin C that even the Romans called it &ldquo;the miracle of Madre Terra.&rdquo; This is where art meets science! Nature&rsquo;s most potent nutrients, pharma-formulated to create supplements that rival medicinal solutions.<\/p>",
+          "img3": "shopify:\/\/shop_images\/Ingredients-2-min.png",
+          "head4": "Bovine Source",
+          "shead4": "<p>Switzerland &amp; Germany<\/p>",
+          "txt4": "<p>The Bruno MD process transforms the purest ingredients into a potent standardized powder: an organic, non-GMO, halal, and kosher certified bovine source, raised exclusively on a plant based diet, supplied by small European farming partners on the slopes of the Alps. Unlike farmers in the US and Brazil, cattle farmers in the European Union are prohibited from breeding genetically modified bovines or using GMO feed.<\/p>\n<p><\/p>\n<p>Our free-range bovine source provides the full bouquet of 18 essential and non essential amino acids.<\/p>",
+          "img4": "shopify:\/\/shop_images\/ing-3.png"
+        }
+      },
+      "landing-rcp-beautiful": {
+        "type": "landing-rcp-beautiful",
+        "settings": {
+          "head": "Beautiful Hair",
+          "shead": "Royal Collagen Peptides<sup>®<\/sup> <br>promotes healthy hair.",
+          "txt": "<p>You&rsquo;ll read a lot of nonsense out there about how collagen improves hair. Here&rsquo;s the truth: collagen can&rsquo;t repair existing hair but it can significantly improve new hair. Here&rsquo;s how:&nbsp; the blood vessels that supply nutrients to your roots are made of collagen. In other words, improved microcirculation from our specific collagen peptides helps increase hair vitality and strength by growing healthier hair from the roots up! Hair grows faster and more robust with renewed luster and bounce.<\/p>",
+          "txt2": "<p><strong>The science<\/strong><\/p>\n<p><\/p>\n<p>Bruno MD&reg; Royal Collagen Peptides&reg; are optimized to perfectly resemble the sequence of amino acids that your body recognizes as degradation products thus stimulating the body&rsquo;s own collagen synthesis.<\/p>\n<p><\/p>\n<p>Long story short? Our technology tells your collagen cells, &ldquo;Hey! We&rsquo;re gettin&rsquo; low here!&rdquo; which in turn stimulates these cells to pump out new collagen no matter your levels. So whether you&rsquo;re 25 or your 65, your cells are always producing collagen.<\/p>",
+          "img": "shopify:\/\/shop_images\/hairy-girl-min.jpg"
+        }
+      },
+      "rcp-intermediate-cart": {
+        "type": "rcp-intermediate-cart",
+        "settings": {
+          "txt": "<p>Subscribe and save 15% with free shipping!<\/p>\n<p>30 days money back guarantee.<\/p>",
+          "text-color": "#54337a"
+        }
+      }
+    },
+    "content_for_index": [
+      "1583135763171",
+      "1586423467646",
+      "1583142998664",
+      "1585725022508",
+      "1583388667619",
+      "1583232529381",
+      "1583300249957",
+      "1583313349102",
+      "1583319063623",
+      "1585910017192",
+      "1583323009265"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "media_size": "medium",
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

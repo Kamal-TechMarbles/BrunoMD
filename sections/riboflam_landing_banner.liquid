@@ -1,0 +1,160 @@
+<div class="landing_page" style="background:url('{{ section.settings.bg_img | img_url: 'master' }}'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="page-width">
+    <div class="grid">
+        <div class="grid__item medium-up--one-half" style="padding-right: 40px;">
+          <div class="landing-banner-description">
+            {% if section.settings.sub_heading != blank %}<h3>{{ section.settings.sub_heading | strip }}</h3>{% endif %}
+          	<h1>{{ section.settings.heading | escape }}</h1>
+        	<p>{{ section.settings.description | escape }}</p>
+          </div>
+         </div>
+       <div class="grid__item medium-up--one-half">
+         {%- assign product = all_products[section.settings.collection] -%}
+         <div class="landing-product-img">
+           	<div class="product-img">
+                  {% for image in product.images limit:1 %}
+              <div class="prescription-img"><img  src="{{ image.src | product_img_url: '800x' }}"></div>
+                   {% endfor %}
+                 <p>
+                   	{% if product.metafields.product_altname != empty %}
+                        {% for field in product.metafields.product_altname %}
+                            {% assign words = field | last | split: '##' %}
+                            {{ words[0] }}<br><span>{{ words[1] }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ product.title | escape }}
+                    {% endif %}
+              	 </p>
+                 <div class="product-type">{{ product.type | escape }}</div>
+              	 <div class="reviews" id="gotoreviews">
+                   	<!-- Yotpo Star Ratings -->
+                    <div class="yotpo bottomLine"
+                    data-product-id="{{ product.id }}">
+                    {%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+                    {%- assign time_now = 'now' | date: '%s' %}
+                    {%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+                    {%- assign diff_seconds_from_live = time_now | minus: yotpo_live_time %}
+                    {%- assign yotpo_bottomline_last_updated = product.metafields.yotpo.bottomline_update_time | date: '%s' %}
+                    {%- assign diff_seconds_from_last_bottomline_update = time_now | minus: yotpo_bottomline_last_updated %}
+                    {%- if yotpo_live_time and diff_seconds_from_live < 86400 or yotpo_bottomline_last_updated and diff_seconds_from_last_bottomline_update < 86400 -%}
+                       {%- assign yotpo_bottomline_obsolete = false %}
+                    {%- else %}
+                       {%- assign yotpo_bottomline_obsolete = true %}
+                    {%- endif %}
+                    {%- if yotpo_offload_content == 'yes' and yotpo_bottomline_obsolete != true -%}
+                       {{ product.metafields.yotpo.bottomline }}
+                    {%- endif %}
+                    </div>
+                    <!-- Yotpo Star Ratings -->
+                 </div>
+           <div class="pro-price">
+             <h6>{{ product.price | money }}</h6>
+           </div>
+              <hr> 
+              <form action="/cart/add" method="post" class="addtocart-act" id="product-form- {{ product.id }}">
+             <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+             <button type="submit" name="add">Buy Now</button>
+           </form>
+			<!-- <div class="ordernow-btn"><a href="{{ product.url }}">Buy Now</a></div> -->
+           </div>
+        
+           	{% assign counter = 0 %}
+           	{% for image in product.images %}
+           		{% assign counter = counter | plus: 1 %}
+           	{% endfor %}
+			{% assign counter = counter | minus: 4 %}
+           
+           	<div class="pres-gallery">
+              	{% assign count = 1 %}
+                {% for image in product.images offset:1 limit:5 %}
+                	<div class="product-img-gallery">
+                      	<img  src="{{ image.src | product_img_url: '800x' }}">
+                      	{% if count == 5 %}
+                      	<div class="pres-gallery-layer"><a class="launch-modal" href="#" data-modal="brunoMD-2">+{{ counter }}</a></div>
+                      	{% endif %}
+              		</div>
+              		{% assign count = count | plus: 1 %}
+                {% endfor %}
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bruno-modal" id="brunoMD-2">
+  	<div class="brunoMD-overlay"></div>
+  	<div class="brunoMD-body">
+      	<span class="close-modal">x</span>
+      	<div class="brunoMD-content">
+          	{% for image in product.images %}
+          		<img  src="{{ image.src | product_img_url: 'master' }}">
+          	{% endfor %}
+      	</div>
+  	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Landing Product Banner",
+    "settings": [
+
+                  {
+                  "type": "image_picker",
+                  "id": "bg_img",
+                  "label": "Banner Image"
+                  },
+                  {
+                  "type":      "header",
+                  "content":   "Text Color",
+                  "info":      "Color"
+                  },
+                  {
+                  "type":      "header",
+                  "content":   "Sub Heading",
+                  "info":      "Text"
+                  },
+                  {
+                  "type": "text",
+                  "id": "sub_heading",
+                  "label": "Sub Heading"
+                  },
+                  {
+                  "type":      "header",
+                  "content":   "Heading",
+                  "info":      "Text"
+                  },
+                  {
+                  "type": "text",
+                  "id": "heading",
+                  "label": "Heading"
+                  },
+                  {
+                  "type":      "range",
+                  "id":        "main_font_size",
+                  "min":       12,
+                  "max":        100,
+                  "step":       1,
+                  "unit":       "px",
+                  "label":     "Font size",
+                  "default":   16
+                  },
+                  {
+                  "type":      "header",
+                  "content":   "Description",
+                  "info":      "Description"
+                  },
+                  {
+                  "type": "text",
+                  "id": "description",
+                  "label": "Description"
+                  },
+
+                  {
+                  "label": "Collection",
+                  "id": "collection",
+                  "type": "product"
+                  }
+				]
+  }
+{% endschema %}

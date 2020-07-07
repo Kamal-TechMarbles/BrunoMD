@@ -1,0 +1,69 @@
+<section class="join-the-health common-section" style="background-image: url({{ section.settings.img3 | img_url: 'master' }})">
+  	<div class="page-width">
+      	<div class="grid">
+          	<div class="grid__item medium-up--one-half text-center">
+          		<div class="health-logo"><img class="lazyload" data-src="{{ section.settings.img2 | img_url: 'master' | split:'?' | first }}"></div>
+          	</div>
+         </div>
+  	</div>
+</section>
+<section class="who-we-are common-section" style="background: {{ section.settings.bg-color }}">
+  	<div class="page-width">
+      	<div class="grid">
+          	<div class="grid__item medium-up--one-half">
+              	<h2>{{ section.settings.head2 }}</h2>
+              	<p>{{ section.settings.txt }}</p>
+          	</div>
+          	<div class="grid__item medium-up--one-half text-center">
+              	<img class="lazyload" data-src="{{ section.settings.img | img_url: 'master' | split:'?' | first }}">
+          	</div>
+         </div>
+  	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Who We Are",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Who We Are"
+			},
+			{
+				"type": "color",
+				"id": "bg-color",
+				"label": "Section Background"
+			},
+			{
+				"type": "text",
+				"id": "head1",
+				"label": "Image Heading"
+			},
+			{
+				"type": "image_picker",
+				"id": "img",
+				"label": "Section Image"
+			},
+			{
+				"type": "text",
+				"id": "head2",
+				"label": "Section Heading"
+			},
+			{
+				"type": "textarea",
+				"id": "txt",
+				"label": "Below Content"
+			},
+			{
+				"type": "image_picker",
+				"id": "img2",
+				"label": "Join the Health Logo"
+			},
+			{
+				"type": "image_picker",
+				"id": "img3",
+				"label": "Join the Health Background"
+			}
+		]
+  	}
+{% endschema %}

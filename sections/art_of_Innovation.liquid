@@ -1,0 +1,100 @@
+<div class="art_inovation">
+    <div class="art-img">
+         <img class="lazyload" data-src="{{ section.settings.section-img | img_url: '903x' | split:'?' | first }}" alt="Art of Science" width="903" height="670">
+     </div>
+    <div class="page-width">
+        <div class="medium-up--two-quarters">
+           <div class="art-description" style="background-color:{{section.settings.text_bg_color }};">
+               <h1>{{ section.settings.heading_richtext | remove: '<p>'  | remove: '</p>'  }}</h1>
+               <p class="about-description-text">
+                  {{ section.settings.description_text | escape }}
+               </p>
+           </div>
+          <div class="art-btn">
+              <a href="{{ section.settings.button_link }}" style="color:{{section.settings.btn-color }}; background-color:{{section.settings.btn_bg }}; font-size:{{section.settings.btn_font_size}}px">
+                 {{- section.settings.btn_text | escape }}<span> <img class="lazyload" data-src="{{ section.settings.btn_con_img | img_url: '800x' | split:'?' | first }}" alt="Arrow" width="42" height="15"></span>
+              </a>
+             </div>
+        </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Art OF Innovation",
+    "settings": [
+      {
+               "type": "color",
+               "id": "text_bg_color",
+               "label": "Background color",
+               "default": "#ffffff"
+           },
+      {
+             "type": "richtext",
+             "id": "heading_richtext",
+             "label": "Text",
+             "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+          },
+        
+    {
+           "type": "textarea",
+           "id": "description_text",
+           "default": "Welcome to my shop!",
+           "label": "Welcome message"
+        },
+    {
+            "type": "image_picker",
+            "id": "section-img",
+            "label": "Image"
+        },
+    {
+          "id": "button_link",
+          "type": "url",
+          "label": "Button link"
+        },
+    {
+           "type": "text",
+           "id": "btn_text",
+           "label": "Button Text"
+        },
+    {
+           "type": "color",
+           "id": "btn_bg",
+           "label": "Background color",
+           "default": "#ffffff"
+        },
+    {
+           "type": "color",
+           "id": "btn-color",
+           "label": "Background color",
+           "default": "#ffffff"
+        },
+    {
+            "type":      "range",
+            "id":        "btn_font_size",
+            "min":       12,
+            "max":        100,
+            "step":       1,
+            "unit":       "px",
+            "label":     "Font size",
+            "default":   16
+        },
+    {
+            "type": "image_picker",
+            "id": "btn_con_img",
+            "label": "button icon"
+        }
+      ],
+   "presets": [
+      {
+        "category": "Homepage",
+        "name": "Images Description with button"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

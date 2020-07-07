@@ -1,0 +1,139 @@
+<section class="rcp-alternate common-section">
+	<div id="nail-growth" class="section-area">
+      	<div class="image-area desktop-hide"><img class="lazyload" data-src="{{ section.settings.img1 | img_url: 'master' }}" alt="Section Image"></div>
+		<div class="content-area">
+			<div>
+				<h2>{{ section.settings.head1 }}</h2>
+				<h4>{{ section.settings.sub1 }}</h4>
+				{{ section.settings.text1 }}
+			</div>
+			<div>{{ section.settings.para1 }}</div>
+		</div>
+		<div class="image-area mobile-hide"><img class="lazyload" data-src="{{ section.settings.img1 | img_url: 'master' }}" alt="Section Image"></div>
+	</div>
+	<div id="bone-strength" class="section-area">
+		<div class="image-area"><img class="lazyload" data-src="{{ section.settings.img2 | img_url: 'master' }}" alt="Section Image"></div>
+		<div class="content-area">
+			<div>
+				<h2>{{ section.settings.head2 }}</h2>
+				<h4>{{ section.settings.sub2 }}</h4>
+				{{ section.settings.text2 }}
+			</div>
+			<div>{{ section.settings.para2 }}</div>
+		</div>
+	</div>
+	<div id="joint-flexibility" class="section-area">
+      	<div class="image-area desktop-hide"><img class="lazyload" data-src="{{ section.settings.img3 | img_url: 'master' }}" alt="Section Image"></div>
+		<div class="content-area">
+			<div>
+				<h2>{{ section.settings.head3 }}</h2>
+				<h4>{{ section.settings.sub3 }}</h4>
+				{{ section.settings.text3 }}
+			</div>
+			<div>{{ section.settings.para3 }}</div>
+		</div>
+		<div class="image-area mobile-hide"><img class="lazyload" data-src="{{ section.settings.img3 | img_url: 'master' }}" alt="Section Image"></div>
+	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "3/Alternate Sections",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "3/Alternate Sections"
+			},
+			{
+				"type": "header",
+				"content": "Section 1 Area",
+				"info": "Upload content and image for the Alternate Section 1"
+			},
+			{
+				"type": "text",
+				"id": "head1",
+				"label": "Heading"
+			},
+			{
+				"type": "text",
+				"id": "sub1",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "text1",
+				"label": "Paragraph"
+			},
+			{
+				"type": "richtext",
+				"id": "para1",
+				"label": "Grey Box Content"
+			},
+			{
+				"type": "image_picker",
+				"id": "img1",
+				"label": "Upload Image"
+			},
+			{
+				"type": "header",
+				"content": "Section 2 Area",
+				"info": "Upload content and image for the Alternate Section 2"
+			},
+			{
+				"type": "text",
+				"id": "head2",
+				"label": "Heading"
+			},
+			{
+				"type": "text",
+				"id": "sub2",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "text2",
+				"label": "Paragraph"
+			},
+			{
+				"type": "richtext",
+				"id": "para2",
+				"label": "Grey Box Content"
+			},
+			{
+				"type": "image_picker",
+				"id": "img2",
+				"label": "Upload Image"
+			},
+			{
+				"type": "header",
+				"content": "Section 3 Area",
+				"info": "Upload content and image for the Alternate Section 3"
+			},
+			{
+				"type": "text",
+				"id": "head3",
+				"label": "Heading"
+			},
+			{
+				"type": "text",
+				"id": "sub3",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "text3",
+				"label": "Paragraph"
+			},
+			{
+				"type": "richtext",
+				"id": "para3",
+				"label": "Grey Box Content"
+			},
+			{
+				"type": "image_picker",
+				"id": "img3",
+				"label": "Upload Image"
+			}
+		]
+  	}
+{% endschema %}

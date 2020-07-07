@@ -1,0 +1,110 @@
+{%- assign product = all_products[section.settings.collection] -%}
+{%- assign sendpro = section.settings.collection -%}
+
+<section class="rcp-banner common-section">
+	<div class="page-width">
+		<div class="grid">
+			<div class="grid__item medium-up--one-half">
+				<h1>{{ section.settings.head1 }}</h1>
+				<h2>{{ section.settings.head2 }}</h2>
+              	<div class="desktop-hide mob-videos">{{ section.settings.video_mob }}</div>
+              	<div class="shop-btn desktop-hide"><a href="/pages/intermediate-cart/?product={{ sendpro }}" class="buynow-button">Buy Now</a></div>
+				<div class="product-benefits desktop-hide">
+					<div class="pb-1" id="mobile-benefits">{{ section.settings.ben_mob }}</div>
+					<div class="pb-2"><div class="proimg-holder"><img class="mobile-proimg" src="{{ section.settings.img | img_url: 'master' }}" alt="Product Image"></div></div>
+				</div>
+              	<div class="vid-side">
+					<div class="col1 text-center">
+						<div class="mobile-hide">{{ section.settings.video }}</div>
+						<p class="mobile-hide">{{ section.settings.head5 }}</p>
+						<h4 class="mobile-hide">{{ section.settings.head4 }}</h4>
+						<div class="shop-btn mobile-hide"><a href="/pages/intermediate-cart/?product={{ sendpro }}" class="buynow-button">Buy Now</a></div>
+					</div>
+					<div class="col1 mobile-hide" id="desktop-benefits">
+						{{ section.settings.head6 }}
+					</div>
+				</div>
+				<div class="vid-side">
+					<div class="col1 desktop-hide">
+						<p>{{ section.settings.head5 }}</p>
+						<h4>{{ section.settings.head4 }}</h4>
+					</div>
+				</div>
+			</div>
+			<div class="grid__item medium-up--one-half">
+				<img class="banner-product-img mobile-hide" src="{{ section.settings.img | img_url: 'master' }}" alt="Product Image">
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+	"name": "RCP Banner",
+	"settings": [
+		{
+			"type": "header",
+			"content": "RCP Banner"
+		},
+		{
+			"type": "color",
+			"id": "bg-color",
+			"label": "Section Background"
+		},
+		{
+			"type": "text",
+			"id": "head1",
+			"label": "Heading 1"
+		},
+		{
+			"type": "text",
+			"id": "head2",
+			"label": "Heading 2"
+		},
+		{
+			"type": "textarea",
+			"id": "video",
+			"label": "Desktop Video Embed Code"
+		},
+		{
+			"type": "textarea",
+			"id": "video_mob",
+			"label": "Mobile Video Embed Code"
+		},
+		{
+			"type": "text",
+			"id": "head5",
+			"label": "Heading 5"
+		},
+		{
+			"type": "header",
+			"content": "Benefits"
+		},
+		{
+			"type": "textarea",
+			"id": "head6",
+			"label": "Desktop Benefits"
+		},
+		{
+			"type": "textarea",
+			"id": "ben_mob",
+			"label": "Mobile Benefits"
+		},
+		{
+			"type": "image_picker",
+			"id": "img",
+			"label": "Product Image"
+		},
+		{
+			"type": "text",
+			"id": "head4",
+			"label": "Heading over Buy Now Button"
+		},
+		{
+			"type": "product",
+			"id": "collection",
+			"label": "Select Product for Shop Button"
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,60 @@
+<section class="supercharge common-section" style="background: {{ section.settings.bg-color }}">
+  	<div class="super-immun">
+  		<div class="leftimg"><img class="lazyload" data-src="{{ section.settings.img | img_url: 'master' }}" alt="Supercharge"></div>
+      	<div class="rightxt">
+      		<div>
+	      		<h2>{{ section.settings.head }}</h2>
+	          	<h4>{{ section.settings.subhead }}</h4>
+	          	{{ section.settings.txt }}
+	      		<div style="background: {{ section.settings.bg-color2 }}">{{ section.settings.paragraph }}</div>
+      		</div>
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Supercharge Immunity",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Supercharge Immunity"
+			},
+			{
+				"type": "color",
+				"id": "bg-color",
+				"label": "Section Background"
+			},
+			{
+				"type": "image_picker",
+				"id": "img",
+				"label": "Leftside Image"
+			},
+			{
+				"type": "text",
+				"id": "head",
+				"label": "Section Heading"
+			},
+			{
+				"type": "text",
+				"id": "subhead",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Description"
+			},
+			{
+				"type": "color",
+				"id": "bg-color2",
+				"label": "Section Background"
+			},
+			{
+				"type": "richtext",
+				"id": "paragraph",
+				"label": "Grey Box Content"
+			}
+		]
+  	}
+{% endschema %}

@@ -1,0 +1,157 @@
+<div class="about-us">
+    <div class="page-width">
+        <div class="feature-row">
+            <div class="medium-up--one-half">
+                <div class="about-img"><img data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About BrunoMD" width="726" height="784" class="lazyload"></div>
+            </div>
+            <div class="medium-up--one-half">
+                <div class="about-us-description">
+                    <h4>{{ section.settings.section-name | escape }}</h4>
+                    <h2>{{ section.settings.main-heading | escape }}</h2>
+                    <h1>{{ section.settings.sub-heading_text | escape_html }}</h1>
+                    <p class="about-description-text">
+                        {{ section.settings.about-description | escape_html }}
+                    </p>
+                    {% if section.settings.heightlight-description %}
+                    <div class="heighlighted-text">
+                        <p>{{ section.settings.heightlight-description | escape }}</p>
+                    </div>
+                    {% endif %}
+                    <div class="section-btn">
+                        <a href="{{ section.settings.readmore_link | escape }}">{{ section.settings.readmore_text | escape }}
+                            <span><img data-src="{{ 'arrow.png' | asset_img_url: 'master' | split:'?' | first }}" alt="Arrow" width="42" height="15" class="lazyload"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img small"><img data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About BrunoMD" class="lazyload"></div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About Us",
+    "settings": [
+      {
+               "type":      "header",
+               "content":   "About Us Images",
+               "info":      "Images"
+            },
+            {
+              "type": "image_picker",
+              "id": "about-img",
+              "label": "Product Images"
+            },
+      {
+               "type":      "header",
+               "content":   "Section Name",
+               "info":      "text"
+            },
+            {
+               "type": "text",
+               "id": "section-name",
+               "label": "Section Name"
+            },
+    {
+               "type":      "header",
+               "content":   "Main Heading",
+               "info":      "text"
+         },
+        {
+               "type": "text",
+               "id": "main-heading",
+               "label": "Heading"
+            },
+    {
+               "type":      "header",
+               "content":   "Sub Heading",
+               "info":      "text"
+         },
+      {
+          "type": "text",
+          "id": "sub-heading_text",
+          "label": "Heading"
+      },
+        {
+             "type": "color",
+             "id": "sub_heading_color",
+             "label": "color",
+             "default": "#ffffff"
+          },
+      {
+          "type":      "range",
+          "id":        "sub_font_size",
+          "min":       12,
+          "max":        100,
+          "step":       1,
+          "unit":       "px",
+          "label":     "Font size",
+          "default":   16
+      },
+  {
+          "type":      "header",
+          "content":   "About Description",
+          "info":      "text"
+     },
+    {
+       "type": "textarea",
+       "id": "about-description",
+       "label": "Text"
+    },
+    {
+        "type": "color",
+        "id": "description-color",
+        "label": "Color"
+    },
+    {
+          "type":      "range",
+          "id":        "description-font-size",
+          "min":       12,
+          "max":        100,
+          "step":       1,
+          "unit":       "px",
+          "label":     "Font size",
+          "default":   16
+      },
+  {
+          "type":      "header",
+          "content":   "heightlight text",
+          "info":      "text"
+     },
+  {
+       "type": "textarea",
+       "id": "heightlight-description",
+       "label": "Description"
+    },
+  {
+       "type":      "header",
+       "content":   "Button",
+       "info":      "Section Button"
+    },
+  {
+       "type": "text",
+       "id": "readmore_text",
+       "label": "Button Text"
+    },
+    {
+      "id": "readmore_link",
+      "type": "url",
+      "label": "Button link"
+    }
+    ],
+    "presets": [
+          {
+            "category": "Homepage",
+            "name": "About Us"
+          }
+        ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

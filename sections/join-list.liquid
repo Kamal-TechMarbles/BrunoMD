@@ -1,0 +1,57 @@
+{%- assign background = section.settings.background_image | img_url: 'master' | split:'?' | first -%}
+<div class="join-our-newsletter" style="background-image: url({{ background }});     background-repeat: no-repeat; background-size: cover;">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-half">
+        <div class="newsletter-para">
+          <p class="text-center newLogo-para"><img src="{{ section.settings.newlogo | img_url: 'master' }}"></p>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-half">
+        <div class="join-us-form">
+                  <h2>{{ section.settings.title | escape }}</h2>
+        {%- assign formId = 'ContactFooter' -%}
+        <form id="email_signup" class="klaviyo_gdpr_embed_QifeuV contact-form" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+          <input type="hidden" name="g" value="QifeuV">
+          <div class="input-group {% if form.errors %} input-group--error{% endif %}">
+            <input type="email" name="email" id="k_id_email" class="input-group__field newsletter__input{% if form.errors %} input--error{% endif %}" value="{{ form.email }}" placeholder="Your Email" required autocorrect="off" autocapitalize="off">
+          </div>
+          <div class="input-group {% if form.errors %} input-group--error{% endif %}">
+            <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">Send</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name":  "Join Our Newsletter",
+    "class": "join-our-newsletter",
+    "settings": [
+      {
+        "type":  "text",
+        "id":    "title",
+        "label": "Section Heading/Title",
+        "default": "Join the New Health Renaissance"
+      },
+	{
+        "type": "image_picker",
+        "id": "newlogo",
+        "label": "New Logo Icon"
+      },
+      {
+        "type":  "richtext",
+        "id":    "paragraph",
+        "label": "Paragraph Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Section Background Image"
+      }
+    ]
+  }
+{% endschema %}

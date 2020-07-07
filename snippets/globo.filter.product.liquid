@@ -1,0 +1,104 @@
+{% raw %}
+    {% assign swatch_options = '' | downcase | replace: ', ', ',' | split: ","  %}
+    {% assign image_options  = '' | downcase | replace: ', ', ',' | split: ","  %}
+    {% assign text_options   = '' | downcase | replace: ', ', ',' | split: ","  %}
+    {% assign show_selected_variant_info = false %}
+    {% assign image_size     = '360x400' %}
+    {% assign images_count   = product.images | size %}
+    {% assign variants_count = product.variants | size %}
+    {% assign options_count  = product.options | size %}
+    {% assign no_image = 'https://cdn.shopify.com/s/images/themes/product-1.png' %}
+    {% assign featured_image            = product.featured_image %}
+    {% assign product_price             = product.price %}
+    {% assign product_compare_at_price  = product.compare_at_price %}
+    {% assign second_image_index        = 2 %}
+    {% assign selected_or_first_available_variant = product.first_available_variant %}
+    {% if show_selected_variant_info and product.selected_or_first_available_variant %}
+        {% assign selected_or_first_available_variant = product.selected_or_first_available_variant %}
+        {% assign product_price             = selected_or_first_available_variant.price %}
+        {% assign product_compare_at_price  = selected_or_first_available_variant.compare_at_price %}
+        {% if selected_or_first_available_variant.image %}
+            {% assign featured_image  = selected_or_first_available_variant.image %}
+        {% endif %}
+        {% for image in product.images %}
+            {% if image.id == featured_image.id %}
+                {% if forloop.index == images_count %}
+                    {% assign second_image_index = 1 %}
+                {% else %}
+                    {% assign second_image_index = forloop.index | plus: 1 %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <div class="spf-col-xl-4 spf-col-lg-4 spf-col-md-12 spf-col-sm-12 spf-col-12">
+        <div class="spf-product-card spf-product-card__template-2{% unless product.available %} spf-soldout{% endunless %}">
+            <div class="spf-product-card__inner">
+                {% unless product.available %}
+                    <span translatable class="spf-product__label spf-product__label-soldout">Sold out</span>
+                {% elsif product_compare_at_price > product_price %}
+                    <span translatable class="spf-product__label spf-product__label-sale">Sale</span>
+                {% endunless %}
+                <a class="spf-product-card__image-wrapper{% if images_count > 1 %} hover-effect{% endif %}" href="{{product.url}}" style="padding-top:100%; padding-top:111.11111111111%;">
+                    {% if images_count > 0 %}
+                        {% for image in product.images %}
+                            <img data-variants="{{image.variant_ids | join: ','}}" class="gflazyload spf-product-card__image spf-product-card__image-{% if featured_image.id == image.id %}main{% elsif forloop.index == second_image_index %}secondary{% else %}hidden{% endif %}" src="{{image.src | img_url: image_size}}" data-src="{{image.src | img_lazyload_url}}" data-sizes="auto" data-aspectratio="{{image.aspect_ratio}}" data-parent-fit="contain" alt="{{image.alt | escape}}">
+                        {% endfor %}
+                    {% else %}
+                        <img data-variants="" class="spf-product-card__image spf-product-card__image-main" src="{{no_image}}" alt="{{product.title | escape}}">
+                    {% endif %}
+                </a>
+                {% if images_count > 1 %}
+                    <div class="spf-product-card__images-navigation">
+                        <span class="image-navigation prev"><svg width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+                        <span class="image-navigation next"><svg width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="spf-product__info">
+                <div class="h4 spf-product-card__title">
+                    <a translatable href="{{product.url}}">
+                        {% if product.metafields.product_altname and product.metafields.product_altname.altname_01 %}
+                      		{% assign words = product.metafields.product_altname.altname_01 | split: '##' %}
+                      		{{ words[0] }}<br><span>{{ words[1] }}</span>
+                        {% else %}
+                            {{ product.title | escape }}
+                        {% endif %}
+                    </a>
+                </div>
+                <!-- <div class="three-icons">
+                    {% if product.metafields.product_icons and product.metafields.product_icons.icons_01 %}
+                        {% assign words = product.metafields.product_icons.icons_01 | split: '##' %}
+                        <img src="{{ words[0] | asset_url }}" alt="{{ words[1] }}">
+                    {% endif %}
+                    {% if product.metafields.product_icons and product.metafields.product_icons.icons_02 %}
+                        {% assign words = product.metafields.product_icons.icons_02 | split: '##' %}
+                        <img src="{{ words[0] | asset_url }}" alt="{{ words[1] }}">
+                    {% endif %}
+                    {% if product.metafields.product_icons and product.metafields.product_icons.icons_03 %}
+                        {% assign words = product.metafields.product_icons.icons_03 | split: '##' %}
+                        <img src="{{ words[0] | asset_url }}" alt="{{ words[1] }}">
+                    {% endif %}
+                </div> -->
+                <div class="spf-product-card__price-wrapper">
+                    {% if product_compare_at_price > product_price %}
+                        <span class="spf-product-card__oldprice money">{{ product_compare_at_price | money }}</span>
+                        <span class="spf-product-card__saleprice money">{{ product_price | money }}</span>
+                    {% else %}
+                        <span class="spf-product-card__price money">{{ product_price | money }}</span>
+                    {% endif %}
+                </div>
+                <div class="yotpo bottomLine" data-product-id="{{ product.id }}">{{product.metafields.yotpo.catalog_bottomline}}</div>
+            </div>
+            <form class="spf-product__form" action="/cart/add" method="post">
+                <select name="id" class="spf-product__variants">
+                    {% for variant in product.variants %}
+                        <option data-price="{{variant.price}}" data-compare_at_price="{{variant.compare_at_price}}" data-available="{{variant.available}}" data-image="{% if variant.image.src %}{{variant.image.src | img_url: image_size }}{% endif %}" {% if variant.id == selected_or_first_available_variant.id %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }}</option>
+                    {% endfor %}
+                </select>
+                <button translatable {% unless product.available %}disabled{% endunless %} type="submit" class="spf-product__form-btn-addtocart" data-available="Order Now" data-soldout="Sold out" data-unavailable="Unavailable"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span>{% if product.available %}Order Now{% else %}Sold out{% endif %}</span></button>
+              	<a href="{{product.url}}" class="spf-product__form-btn-addtocart">Learn More</a>
+            </form>
+        </div>
+    </div>
+{% endraw %}

@@ -1,0 +1,116 @@
+<section class="what-is-collegen common-section">
+  	<div class="page-width">
+      	<div class="facts">
+          	<img class="lazyload" data-src="{{ section.settings.facts | img_url: "master" | split:'?' | first }}">
+          	<h4>{{ section.settings.head }}</h4>
+      	</div>
+		<div class="facts-right">
+			<div>
+				<span><img class="lazyload" data-src="{{ section.settings.fact1 | img_url: "master" | split:'?' | first }}"></span>
+	          	<p>
+	              	<b>{{ section.settings.head1 }}</b>
+	              	{{ section.settings.head1-1 }}
+	          	</p>
+	        </div>
+	        <div>
+	          	<span><img class="lazyload" data-src="{{ section.settings.fact2 | img_url: "master" | split:'?' | first }}"></span>
+	          	<p>
+	              	<b>{{ section.settings.head2 }}</b>
+	              	{{ section.settings.head2-1 }}
+	          	</p>
+	        </div>
+	        <div>
+	          	<span><img class="lazyload" data-src="{{ section.settings.fact3 | img_url: "master" | split:'?' | first }}"></span>
+	          	<p>
+	              	<b>{{ section.settings.head3 }}</b>
+	              	{{ section.settings.head3-1 }}
+	          	</p>
+	        </div>
+      	</div>
+  	</div>
+    <h2 class="text-center mobile-hide">What is Collagen?</h2>
+  	<div class="collegen-txt">
+      	<div class="page-width">
+          	<h2 class="text-center desktop-hide">What is Collagen?</h2>
+      		{{ section.settings.txt }}
+      		<img class="lazyload" data-src="{{ section.settings.img | img_url: "master" | split:'?' | first }}">
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "What is Collagen",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "What is Collagen"
+			},
+			{
+				"type": "image_picker",
+				"id": "facts",
+				"label": "Facts Icon"
+			},
+			{
+				"type": "text",
+				"id": "head",
+				"label": "Facts Heading"
+			},
+			{
+				"type": "image_picker",
+				"id": "fact1",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "text",
+				"id": "head1",
+				"label": "Fact 1 Heading"
+			},
+			{
+				"type": "text",
+				"id": "head1-1",
+				"label": "Fact 1 Subhead"
+			},
+			{
+				"type": "image_picker",
+				"id": "fact2",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "text",
+				"id": "head2",
+				"label": "Fact 2 Heading"
+			},
+			{
+				"type": "text",
+				"id": "head2-1",
+				"label": "Fact 2 Subhead"
+			},
+			{
+				"type": "image_picker",
+				"id": "fact3",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "text",
+				"id": "head3",
+				"label": "Fact 3 Heading"
+			},
+			{
+				"type": "text",
+				"id": "head3-1",
+				"label": "Fact 3 Subhead"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Paragraph"
+			},
+			{
+				"type": "image_picker",
+				"id": "img",
+				"label": "Upload Image"
+			}
+		]
+  	}
+{% endschema %}

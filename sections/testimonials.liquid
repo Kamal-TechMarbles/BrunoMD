@@ -1,0 +1,85 @@
+<div class="testimonial-section">
+  <div class="page-width">
+    <div class="testimonial-description">
+      <h1 style="color:{{section.settings.heading_color}}; font-size:{{section.settings.font_size}}px">{{ section.settings.section_heading | strip }}</h1>
+    </div>
+      <div class="owl-slider">
+        <div id="testimonial_slider" class="owl-carousel">
+          {% for block in section.blocks %}
+          <div class="item">
+            <p><span><i class="fa fa-quote-left" aria-hidden="true"></i></span>{{ block.settings.description | escape  }}
+              <span><i class="fa fa-quote-right" aria-hidden="true"></i></span></p>
+            <p class="person-name">-{{ block.settings.customer_name | escape }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Testimonial",
+    "settings": [
+		{
+           "type": "text",
+           "id": "section_heading",
+           "label": "Testimonial heading"
+        },
+		{
+           "type": "color",
+           "id": "heading_color",
+           "label": "Color",
+           "default": "#ffffff"
+        },
+		{
+            "type":      "range",
+            "id":        "font_size",
+            "min":       12,
+            "max":        100,
+            "step":       1,
+            "unit":       "px",
+            "label":     "Font size",
+            "default":   16
+        }
+		
+	],
+	   "blocks": [
+        {
+          "type": "text",
+          "name": "Description",
+          "settings": [
+				{
+           "type": "text",
+           "id": "description",
+           "label": "Description"
+        },
+		{
+           "type":      "header",
+           "content":   "Customer Name",
+           "info":      "Text"
+        },
+		{
+           "type": "text",
+           "id": "customer_name",
+           "label": "Customer Name"
+        }
+
+          ]
+        }
+      ],
+	"presets": [
+      {
+        "category": "Homepage",
+        "name": "Testimonial"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

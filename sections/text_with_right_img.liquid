@@ -1,0 +1,44 @@
+<div class="art_inovation right-art-inovation">
+    <div class="art-img">
+         <img  src="{{ section.settings.section-img | img_url: '800x' }}">
+     </div>
+    <div class="page-width">
+        <div class="medium-up--two-quarters">
+           <div class="art-description" style="background-color:{{section.settings.text_bg_color }};">
+               <p class="about-description-text">
+                  {{ section.settings.description_text | escape }}
+               </p>
+           </div>
+        </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Right Images text",
+    "settings": [
+			{
+               "type": "color",
+               "id": "text_bg_color",
+               "label": "Background color",
+               "default": "#ffffff"
+           },
+		{
+           "type": "textarea",
+           "id": "description_text",
+           "default": "Welcome to my shop!",
+           "label": "Welcome message"
+        },
+		{
+            "type": "image_picker",
+            "id": "section-img",
+            "label": "Image"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,70 @@
+<div class="art_inovation">
+    <div class="art-img small--hide">
+    	<!-- <img  src="{{ section.settings.section-img | img_url: 'master' }}"> -->
+      	<!-- <video class="embed-responsive-item" id="ytplayer" width="100%" height="800" autoplay muted loop playsinline>
+            <source src="https://cdn.shopify.com/s/files/1/0021/0573/7291/files/Science_Rev04.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+		</video> -->
+      	<iframe src="https://fast.wistia.net/embed/iframe/wjbv2ss2xt" title="Science Rev04 Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="510"></iframe>
+      	<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+     </div>
+    <div class="page-width">
+        <div class="medium-up--two-quarters">
+           <div class="art-description">
+               <h1 >{{ section.settings.heading_richtext | remove: '<p>'  | remove: '</p>'  }}</h1>
+               <p class="about-description-text">
+                  {{ section.settings.description_text | escape }}
+               </p>
+           </div>
+        </div>
+  </div>
+  <div class="art-img medium--hide">
+    	<!-- <img  src="{{ section.settings.section-img | img_url: 'master' }}"> -->
+    	<!-- <video class="embed-responsive-item" id="ytplayer" width="100%" height="800" autoplay muted loop playsinline>
+            <source src="https://cdn.shopify.com/s/files/1/0021/0573/7291/files/Science_Rev04.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+		</video> -->
+    	<iframe src="https://fast.wistia.net/embed/iframe/wjbv2ss2xt" title="Science Rev04 Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen width="100%" height="510"></iframe>
+     </div>
+</div>
+{% schema %}
+  {
+    "name": "vital Nature",
+    "settings": [
+			
+			{
+             "type": "richtext",
+             "id": "heading_richtext",
+             "label": "Text",
+             "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+          },
+		{
+           "type": "textarea",
+           "id": "description_text",
+           "default": "Welcome to my shop!",
+           "label": "Welcome message"
+        },
+		{
+            "type": "image_picker",
+            "id": "section-img",
+            "label": "Image"
+        },
+		{
+          "id": "button_link",
+          "type": "url",
+          "label": "Button link"
+        },
+		{
+           "type": "text",
+           "id": "btn_text",
+           "label": "Button Text"
+        }
+      ],
+	 "presets": [
+      {
+        "category": "Homepage",
+        "name": "Images Description with button"
+      }
+    ]
+  }
+{% endschema %}

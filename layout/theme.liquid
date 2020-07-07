@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="{{ shop.locale }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Expires" content="30">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_button }}">
+    <link rel="canonical" href="{{ canonical_url }}">    
+    {%- if settings.favicon != blank -%}<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' | split:'?' | first }}" type="image/png">{%- endif -%}
+    {%- capture seo_title -%}
+    {%- if request.page_type == 'search' and search.performed == true -%}
+    {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+    {%- else -%}{{ page_title }}{%- endif -%}
+    {%- if current_tags -%}
+    {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+    &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- assign escaped_page_title = page_title | escape -%}
+    {%- unless escaped_page_title contains shop.name -%}
+    &ndash; {{ shop.name }}
+    {%- endunless -%}
+    {%- endcapture -%}
+    <title>{{ seo_title | strip }}</title>
+    {%- if page_description -%}<meta name="description" content="{{ page_description | escape }}">{%- endif -%}
+
+ 	{% assign homepage = false %}
+    {% if template == 'index' %}
+  	     <!-- Homepage checker -->
+        {% assign homepage = true %}
+    {% endif %}
+    {% assign landing = false %}
+  	{% if template == 'page.Landing-RCP' %}
+        <!-- RCP Landing Page -->
+        {% assign landing = true %}
+    {% endif %}
+    {% assign intCart = false %}
+  	{% if template == 'page.rcp-intermediate' %}
+        <!-- Intermediate Cart -->
+        {% assign intCart = true %}
+    {% endif %}
+
+    {% include 'social-meta-tags' %}
+    {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+    {% if landing == true %}
+  		{{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
+  		{{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
+        {{ 'landing-page.scss.css' | asset_url | stylesheet_tag }}
+    {% else %}
+        {{ 'custom_theme.scss.css' | asset_url | stylesheet_tag }}
+        {% if intCart == true %}
+            {{ 'landing-page.scss.css' | asset_url | stylesheet_tag }}
+        {% endif %}
+    {% endif %}
+    <script>
+        var theme = {
+            breakpoints: {
+                medium: 750,
+                large: 990,
+                widescreen: 1400
+            },
+            strings: {
+                addToCart: {{ 'products.product.add_to_cart' | t | json }},
+                soldOut: {{ 'products.product.sold_out' | t | json }},
+                unavailable: {{ 'products.product.unavailable' | t | json }},
+                regularPrice: {{ 'products.product.regular_price' | t | json }},
+                salePrice: {{ 'products.product.sale_price' | t | json }},
+                sale: {{ 'products.product.on_sale' | t | json }},
+                fromLowestPrice: {{ 'products.product.from_lowest_price' | t: lowest_price: '[price]' | json }},
+                vendor: {{'products.product.vendor' | t | json }},
+                showMore: {{ 'general.filters.show_more' | t | json }},
+                showLess: {{ 'general.filters.show_less' | t | json }},
+                searchFor: {{ 'general.search.search_for' | t | json }},
+                addressError: {{ 'sections.map.address_error' | t | json }},
+                addressNoResults: {{ 'sections.map.address_no_results' | t | json }},
+                addressQueryLimit: {{ 'sections.map.address_query_limit_html' | t | json }},
+                authError: {{ 'sections.map.auth_error_html' | t | json }},
+                newWindow: {{ 'general.accessibility.link_messages.new_window' | t | json }},
+                external: {{ 'general.accessibility.link_messages.external' | t | json }},
+                newWindowExternal: {{ 'general.accessibility.link_messages.new_window_and_external' | t | json }},
+                removeLabel: {{ 'cart.label.remove' | t: product: '[product]' | json }},
+                update: {{ 'cart.label.update' | t | json }},
+                quantity: {{ 'cart.label.quantity' | t | json }},
+                discountedTotal: {{ 'cart.label.discounted_total' | t | json }},
+                regularTotal: {{ 'cart.label.regular_total' | t | json }},
+                priceColumn: {{ 'cart.label.price_column' | t | json }},
+                quantityMinimumMessage: {{ 'products.product.quantity_minimum_message' | t | json }},
+                cartError: {{ 'cart.general.cart_error' | t | json }},
+                removedItemMessage: {{ 'cart.general.removed_item_html' | t: quantity: '[quantity]', link: '[link]' | json }},
+                unitPrice: {{ 'products.product.unit_price_label' | t | json }},
+                unitPriceSeparator: {{ 'general.accessibility.unit_price_separator' | t | json }},
+                oneCartCount: {{ 'cart.popup.cart_count' | t: count: 1 | json }},
+                otherCartCount: {{ 'cart.popup.cart_count' | t: count: '[count]' | json }},
+                quantityLabel: {{ 'cart.popup.quantity_label' | t: quantity_count: '[count]' | json }},
+                products: {{ 'general.search.products' | t | json }},
+                loading: {{ 'general.search.loading' | t | json }},
+                number_of_results: {{ 'general.search.number_of_results' | t: result_number: '[result_number]', results_count: '[results_count]' | json }},
+                number_of_results_found: {{ 'general.search.number_of_results_found' | t: results_count: '[results_count]' | json }},
+                one_result_found: {{ 'general.search.one_result_found' | t | json }}
+            },
+            moneyFormat: {{ shop.money_format | json }},
+            moneyFormatWithCurrency: {{ shop.money_with_currency_format | json }},
+            settings: {
+                predictiveSearchEnabled: {{ settings.predictive_search_enabled | json }},
+                predictiveSearchShowPrice: {{ settings.predictive_search_show_price | json }},
+                predictiveSearchShowVendor: {{ settings.predictive_search_show_vendor | json }}
+            }
+        }
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+
+    {% if template == "collection" %}{% include 'globo.filter.script' %}{% endif %}
+    {{ content_for_header }}
+    {%- include 'weglot_hreftags' -%}
+    {%- include 'weglot_switcher' -%}
+</head>
+<body class="template-{{ request.page_type | handle }} burnopage-{{ page.id }}">
+    {%- if settings.enable_ajax -%}{% if homepage == false %}{% include 'cart-popup' %}{% endif %}{%- endif -%}
+    
+    {% if landing == false %}{% section 'header' %}{% endif %}
+    
+    <div class="page-container drawer-page-content" id="PageContainer">
+        <main class="main-content js-focus-hidden" id="MainContent">{{ content_for_layout }}</main>
+        
+        {% if landing == false %}{% if intCart == false %}{% section 'footer' %}{% endif %}{% endif %}
+    </div>
+  
+    {%- if request.page_type contains 'customers/' -%}<script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>{%- endif -%}
+    <script src="{{ 'lazysizes.min.js' | asset_url }}" async defer="defer"></script>
+  	{% if landing == false %}<script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>{% endif %}
+    {% if landing == false %}<script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>{% endif %}
+    {% if homepage == true %}<script src="https://fast.wistia.com/embed/medias/ff19pzikrt.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>{% endif %}
+    {% if landing == true %}
+        <script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0332/6297/t/76/assets/jquery.min.js"></script>
+  		<script src="{{ 'owl.carousel.min.js' | asset_url }}"></script>
+        <script>
+          	var $winWidth=jQuery(window).width();if($winWidth>768){var $window=jQuery(window),$header=jQuery(".rcp-header"),$headerTop=jQuery(".rcp-topheader").outerHeight();$window.scroll(function(){$header.toggleClass("sticky-header",$window.scrollTop()>$headerTop),jQuery("body").toggleClass("body-fixed-header",$window.scrollTop()>$headerTop)})}$('.rcp-menus a[href*="#"]:not([href="#"])').click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var e=$(this.hash);if((e=e.length?e:$("[name="+this.hash.slice(1)+"]")).length)return $("html, body").animate({scrollTop:e.offset().top-91},1e3),!1}}),jQuery(".mobileMenu").on("click",function(){jQuery(this).toggleClass("open"),jQuery(this).siblings("ul").slideToggle()}),jQuery(".collapse").on("click",function(){var e=jQuery(this);jQuery(".collapse").not(e).removeClass("active"),jQuery(".collapse").not(e).find(".collapse_inner").slideUp(),e.hasClass("active")?(jQuery(".collapse").not(e).removeClass("active"),jQuery(".collapse").not(e).find(".collapse_inner").slideUp()):(e.stop(!0,!0).addClass("active"),e.stop(!0,!0).find(".collapse_inner").slideDown(500))}),jQuery(".collapse_inner").on("click",function(){var e=jQuery(this);jQuery(".collapse_inner").not(e).removeClass("active"),jQuery(".collapse_inner").not(e).find("div").slideUp(),e.hasClass("active")?(jQuery(".collapse_inner").not(e).removeClass("active"),jQuery(".collapse_inner").not(e).find("div").slideUp()):(e.stop(!0,!0).addClass("active"),e.stop(!0,!0).find("div").slideDown(500))});
+          	$('#desktop-benefits > div').on('click', function() {
+                var data = $(this).attr('data-scroll');
+                var target = $(data);
+                if( target.length ) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top-51
+                    }, 1000);
+                    return false;
+                }
+            });
+            $('#mobile-benefits > p').on('click', function() {
+                var data = $(this).attr('data-scroll');
+                var target = $(data);
+                if( target.length ) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top-20
+                    }, 1000);
+                    return false;
+                }
+            });
+          	$('#video-testimonial').owlCarousel({
+                items: 1,
+                loop: false,
+                autoPlay: false,
+                mouseDrag: true,
+                rewindSpeed: 20,
+                responsive: true,
+                navigation: true,
+                pagination: false,
+                paginationSpeed: 300,
+                navigationText: ["<", ">"],
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [979, 1],
+                itemsTablet: [768, 1],
+                itemsTabletSmall: true,
+                itemsMobile: [479, 1],
+            });
+          
+          	jQuery('#video-testimonial .owl-dots .owl-dot').on('click', function() {
+                var owlPos = jQuery(this).index();
+                var $wistia = jQuery('#video-testimonial .owl-stage .owl-item:eq('+owlPos+')').find('.wistia_responsive_padding').attr('id');
+                window._wq = window._wq || [];
+                _wq.push({ id: "_all", onReady: function(video) {
+                    video.pause();
+                    video.time(0);
+                }});
+                console.log('Video: '+$wistia);
+                _wq.push({ id: $wistia, onReady: function(video) {
+                    video.play();
+                }});
+            });
+  		</script>
+  	{% endif %}
+    {% if template == "product" %}
+  	<script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
+    {%- include 'subscription-cart-footer' -%}
+    <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=brunomd.myshopify.com"></script>
+    {% endif %}
+    {% if landing == false %}<script src="{{ 'all-jquery.js' | asset_url }}"></script>{% endif %}
+    {% if intCart == true %}
+        <script>
+            jQuery('input[name="subscription_type"]').on('change', function() {
+                var subVal = jQuery(this).val();
+                if( subVal == 'one_time' ) {
+                    var price = jQuery('#onetime_price').val();
+                    jQuery('input.rc_radio__onetime').trigger('click');
+                    jQuery('.buy-now').text('Add to Cart');
+                    jQuery('.yousave-span').hide();
+                    jQuery('.price-value').text(price);
+                } else {
+                    var price = jQuery('#subs_price').val();
+                  	var yousave = jQuery('#yousave').val();
+                  	var discount = jQuery('#savepercent').val();
+                    jQuery('input.rc_radio__autodeliver').trigger('click');
+                    jQuery('.buy-now').text('Subscribe Now');
+                  	jQuery('.price-value').text(price);
+                    jQuery('.yousave-span').text('You save ' + discount + '% (' + yousave + ')' ).show();
+                }
+            });
+        </script>
+    {% endif %}
+  	{% if template == "collection" %}
+  		<script>
+          	setTimeout(function() {
+        		jQuery('.template-collection #shopify-section-collection-template').css('opacity', '1');
+    		}, 2000);
+  		</script>
+        {% include 'globo.filter.action' %}
+  	{% endif %}
+    {{ '//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js' | script_tag }}
+<!-- CRITEO START -->
+{% include 'criteo-tracking' %}
+<!-- CRITEO END -->
+
+{{ 'ndnapps-sociallogin.css' | asset_url | stylesheet_tag }}
+{% if shop.customer_accounts_enabled %}{% unless customer  %}{{ 'ndnapps-sociallogin-script.js' | asset_url | script_tag }}{% endunless %}{% endif %}
+</body>
+</html>

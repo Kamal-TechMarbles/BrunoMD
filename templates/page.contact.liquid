@@ -1,0 +1,60 @@
+{% comment %}{% if page.content.size > 0 %}
+    <div class="rte contact-description">
+      <div class="page-width">
+        <div class="grid">
+          <div class="grid__item">
+            {{ page.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endif %}{% endcomment %}
+<div class="contact-section">
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item  small--one-full medium-up--one-half">
+      <div class="cont-form-image contactus-form">
+        <div class="rte contact-description">{{ page.content }}</div>
+        {% comment %}{% section 'contactus-form-images' %}{% endcomment %}
+        </div>
+  </div>
+    <div class="grid__item  small--one-full medium-up--one-half">
+      <div class="contact-form form-vertical contact-us-form">
+        {%- assign formId = 'ContactForm' -%}
+        {% form 'contact', id: formId %}
+          {% include 'form-status', form: form, form_id: formId %}
+
+
+              <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'contact.form.name' | t }}">
+              <input
+                type="email"
+                id="{{ formId }}-email"
+                name="contact[email]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+                placeholder="{{ 'contact.form.email' | t }} ">
+              {%- if form.errors contains 'email' -%}
+                <span id="{{ formId}}-email-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                </span>
+              {%- endif -%}
+          <input type="tel" id="{{ formId }}-phone" name="contact[{{ 'contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'contact.form.phone' | t }}">
+
+          <textarea rows="10" id="{{ formId }}-message" name="contact[{{ 'contact.form.message' | t }}]" placeholder="{{ 'contact.form.message' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+          <input type="submit" class="btn" value="SEND">
+<!-- </div> -->
+        {% endform %}
+      </div>
+  </div>
+</div>
+</div>

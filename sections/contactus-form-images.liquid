@@ -1,0 +1,25 @@
+<img src="{{ section.settings.contact_us | img_url: '2000x600' | split:'?' | first }}" alt="Contact">
+
+{% schema %}
+  {
+    "name": "Contact Us",
+    "settings": [
+				{
+                   "type":      "header",
+                   "content":   "Contact Us Images",
+                   "info":      "Images"
+                },
+				 {
+                    "type": "image_picker",
+                    "id": "contact_us",
+                    "label": "Image"
+                  }
+				],
+			 "presets": [
+            {
+                "category": "Contact US",
+                "name": "Images"
+            }
+        ]
+  }
+{% endschema %}

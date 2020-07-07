@@ -1,0 +1,38 @@
+<section class="ingredients common-section">
+	<div class="page-width">
+		<div class="imgbox">
+			<img class="lazyload" data-src="{{ section.settings.img | img_url: 'master' | split:'?' | first }}" alt="Ingredients">
+		</div>
+		<div class="content">
+			<h2>{{ section.settings.head }}</h2>
+			{{ section.settings.txt }}
+	    </div>
+	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Ingredients Section",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Ingredients Section"
+			},
+			{
+				"type": "text",
+				"id": "head",
+				"label": "Section Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Description"
+			},
+			{
+				"type": "image_picker",
+				"id": "img",
+				"label": "Upload Image"
+			}
+		]
+  	}
+{% endschema %}

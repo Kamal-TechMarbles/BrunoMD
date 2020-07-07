@@ -1,0 +1,97 @@
+<header class="rcp-landing-footer">
+  	<section class="rcp-topfooter">
+      	<div class="page-width">
+          	<div class="grid">
+              	<div class="grid__item medium-up--one-half desktop-hide">
+                  	<div class="about-logo text-center"><img class="lazyload" data-src="{{ section.settings.column2 | img_url: 'master' | split:'?' | first }}" alt="Health"></div>
+                </div>
+                <div class="grid__item medium-up--one-half">
+                  	<div class="about-txt">{{ section.settings.column1 }}</div>
+              	</div>
+                <div class="grid__item medium-up--one-half mobile-hide">
+                  	<div class="about-logo text-center"><img class="lazyload" data-src="{{ section.settings.column2 | img_url: 'master' | split:'?' | first }}" alt="Health"></div>
+                </div>
+          	</div>
+      	</div>
+  	</section>
+  	<section class="rcp-footer">
+      	<div class="page-width">
+          	<div class="grid">
+                <div class="grid__item medium-up--one-half">{{ section.settings.copyright }}</div>
+                <div class="grid__item medium-up--one-half">
+                    <ul class="footer-menus">
+                        {% assign menus = section.settings.footer-menu %}
+                        {%- for link in linklists[menus].links -%}
+                        <li class="menu-item {% if link.current %}current-page{% endif %}">
+                            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                        </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+          	</div>
+      	</div>
+  	</section>
+</header>
+
+{% schema %}
+	{
+		"name": "RCP Footer",
+		"settings": [
+			{
+				"type": "header",
+				"content": "Footer Section"
+			},
+			{
+				"type": "header",
+				"content": "Footer Column 1"
+			},
+			{
+				"type": "textarea",
+				"id": "column1",
+				"label": "About Us"
+			},
+			{
+				"type": "header",
+				"content": "Footer Column 2"
+			},
+			{
+				"type": "image_picker",
+				"id": "column2",
+				"label": "Join the Health Logo"
+			},
+			{
+				"type": "header",
+				"content": "Footer Column 3"
+			},
+			{
+				"type": "textarea",
+				"id": "column3-1",
+				"label": "Address"
+			},
+			{
+				"type": "text",
+				"id": "column3-2",
+				"label": "Phone"
+			},
+			{
+				"type": "text",
+				"id": "column3-3",
+				"label": "Email"
+			},
+			{
+				"type": "header",
+				"content": "Copyright Footer"
+			},
+			{
+				"type": "textarea",
+				"id": "copyright",
+				"label": "Copyright Text"
+			},
+			{
+				"type": "link_list",
+				"id": "footer-menu",
+				"label": "Select Menus"
+			}
+		]
+	}
+{% endschema %}

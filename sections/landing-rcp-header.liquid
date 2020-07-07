@@ -1,0 +1,132 @@
+{%- assign product = all_products[section.settings.collection] -%}
+{%- assign sendpro = section.settings.collection -%}
+<header class="rcp-landing-header">
+  	<section class="rcp-topheader">
+      	<div class="page-width">
+          	<div class="column">
+              	<img src="{{ section.settings.top_img1 | img_url: 'master' }}" alt="topbar Icon1" width="56" height="54">
+              	<span>{{ section.settings.top_txt1 }}</span>
+          	</div>
+          	<div class="column bordered">
+              	<img src="{{ section.settings.top_img2 | img_url: 'master' }}" alt="topbar Icon2" width="50" height="44">
+              	<span>{{ section.settings.top_txt2 }}</span>
+          	</div>
+          	<div class="column">
+              	<img src="{{ section.settings.top_img3 | img_url: 'master' }}" alt="topbar Icon3" width="46" height="48">
+              	<span>{{ section.settings.top_txt3 }}</span>
+          	</div>
+      	</div>
+  	</section>
+  	<section class="rcp-header">
+      	<div class="page-width">
+          	<div class="rcp-logo">
+              <a href="https://www.brunomd.com">
+              	<img src="{{ section.settings.logo | img_url: 'master' }}" alt="Royal Collagen Peptides" width="276" height="72">
+              </a>
+            </div>
+          	<div class="rcp-menus">
+              	<ul>
+                  	{% assign menus = section.settings.menus %}
+                  	{%- for link in linklists[menus].links -%}
+                    <li class="menu-item {% if link.current %}current-page{% endif %}">
+                        <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                    </li>
+                    {%- endfor -%}
+                  	<li class="menu-item noborder mobile-hide">
+						<!-- <a href="javascript:void(0)" class="buynow-button launch-modal" data-modal="brunoMD-buynow">Buy Now</a> -->
+                      	<a href="/pages/intermediate-cart/?product={{ sendpro }}" class="buynow-button">Buy Now</a>
+                    </li>
+              	</ul>
+          	</div>
+      	</div>
+  	</section>
+  	<div class="rcp-logo" style="display:none">
+      	<a href="https://www.brunomd.com">
+          	<img src="{{ section.settings.logo | img_url: 'master' }}" alt="Royal Collagen Peptides" width="276" height="72">
+      	</a>
+    </div>
+  	<section class="rcp-mobile-header" style="display:none">
+      	<div class="page-width">
+          	<div class="rcp-menus">
+              	<div class="mobile-buy"><a href="/pages/intermediate-cart/?product={{ sendpro }}" class="buynow-button">Buy Now</a></div>
+              	<div class="mobileMenu"><span></span><span></span><span></span></div>
+              	<ul>
+                  	{% assign menus = section.settings.menus %}
+                  	{%- for link in linklists[menus].links -%}
+                    <li class="menu-item {% if link.current %}current-page{% endif %}">
+                        <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                    </li>
+                    {%- endfor -%}
+              	</ul>
+          	</div>
+      	</div>
+  	</section>
+</header>
+
+{% schema %}
+	{
+		"name": "RCP Header",
+		"settings": [
+			{
+				"type": "header",
+				"content": "Top Header",
+				"info": "Text Columns with Icons"
+			},
+			{
+				"type": "text",
+				"id": "top_txt1",
+				"label": "Column 1 Text"
+			},
+			{
+				"type": "image_picker",
+				"id": "top_img1",
+				"label": "Column 1 Icon"
+			},
+			{
+				"type": "text",
+				"id": "top_txt2",
+				"label": "Column 2 Text"
+			},
+			{
+				"type": "image_picker",
+				"id": "top_img2",
+				"label": "Column 2 Icon"
+			},
+			{
+				"type": "text",
+				"id": "top_txt3",
+				"label": "Column 3 Text"
+			},
+			{
+				"type": "image_picker",
+				"id": "top_img3",
+				"label": "Column 3 Icon"
+			},
+			{
+				"type": "header",
+				"content": "Main Header",
+				"info": "Header with Logo and Menus"
+			},
+			{
+				"type": "image_picker",
+				"id": "logo",
+				"label": "Header Logo"
+			},
+			{
+				"type": "link_list",
+				"id": "menus",
+				"label": "Select Menus"
+			},
+			{
+				"type": "header",
+				"content": "Base Product",
+				"info": "Select Base Product for Add to Cart or Subscription"
+			},
+			{
+				"type": "product",
+				"id": "collection",
+				"label": "Select Product"
+			}
+		]
+	}
+{% endschema %}

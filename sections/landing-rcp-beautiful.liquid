@@ -1,0 +1,50 @@
+<section class="beautiful common-section" id="youthful-hair" style="background-image: url({{ section.settings.img | img_url: 'master' | split:'?' | first }});">
+	<div class="page-width">
+      	<div class="desktop-hide imagebox"><img class="lazyload" data-src="{{ section.settings.img | img_url: 'master' | split:'?' | first }}" alt="Beautiful"></div>
+		<div class="content">
+			<h2>{{ section.settings.head }}</h2>
+			<h4>{{ section.settings.shead }}</h4>
+			{{ section.settings.txt }}
+		</div>
+		<div class="content">
+			{{ section.settings.txt2 }}
+		</div>
+	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Beautiful Hair",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Beautiful Hair"
+			},
+			{
+				"type": "text",
+				"id": "head",
+				"label": "Section Heading"
+			},
+			{
+				"type": "text",
+				"id": "shead",
+				"label": "Sub-Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Description"
+			},
+			{
+				"type": "richtext",
+				"id": "txt2",
+				"label": "Grey Bar Text"
+			},
+			{
+				"type": "image_picker",
+				"id": "img",
+				"label": "Background Image"
+			}
+		]
+  	}
+{% endschema %}

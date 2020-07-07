@@ -1,0 +1,98 @@
+<div class="landing-product-benefits">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-whole">
+        <div class="section-heading">
+           <h3>{{ section.settings.heading | remove: '<p>' | remove: '</p>' }}</h3>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-whole">
+      	 <div class="landing-product-benefits-img">
+        	 <img  src="{{ section.settings.images | product_img_url: '800x' }}">
+           <div class="landing-benefits">
+            {% for block in section.blocks %}
+             <div class="benefits-points">
+                     <h4>{{ block.settings.benefits_heading | escape }}</h4>
+                    <p>{{ block.settings.description | escape  }}</p>
+             </div>
+             {% endfor %}
+           </div>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-whole">
+        <div class="benefits-content">
+           <p>{{ section.settings.content | remove: '<p>' | remove: '</p>' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Benefits",
+    "settings": [
+		{
+           "type": "header",
+           "content": "Section Heading"
+        },
+        {
+           "type": "richtext",
+           "id": "heading",
+           "label": "heading"
+        },
+		{
+           "type": "header",
+           "content": "Product Benefits"
+        },
+		 {
+          "type": "image_picker",
+          "id": "images",
+          "label": "Product Image"
+        },
+		{
+           "type": "header",
+           "content": "Product Benefits style"
+        },
+		{
+           "type": "header",
+           "content": "Content"
+        },
+		{
+           "type": "richtext",
+           "id": "content",
+           "label": "content"
+        }
+
+	],
+"blocks": [
+    {
+    "type": "text",
+    "name": "text",
+    "settings": [
+                    {
+                       "type": "header",
+                       "content": "Product Benefits Description "
+                    },
+                    {
+                       "type": "text",
+                       "id": "benefits_heading",
+                       "label": "Benefits Heading"
+                    },
+                  
+                    {
+                       "type": "text",
+                       "id": "description",
+                       "label": "Description"
+                    }
+                ]
+    }
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

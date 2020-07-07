@@ -1,0 +1,150 @@
+<div class="prescription-slider" style="background-color:{{section.settings.background_color }}">
+    <div class="page-width">
+        <div class="grid__item small--one-full medium-up--one-full">
+            <div class="banner-discription">
+                <h1 style="color:{{section.settings.heading_color }};font-size:{{section.settings.font_size}}px">{{ section.settings.heading | remove: '<p>' | remove: '</p>' }}</h1>
+            </div>
+        </div>
+        <div class="grid__item  small--one-full medium-up--one-full">
+            <div class="banner-slider">
+                <div class="owl-slider">
+                    <div id="discription_slider" class="owl-carousel">
+                        {% for block in section.blocks %}
+                        {% if block.type == 'product' %}
+                        {%- assign product = all_products[block.settings.product_list] -%}
+                        <div class="item">
+                            <div onclick="location.href='{{ product.url }}';" class="prescription-img">
+                                {% for image in product.images limit:1 %}
+                                    <img class="lazyload" data-src="{{ image.src | product_img_url: '310x' | split:'?' | first }}" alt="Product image" width="310" height="310">
+                                {% endfor %}
+                            </div>
+                            <p>
+                              	{% if product.metafields.product_altname != empty %}
+                                    {% for field in product.metafields.product_altname %}
+                                        {% assign words = field | last | split: '##' %}
+                              			{{ words[0] }}<br><span>{{ words[1] }}</span>
+                                    {% endfor %}
+                                {% else %}
+                                    {{ product.title | escape }}
+                                {% endif %}
+                            </p>
+                            <div class="product-deatils">
+                                <ul>
+                                    {% if block.settings.icon_1 != empty %}<li>{{ block.settings.icon_1 }}</li>{% endif %}
+                                    {% if block.settings.icon_2 != empty %}<li>{{ block.settings.icon_2 }}</li>{% endif %}
+                                    {% if block.settings.icon_3 != empty %}<li>{{ block.settings.icon_3 }}</li>{% endif %}
+                                </ul>
+                            </div>
+                            {% comment %} <div class="pro-price"><h6>{{ product.price | money }}</h6></div> {% endcomment %}
+                            <div class="reviews" onclick="location.href='{{ product.url }}?seereviews=1'">
+                                <div class="yotpo bottomLine" data-product-id="{{ product.id }}">
+                                    {%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+                                    {%- assign time_now = 'now' | date: '%s' %}
+                                    {%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+                                    {%- assign diff_seconds_from_live = time_now | minus: yotpo_live_time %}
+                                    {%- assign yotpo_bottomline_last_updated = product.metafields.yotpo.bottomline_update_time | date: '%s' %}
+                                    {%- assign diff_seconds_from_last_bottomline_update = time_now | minus: yotpo_bottomline_last_updated %}
+                                    {%- if yotpo_live_time and diff_seconds_from_live < 86400 or yotpo_bottomline_last_updated and diff_seconds_from_last_bottomline_update < 86400 -%}
+                                    {%- assign yotpo_bottomline_obsolete = false %}
+                                    {%- else %}
+                                    {%- assign yotpo_bottomline_obsolete = true %}
+                                    {%- endif %}
+                                </div>
+                            </div>
+                            <div class="ordernow-btn"><a href="{{ product.url }}">Learn More</a></div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name":  "Prescription Pro",
+    "class": "index-section index-prescription-pro",
+    "settings": [
+        {
+           "type":      "header",
+           "content":   "Background",
+           "info":      "Text"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Section Background Color"
+        },
+        {
+           "type":      "header",
+           "content":   "Heading",
+           "info":      "Text"
+        },
+        {
+            "type":  "richtext",
+            "id":    "heading",
+            "label": "Section Heading/Title"
+        },
+        {
+           "type":    "color",
+           "id":      "heading_color",
+           "label":   "Color"
+        },
+        {
+            "type":    "range",
+            "id":      "font_size",
+            "min":     15,
+            "max":     72,
+            "step":    1,
+            "unit":    "px",
+            "label":   "Font size",
+            "default": 24
+        },
+        {
+            "type": "header",
+            "content": "Prescription Product Slider"
+        }
+    ],
+    "name": "Prescription Pro Section",
+    "blocks": [
+        {
+            "type": "product",
+            "name": "Product",
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product_list",
+                    "label": "Select Product"
+                },
+                {
+                    "type": "header",
+                    "content": "Below Indicator Icons"
+                },
+                {
+                    "type": "text",
+                    "id": "icon_1",
+                    "label": "Checkmark 1"
+                },
+                {
+                    "type": "text",
+                    "id": "icon_2",
+                    "label": "Checkmark 2"
+                },
+                {
+                    "type": "text",
+                    "id": "icon_3",
+                    "label": "Checkmark 3"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Prescription Pro",
+            "category": "Product"
+        }
+    ]
+}
+{% endschema %}

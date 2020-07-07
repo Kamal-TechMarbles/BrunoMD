@@ -1,0 +1,219 @@
+<div class="landing-product-benefits">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-whole">
+        <div class="section-heading">
+           <h3>{{ section.settings.heading | remove: '<p>' | remove: '</p>' }}</h3>
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-whole">
+        <div class="page-width">
+          <div class="grid product-div">
+            <div class="grid__item medium-up--one-whole top-product">
+              <div class="product-benefits text-center">
+                <div class="benefits-points">
+                  <div class="product-icon">
+                    <h4>{{ section.settings.benefits_heading | remove: '<p>' | remove: '</p>' }}</h4>
+                    <p>{{ section.settings.description | remove: '<p>' | remove: '</p>' }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-quarter left-product">
+              <div class="product-benefits">
+                <div class="benefits-points">
+                  <div class="product-icon">
+                    <h4>{{ section.settings.benefits_heading1 | remove: '<p>' | remove: '</p>' }}</h4>
+                    <p>{{ section.settings.description1 | remove: '<p>' | remove: '</p>' }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product-benefits">
+                <div class="benefits-points">
+                  <div class="product-icon">
+                    <h4>{{ section.settings.benefits_heading2 | remove: '<p>' | remove: '</p>' }}</h4>
+                    <p>{{ section.settings.description2 | remove: '<p>' | remove: '</p>' }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item medium-up--one-half prodect-center-img">
+              <div class="product-circle-img text-center">
+                <img  src="{{ section.settings.images | product_img_url: '800x' }}">
+                <div class="product-icon ribo-icon">
+                  {% for block in section.blocks %}
+                  <img src="{{ block.settings.icon_images | img_url: '800x' }}">
+                  {% endfor %}
+                </div>
+              </div>
+            	
+            </div>
+            <div class="grid__item medium-up--one-quarter  right-product">
+              <div class="product-benefits">
+                <div class="benefits-points">
+                  <div class="product-icon">
+                    <h4>{{ section.settings.benefits_heading3 | remove: '<p>' | remove: '</p>' }}</h4>
+                    <p>{{ section.settings.description3 | remove: '<p>' | remove: '</p>' }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product-benefits">
+                <div class="benefits-points">
+                  <div class="product-icon">
+                    <h4>{{ section.settings.benefits_heading4 | remove: '<p>' | remove: '</p>' }}</h4>
+                    <p>{{ section.settings.description4 | remove: '<p>' | remove: '</p>' }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      
+      <div class="grid__item medium-up--one-whole">
+        <div class="benefits-content">
+           <p>{{ section.settings.content | remove: '<p>' | remove: '</p>' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Benefits",
+    "settings": [
+		{
+           "type": "header",
+           "content": "Section Heading"
+        },
+        {
+           "type": "richtext",
+           "id": "heading",
+           "label": "heading"
+        },
+		{
+           "type": "header",
+           "content": "Product Benefits"
+        },
+		 {
+          "type": "image_picker",
+          "id": "images",
+          "label": "Product Image"
+        },
+		{
+           "type": "header",
+           "content": "Product Benefits style"
+        },
+		{
+           "type": "header",
+           "content": "Content"
+        },
+		{
+           "type": "richtext",
+           "id": "content",
+           "label": "content"
+        },
+		{
+           "type": "header",
+           "content": "Product Benefits Description"
+        },
+		{
+           "type": "header",
+           "content": "Benefits 1"
+        },
+        {
+          "type": "text",
+          "id": "benefits_heading",
+          "label": "Benefits Heading"
+        },
+
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+		{
+           "type": "header",
+           "content": "Benefits 2"
+        },
+		 {
+          "type": "text",
+          "id": "benefits_heading1",
+          "label": "Benefits Heading"
+        },
+
+        {
+          "type": "text",
+          "id": "description1",
+          "label": "Description"
+        },
+		{
+           "type": "header",
+           "content": "Benefits 3"
+        },
+		 {
+          "type": "text",
+          "id": "benefits_heading2",
+          "label": "Benefits Heading"
+        },
+
+        {
+          "type": "text",
+          "id": "description2",
+          "label": "Description"
+        },
+		{
+           "type": "header",
+           "content": "Benefits 4"
+        },
+		 {
+          "type": "text",
+          "id": "benefits_heading3",
+          "label": "Benefits Heading"
+        },
+
+        {
+          "type": "text",
+          "id": "description3",
+          "label": "Description"
+        },
+		{
+           "type": "header",
+           "content": "Benefits 5"
+        },
+		 {
+          "type": "text",
+          "id": "benefits_heading4",
+          "label": "Benefits Heading"
+        },
+		
+        {
+          "type": "text",
+          "id": "description4",
+          "label": "Description"
+        }
+	],
+	"blocks": [
+    {
+    "type": "text",
+    "name": "text",
+    "settings": [
+                    {
+                       "type": "header",
+                       "content": "Product Benefits icon "
+                    },
+                    {
+                      "type": "image_picker",
+                      "id": "icon_images",
+                      "label": "Product Image"
+                    }
+                ]
+    }
+]
+}
+{% endschema %}
+
+

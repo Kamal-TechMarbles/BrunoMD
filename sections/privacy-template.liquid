@@ -1,0 +1,45 @@
+<div class="grid">
+  <div class="grid__item medium-up--one-whole">
+    <div class="topOver">
+      <img src="{{ section.settings.bg|img_url:'master'}}" alt=""/>
+      <div class="bottomOver">
+        <h1>{{page.title}}</h1>
+        <p>{{ section.settings.bg_text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <div class="rte page_content">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Privacy Policy",
+    "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "background Image"
+    },
+    {
+      "type": "textarea",
+      "id": "bg_text",
+      "label": "Short Description on image"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

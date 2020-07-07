@@ -1,0 +1,63 @@
+<div id="shopify-section-how_to_use">
+	<div class="how_to_use"   style="background:url('{{ section.settings.bg_img | img_url: 'master' }}'); background-repeat: no-repeat; background-size: cover">
+        <div style="width: 100%; height: 100%; /*background: #fa4d09;*/ opacity: .5; position: absolute;"></div>
+        <div class="page-width">
+  	  		<div class="grid__item medium-up--one-half">
+        		<div class="section-img"><img src="{{ section.settings.img | img_url: 'master' }}"></div>
+ 	 		</div>
+    		<div class="how_to_use_text grid__item medium-up--one-half">
+      			<div class="section-description">
+      				<h4>{{ section.settings.heading  | remove: '<p>' | remove: '</p>'}}</h4>
+        			<p>{{ section.settings.description |  script }}</p>
+      			</div>
+    		</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Images with Content",
+    "settings": [
+  					{
+                        "type": "header",
+                        "content": "Section Background Image"
+                    },
+  					{
+                        "type": "image_picker",
+                        "id": "bg_img",
+                        "label": "Upload Sewction Image"
+                    },
+  					{
+                        "type": "header",
+                        "content": "Section Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "img",
+                        "label": "Upload Sewction Image"
+                    },
+  					{
+                        "type": "header",
+                        "content": "Heading"
+                    },
+  					{
+                       "type": "richtext",
+                       "id": "heading",
+                       "label": "Text",
+                       "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+                    },
+  					{
+                        "type": "header",
+                        "content": "Description"
+                    },
+  	
+  					{
+                       "type": "richtext",
+                       "id": "description",
+                       "label": "Text",
+                       "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+                    }
+  				]
+  }
+{% endschema %}

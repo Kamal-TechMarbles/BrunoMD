@@ -1,0 +1,54 @@
+<section class="youthful-skin common-section" id="eye-wrinkle-volume">
+	<div class="imgbox">
+		<img class="mobile-hide lazyload" data-src="{{ section.settings.img | img_url: 'master' | split:'?' | first }}">
+      	<img class="desktop-hide lazyload" data-src="{{ section.settings.img2 | img_url: 'master' | split:'?' | first }}">
+	</div>
+	<div class="content">
+		<h2>{{ section.settings.head }}</h2>
+		<h4>{{ section.settings.head2 }}</h4>
+		{{ section.settings.txt }}
+      	<div>{{ section.settings.txt2 }}</div>
+    </div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Youthful Skin",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Youthful Skin"
+			},
+			{
+				"type": "text",
+				"id": "head",
+				"label": "Section Heading"
+			},
+			{
+				"type": "text",
+				"id": "head2",
+				"label": "Sub Heading"
+			},
+			{
+				"type": "richtext",
+				"id": "txt",
+				"label": "Description"
+			},
+			{
+				"type": "richtext",
+				"id": "txt2",
+				"label": "Grey Bar Content"
+			},
+			{
+				"type": "image_picker",
+				"id": "img",
+				"label": "Upload Image"
+			},
+			{
+				"type": "image_picker",
+				"id": "img2",
+				"label": "Upload Mobile Image"
+			}
+		]
+  	}
+{% endschema %}

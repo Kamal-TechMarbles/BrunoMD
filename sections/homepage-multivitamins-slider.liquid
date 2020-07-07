@@ -1,0 +1,95 @@
+<div class="traditional-multivitamins">
+    <div class="page-width">
+        <div class="multivitamin-slider-content">
+            <div class="banner-discription">
+              	<video class="embed-responsive-item home-page-video" id="ytplayer" height="700" autoplay muted loop playsinline style="margin-left:-50%;" width="200%">
+                    <source src="https://cdn.shopify.com/s/files/1/0021/0573/7291/files/Science_Rev04.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video><br><br>
+              	<h1 class="text-center" style="text-transform:none;color:#636464;letter-spacing:0">{{ section.settings.video_txt }}</h1><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Slider with text",
+        "settings": [
+            {
+                "type":      "header",
+                "content":   "Background",
+                "info":      "Color"
+            },
+		    {
+                "type": "color",
+                "id": "background-color",
+                "label": "background color"
+            },
+		    {
+                "type":      "header",
+                "content":   "Main Heading",
+                "info":      "Color"
+            },
+		    {
+                "type": "richtext",
+                "id": "main-heading",
+                "label": "Heading"
+            },
+		    {
+                "type": "color",
+                "id": "main-heading_color",
+                "label": "Color"
+            },
+		    {
+                "type":      "range",
+                "id":        "main_font_size",
+                "min":       12,
+                "max":        100,
+                "step":       1,
+                "unit":       "px",
+                "label":     "Font size",
+                "default":   16
+            },
+			{
+                "type": "text",
+                "id": "video_ml",
+                "label": "Masthead Video"
+			},
+			{
+                "type": "text",
+                "id": "video_txt",
+                "label": "Masthead Video Title"
+			}
+        ],
+        "blocks": [
+            {
+                "type": "images",
+                "name": "Product slider",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "slider-img",
+                        "label": "Slider images"
+                    },
+				    {
+                        "type": "text",
+                        "id": "slider-heading",
+                        "label": "Sub Heading"
+                    },
+                    {
+                        "type": "text",
+                        "id": "description",
+                        "label": "description"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "category": "Homepage",
+                "name": "heading with Slider"
+            }
+        ]
+    }
+{% endschema %}

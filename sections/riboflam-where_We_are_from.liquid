@@ -1,0 +1,72 @@
+<div class="where_We_are_from" style="background:url('{{ section.settings.bg_img | img_url: 'master' }}'); background-repeat: no-repeat; background-size: cover;  background-position: center center;">
+  <div class="page-width">
+    <div class="grid">
+      <div class="grid__item medium-up--one-whole">
+        <div class="section-content">
+          <h1>{{ section.settings.section_heading |  remove: '<p>'  | remove: '</p>' }}</h1>
+          <p>{{ section.settings.description |  remove: '<p>'  | remove: '</p>' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Where We're From",
+    "settings": [
+		{
+           "type":      "header",
+           "content":   "Section Background image",
+           "info":      "section background Image"
+        },
+		{
+          "type": "image_picker",
+          "id": "bg_img",
+          "label": "Background image"
+        },
+		{
+           "type":      "header",
+           "content":   "Section Heading",
+           "info":      "section Heading"
+        },
+        {
+           "type": "richtext",
+           "id": "section_heading",
+           "label": "Text",
+           "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+        },
+      {
+        "type":      "header",
+        "content":   "Section Description",
+        "info":      "Description"
+      },
+      {
+         "type": "textarea",
+         "id": "description",
+         "label": "Description"
+      },
+	{
+         "type": "color",
+         "id": "description_color",
+         "label": "heading_color",
+         "default": "#ffffff"
+      },
+      {
+        "type":      "range",
+        "id":        "description_size",
+        "min":       12,
+        "max":        100,
+        "step":       1,
+        "unit":       "px",
+        "label":     "Font size",
+        "default":   16
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

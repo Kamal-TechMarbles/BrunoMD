@@ -1,0 +1,39 @@
+<div class="art_inovation left-art-inovation">
+  <div class="art-img small--hide">
+      <img class="lazyload" data-src="{{ section.settings.section-img | img_url: '940x' | split:'?' | first }}" alt="Altra">
+    </div>
+    <div class="page-width">
+        <div class="medium-up--two-quarters">
+            <div class="art-description" style="background-color:{{section.settings.text_bg_color }};">
+                <h1 style="color:{{section.settings.main-heading_color }}; font-family:{{section.settings.main-heading_font}}; font-size:{{section.settings.font_size}}px">{{ section.settings.heading_richtext | remove: '<p>'  | remove: '</p>'  }}</h1>
+                <p class="about-description-text">{{ section.settings.description_text | escape_html }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="art-img medium--hide">
+      <img class="lazyload" data-src="{{ section.settings.section-img | img_url: '940x' | split:'?' | first }}" alt="Altra">
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Left Images text",
+    "settings": [
+{
+             "type": "richtext",
+             "id": "heading_richtext",
+             "label": "Text"
+          },
+    {
+           "type": "textarea",
+           "id": "description_text",
+           "default": "Welcome to my shop!",
+           "label": "Welcome message"
+        },
+    {
+            "type": "image_picker",
+            "id": "section-img",
+            "label": "Image"
+        }
+      ]
+  }
+{% endschema %}

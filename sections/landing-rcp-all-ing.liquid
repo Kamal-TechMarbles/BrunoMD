@@ -1,0 +1,140 @@
+<section class="all-ingredients common-section">
+    <div class="page-width">
+        <div class="inline-bx">
+            <div class="imgbox"><img class="lazyload" data-src="{{ section.settings.img1 | img_url: 'master' }}" alt="Ingredient 1"></div>
+            <div class="content">
+                <div>
+                    <img class="desktop-hide lazyload" data-src="{{ section.settings.img1 | img_url: 'master' }}" alt="Ingredient 1">
+                    <h2>{{ section.settings.head1 }}</h2>
+                    <h4>{{ section.settings.shead1 | split: '</p>' }}</h4>
+                    {{ section.settings.txt1 }}
+                </div>
+            </div>
+        </div>
+        <div class="inline-bx">
+            <div class="imgbox"><img class="lazyload" data-src="{{ section.settings.img2 | img_url: 'master' }}" alt="Ingredient 2"></div>
+            <div class="content">
+                <div>
+                    <img class="desktop-hide lazyload" data-src="{{ section.settings.img2 | img_url: 'master' }}" alt="Ingredient 2">
+                    <h2>{{ section.settings.head2 }}</h2>
+                    <h4>{{ section.settings.shead2 | split: '</p>' }}</h4>
+                    {{ section.settings.txt2 }}
+                </div>
+            </div>
+        </div>
+        <div class="inline-bx">
+            <div class="imgbox"><img class="lazyload" data-src="{{ section.settings.img3 | img_url: 'master' }}" alt="Ingredient 3"></div>
+            <div class="content">
+                <div>
+                    <img class="desktop-hide lazyload" data-src="{{ section.settings.img3 | img_url: 'master' }}" alt="Ingredient 3">
+                    <h2>{{ section.settings.head3 }}</h2>
+                    <h4>{{ section.settings.shead3 | split: '</p>' }}</h4>
+                    {{ section.settings.txt3 }}
+                </div>
+            </div>
+        </div>
+        <div class="inline-bx">
+            <div class="imgbox"><img class="lazyload" data-src="{{ section.settings.img4 | img_url: 'master' }}" alt="Ingredient 4"></div>
+            <div class="content">
+                <div>
+                    <img class="desktop-hide lazyload" data-src="{{ section.settings.img4 | img_url: 'master' }}" alt="Ingredient 4">
+                    <h2>{{ section.settings.head4 }}</h2>
+                    <h4>{{ section.settings.shead4 | split: '</p>' }}</h4>
+                    {{ section.settings.txt4 }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "All Ingredients Section",
+        "settings": [
+            {
+                "type": "header",
+                "content": "All Ingredients Section"
+            },
+            {
+                "type": "text",
+                "id": "head1",
+                "label": "Title 1"
+            },
+            {
+                "type": "richtext",
+                "id": "shead1",
+                "label": "Sub-Title 1"
+            },
+            {
+                "type": "richtext",
+                "id": "txt1",
+                "label": "Description 1"
+            },
+            {
+                "type": "image_picker",
+                "id": "img1",
+                "label": "Upload Image 1"
+            },
+            {
+                "type": "text",
+                "id": "head2",
+                "label": "Title 2"
+            },
+            {
+                "type": "richtext",
+                "id": "shead2",
+                "label": "Sub-Title 2"
+            },
+            {
+                "type": "richtext",
+                "id": "txt2",
+                "label": "Description 2"
+            },
+            {
+                "type": "image_picker",
+                "id": "img2",
+                "label": "Upload Image 2"
+            },
+            {
+                "type": "text",
+                "id": "head3",
+                "label": "Title 3"
+            },
+            {
+                "type": "richtext",
+                "id": "shead3",
+                "label": "Sub-Title 3"
+            },
+            {
+                "type": "richtext",
+                "id": "txt3",
+                "label": "Description 3"
+            },
+            {
+                "type": "image_picker",
+                "id": "img3",
+                "label": "Upload Image 3"
+            },
+            {
+                "type": "text",
+                "id": "head4",
+                "label": "Title 4"
+            },
+            {
+                "type": "richtext",
+                "id": "shead4",
+                "label": "Sub-Title 4"
+            },
+            {
+                "type": "richtext",
+                "id": "txt4",
+                "label": "Description 4"
+            },
+            {
+                "type": "image_picker",
+                "id": "img4",
+                "label": "Upload Image 4"
+            }
+        ]
+    }
+{% endschema %}

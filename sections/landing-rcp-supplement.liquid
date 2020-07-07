@@ -1,0 +1,80 @@
+{%- assign product = all_products[section.settings.collection] -%}
+{%- assign sendpro = section.settings.collection -%}
+
+<section class="supplement-img">
+  	<img class="mobile-hide lazyload" data-src="{{ section.settings.img1 | img_url: 'master' | split:'?' | first }}">
+  	<img class="desktop-hide lazyload" data-src="{{ section.settings.img_mob | img_url: 'master' | split:'?' | first }}">
+</section>
+<section class="kickstart-bar common-section" style="background: {{ section.settings.bg-color1 }}">
+  	<div class="page-width">
+      	<div class="grid one-div-container">
+          	<div class="grid__item medium-up--one-third"><img class="lazyload" data-src="{{ section.settings.img2 | img_url: 'master' | split:'?' | first }}" alt="Kickstart"></div>
+            <div class="grid__item medium-up--two-thirds content-divs">
+              	<div style="background: {{ section.settings.bg-color2 }}">{{ section.settings.txt1 }}</div>
+              	<div>{{ section.settings.txt2 }}</div>
+            </div>
+         </div>
+  	</div>
+  	<div class="subscribe-save">
+      	<div class="page-width">
+          	<div class="txt">Subscribe & save 15% today!</div>
+  			<div class="shop-btn"><a href="/pages/intermediate-cart/?product={{ sendpro }}" class="buynow-button">Buy Now</a></div>
+      	</div>
+  	</div>
+</section>
+
+{% schema %}
+	{
+    	"name": "Supplement Section",
+    	"settings": [
+			{
+				"type": "header",
+				"content": "Supplement Facts"
+			},
+			{
+				"type": "image_picker",
+				"id": "img1",
+				"label": "Upload Supplement Image"
+			},
+			{
+				"type": "image_picker",
+				"id": "img_mob",
+				"label": "Supplement Mobile Image"
+			},
+			{
+				"type": "header",
+				"content": "Kickstart Bar"
+			},
+			{
+				"type": "color",
+				"id": "bg-color1",
+				"label": "Bar Background"
+			},
+			{
+				"type": "image_picker",
+				"id": "img2",
+				"label": "Section Left Image"
+			},
+			{
+				"type": "color",
+				"id": "bg-color2",
+				"label": "Blue Bar Background"
+			},
+			{
+				"type": "textarea",
+				"id": "txt1",
+				"label": "Blue bar Content"
+			},
+			{
+				"type": "textarea",
+				"id": "txt2",
+				"label": "Below Content"
+			},
+			{
+				"type": "product",
+				"id": "collection",
+				"label": "Buy Now Product"
+			}
+		]
+  	}
+{% endschema %}

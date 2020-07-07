@@ -1,0 +1,133 @@
+<div class="about-us custom-about-us small--text-center">
+    <div class="page-width">
+        <div class="feature-row">
+            <div class="medium-up--one-half"><div class="about-img"><img data-src="{{ section.settings.img1 | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div></div>
+            <div class="medium-up--one-half">
+                <div class="about-us-description">
+                    <h4>{{ section.settings.header1 | escape }}</h4>
+                    <h2 style="text-transform:none">{{ section.settings.header2 }}</h2>
+                    <p class="about-description-text">{{ section.settings.cont1 | escape }}</p>
+                </div>
+            </div>
+            <div class="about-img small"><img data-src="{{ section.settings.img1 | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
+        </div>
+    </div>
+    <div class="page-width">
+        <div class="feature-row featrow2 abt-feat">
+            <div class="medium-up--one-half">
+                <div class="about-us-description">
+                    <h4>{{ section.settings.section-name | escape }}</h4>
+                    <h2>{{ section.settings.main-heading |  remove: '<p>'  | remove: '</p>' }}</h2>
+                    <p class="about-description-text">{{ section.settings.about-description | escape }}</p>
+                </div>
+            </div>
+            <div class="medium-up--one-half">
+                <div class="about-img"><img data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-width">
+        <div class="feature-row">
+            <div class="small-container text-center pt-50">
+                <div class="about-us-description">
+                    <div class="heighlighted-text">
+                        <p>{{ section.settings.heightlight-description | escape }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img small"><img data-src="{{ section.settings.about-img | img_url: '800x' | split:'?' | first }}" alt="About" class="lazyload"></div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About Us",
+    "settings": 
+      [
+        {
+            "type": "text",
+            "id": "header1",
+            "label": "Section 1 Heading"
+        },
+        {
+            "type": "text",
+            "id": "header2",
+            "label": "Section 1 Sub-Head"
+        },
+        {
+            "type": "textarea",
+            "id": "cont1",
+            "label": "Section 1 Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "img1",
+            "label": "Section Image"
+        },
+        {
+        "type":      "header",
+        "content":   "About Us Images",
+        "info":      "Images"
+        },
+        {
+        "type": "image_picker",
+        "id": "about-img",
+        "label": "Product Images"
+        },
+        {
+        "type":      "header",
+        "content":   "Section Name",
+        "info":      "text"
+        },
+        {
+        "type": "text",
+        "id": "section-name",
+        "label": "Section Name"
+        },
+        {
+        "type":      "header",
+        "content":   "Main Heading",
+        "info":      "text"
+        },
+        {
+        "type": "richtext",
+        "id": "main-heading",
+        "label": "Text",
+        "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+        },
+
+        {
+        "type": "richtext",
+        "id": "column_richtext",
+        "label": "Text",
+        "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+        },
+        {
+        "type":      "header",
+        "content":   "Sub Heading",
+        "info":      "text"
+        },
+        {
+        "type":      "header",
+        "content":   "About Description",
+        "info":      "text"
+        },
+        {
+        "type": "textarea",
+        "id": "about-description",
+        "label": "Text"
+        },
+        {
+        "type":      "header",
+        "content":   "heightlight text",
+        "info":      "text"
+        },
+        {
+        "type": "textarea",
+        "id": "heightlight-description",
+        "label": "Description"
+        }
+    ]
+  }
+{% endschema %}

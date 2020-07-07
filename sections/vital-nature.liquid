@@ -1,0 +1,83 @@
+<div class="about-us vital-nature custom-about-us small--text-center">
+    <div class="page-width">
+        <div class="feature-row">
+            <div class="medium-up--one-half">
+                <div class="about-img">
+                    {{ section.settings.iframe1 }}
+                </div>
+            </div>
+            <div class="medium-up--one-half">
+                <div class="about-us-description abt-sci">
+                    <h2>{{ section.settings.main-heading | remove: '<p>' | remove: '</p>' }}</h2>
+                    <div class="about-description-text">{{ section.settings.about-description | escape_html }}</div>
+                </div>
+            </div>
+            <div class="about-img small">{{ section.settings.iframe1 }}</div>
+        </div>
+        <div class="feature-row featrow2">
+            <div class="medium-up--one-half">
+                <div class="about-us-description abt-sci">
+                    <h2>{{ section.settings.main-heading2 | remove: '<p>' | remove: '</p>' }}</h2>
+                    <div class="about-description-text">{{ section.settings.about-description2 | escape_html }}</div>
+                </div>
+            </div>
+            <div class="medium-up--one-half">
+                <div class="about-img">{{ section.settings.iframe2 }}</div>
+              	<div class="about-img small">{{ section.settings.iframe2 }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "About Us",
+        "settings": [
+            {
+                "type": "header",
+                "content": "About Us Section",
+                "info": "Image/Video"
+            },
+            {
+                "type": "image_picker",
+                "id": "about-img",
+                "label": "Product Images"
+            },
+            {
+                "type": "richtext",
+                "id": "main-heading",
+                "label": "Main Heading"
+            },
+            {
+                "type": "textarea",
+                "id": "about-description",
+                "label": "Text Description"
+            },
+            {
+                "type": "textarea",
+                "id": "iframe1",
+                "label": "Embed Video Source"
+            },
+            {
+                "type": "header",
+                "content": "Section 2",
+                "info": "Image/Video"
+            },
+            {
+                "type": "richtext",
+                "id": "main-heading2",
+                "label": "Main Heading"
+            },
+            {
+                "type": "textarea",
+                "id": "about-description2",
+                "label": "Text Description"
+            },
+            {
+                "type": "textarea",
+                "id": "iframe2",
+                "label": "Embed Video Source"
+            }
+        ]
+    }
+{% endschema %}

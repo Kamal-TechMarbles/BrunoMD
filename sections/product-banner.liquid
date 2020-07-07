@@ -1,0 +1,45 @@
+<!-- <div class="productpage-banner">
+    <div class="page-width-custom">
+        <div class="grid">
+            <div class="grid__item small--one-whole medium-up--one-whole" style="background-image: url({{ section.settings.banner | img_url: 'master' }})"><p>{{ section.settings.banner_text }}</p></div>
+        </div>
+    </div>
+</div> -->
+
+{% for field in product.metafields.product_banner %}
+	{% assign words = field | last | split: '##' %}
+	<div class="productpage-banner">
+    	<div class="page-width-custom">
+        	<div class="grid">
+              	<div class="grid__item small--one-whole medium-up--one-whole" style="background-image: url({{ words[0] | asset_url }})"><p>{{ words[1] }}</p></div>
+        	</div>
+    	</div>
+	</div>
+{% endfor %}
+
+{% schema %}
+    {
+        "name": "Product Banner",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Product Banner Section"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner",
+                "label": "Upload Banner Image"
+            },
+            {
+                "type": "richtext",
+                "id": "banner_text",
+                "label": "Banner Content"
+            },
+            {
+                "type": "image_picker",
+                "id": "product_banner",
+                "label": "Upload Product Image"
+            }
+        ]
+    }
+{% endschema %}

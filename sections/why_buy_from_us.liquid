@@ -1,0 +1,67 @@
+<div class="why_buy_from_us">
+    <div class="page-width">
+        <div class="form-us-text">
+            <h1 style="color:{{section.settings.heading_color}}; font-size:{{section.settings.font_size}}px">{{ section.settings.section_heading | remove: '<p>'  | remove: '</p>' }}</h1>
+			   <div class="section-img">
+                 <div class="owl-slider">
+                   <div id="from-us-icon" class="owl-carousel">
+                     {% for block in section.blocks %}
+                     <div class="item">
+                       <img src="{{ block.settings.images | img_url: '800x' | split:'?' | first }}" alt="{{ block.settings.image.alt }}">
+                     </div>
+                     {% endfor %}
+                   </div>
+                 </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Why Buy from Us",
+    "settings": [
+    {
+        "type": "richtext",
+        "id": "section_heading",
+        "label": "Text",
+        "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+    },
+    {
+        "type": "color",
+        "id": "heading_color",
+        "label": "color",
+        "default": "#ffffff"
+    },
+    {
+        "type":      "range",
+        "id":        "font_size",
+        "min":       12,
+        "max":        100,
+        "step":       1,
+        "unit":       "px",
+        "label":     "Font size",
+        "default":   16
+    }
+    ],
+    "blocks": [
+    {
+        "type": "images",
+        "name": "images",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "images",
+            "label": "Images"
+        }
+        ]
+    }
+    ],
+    "presets": [
+    {
+        "category": "Homepage",
+        "name": "Why buy from US"
+    }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,117 @@
+<div class="who_we_are small--text-center" style="background-color:{{section.settings.bg_color }}">
+  <div class="page-width">
+    <div class="grid">
+  	<div class="grid__item small--one-full medium-up--three-fifths">
+      <div class="who-we-are-description">
+        <h1 style="font-size:{{section.settings.font_size}}px">{{ section.settings.section_heading |  remove: '<p>'  | remove: '</p>' }}</h1>
+        <p>{{ section.settings.description |  script }}</p>
+        <div class="section-btn small--hide">
+            <a href="{{ section.settings.readmore_link | escape }}">{{ section.settings.readmore_text | escape }}
+                 <span><img class="lazyload" data-src="{{ 'arrow.png' | asset_img_url: 'master' | split:'?' | first }}" alt="Arrow" width="42" height="15"></span>
+             </a>
+        </div>
+      </div>
+    </div>
+    <div class="grid__item small--one-full medium-up--two-fifths">
+      <div class="section-img"><img class="lazyload section-img-child" data-src="{{ section.settings.section_images | img_url: '545x836' | split:'?' | first }}" alt="About Us"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Who We Are",
+    "settings": [
+		{
+           "type":      "header",
+           "content":   "color",
+           "info":      "section background color"
+        },
+		{
+           "type": "color",
+           "id": "bg_color",
+           "label": "Background color"
+        },
+		{
+           "type":      "header",
+           "content":   "Heading",
+           "info":      "section heading"
+        },
+		{
+             "type": "richtext",
+             "id": "section_heading",
+             "label": "Heading",
+             "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+          },
+        {
+           "type": "color",
+           "id": "heading_color",
+           "label": "color",
+           "default": "#ffffff"
+        },
+		{
+            "type":      "range",
+            "id":        "font_size",
+            "min":       12,
+            "max":        100,
+            "step":       1,
+            "unit":       "px",
+            "label":     "Font size",
+            "default":   16
+        },
+		{
+           "type":      "header",
+           "content":   "Heading",
+           "info":      "section Description"
+        },
+		{
+           "type": "textarea",
+           "id": "description1",
+           "default": "Description",
+           "label": "text"
+        },
+		{
+			  "type": "html",
+             "id": "description",
+             "label": "Description"
+		},
+		{
+           "type":      "header",
+           "content":   "Images",
+           "info":      "Images"
+        },
+		{
+            "type": "image_picker",
+            "id": "section_images",
+            "label": "image"
+         },
+		{
+           "type":      "header",
+           "content":   "Button",
+           "info":      "Section Button"
+        },
+		{
+           "type":      "header",
+           "content":   "Button",
+           "info":      "Button"
+        },
+		{
+           "type": "text",
+           "id": "readmore_text",
+           "label": "Button Text"
+        },
+		{
+          "id": "readmore_link",
+          "type": "url",
+          "label": "Button link"
+        }
+	],
+	"presets": [
+      {
+        "category": "Homepage",
+        "name": "Who We Are"
+      }
+    ]
+  }
+{% endschema %}
